@@ -294,11 +294,16 @@ a img.aligncenter {
 }
 
 /* line 1, ../sass/layout/_header.sass */
-#header-area {
+header#global-header {
   display: inline-block;
   vertical-align: middle;
   *vertical-align: auto;
   *zoom: 1;
   *display: inline;
   padding: 15px 0;
+}
+
+/* line 1, ../sass/layout/_footer.sass */
+footer#global-footer {
+  padding: 15px 0 0;
 }
