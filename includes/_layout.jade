@@ -1,8 +1,10 @@
-html
-  include _head.jade
-  
+doctype html
+html(lang="en" dir="ltr")
+  include _head
   body
-    block content
-    block foot
-      #footer
-        p some footer content
+    .container
+      include _header
+      
+      block content
+      
+      include _footer
