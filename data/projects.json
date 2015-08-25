@@ -1,0 +1,54 @@
+{
+  "projects": [
+    {
+      "projectID": "20140401",
+      "date": "April 2014",
+      "title": "Grown Up Shoes",
+      "client": "Go Forth Creative",
+      "thumb": "/images/projects/thumb-grownup.png",
+      "image": "/images/projects/grownup.jpg",
+      "description": "<p>I love working with Chelsea from Go Forth Creative! This was a smaller job for an existing blog that just needed to have a “facelift” for a more modern look.</p><p>Chelsea and the site owner Ana Louise worked together on the design, and then turned over the files to me to make it work. After a few delays and some adjustments, the new theme is finally live!</p>",
+      "url": "http://grownupshoes.com/"
+    },
+    {
+      "projectID": "20140301",
+      "date": "March 2014",
+      "title": "Oh! Fox Creative",
+      "client": "Go Forth Creative",
+      "thumb": "/images/projects/thumb-ohfox.png",
+      "image": "/images/projects/ohfox.jpg",
+      "description": "<p>Go Forth Creative contracted me to develop a full site experience for a local Austin designer specializing in vintage aesthetics for homes and small businesses.</p><p>The site is developed in WordPress and uses a combination of PHP and JavaScript. It’s a beautiful design, and I am happy to add this site to my portfolio.</p>",
+      "url": "http://ohfoxcreative.com/"
+    },
+    {
+      "projectID": "20140302",
+      "date": "March 2014",
+      "title": "Studio Slomo",
+      "client": "Studio Slomo/Sarah Wymer",
+      "thumb": "/images/projects/thumb-slomo.png",
+      "image": "/images/projects/slomo.jpg",
+      "description": "<p>Studio Slomo contacted me through a coworker wanting to update her site into WordPress. Originally started back last October, the site was a long collaboration between myself and Sarah Wymer.</p><p>Studio Slomo specializes in letterpress, stationery, and wedding invitations/placecards/etc. Sarah does some beautiful work, so make sure you check out her gallery!</p><p>Design is by Sarah Wymer, and all development by Sean Loyless Designs in WordPress and Javascript.</p>",
+      "url": "http://studioslomo.com/"
+    },
+    {
+      "projectID": "20140201",
+      "date": "February 2014",
+      "title": "Buggy Bagg",
+      "client": "Viewers Like You",
+      "thumb": "/images/projects/thumb-buggy.png",
+      "image": "/images/projects/buggy.jpg",
+      "description": "<p>After doing a small site update for this client, they tasked me with revamping another existing site they owned. Designs by Viewers Like You, coding done by me. Built in WordPress, HTML5, and a little JavaScript and jQuery magic. Site is no longer online.</p>",
+      "url": ""
+    },
+    {
+      "projectID": "20131101",
+      "date": "November 2013",
+      "title": "Perpetually Chic",
+      "client": "Studio SloMo",
+      "thumb": "/images/projects/thumb-perpetual.png",
+      "image": "/images/projects/perpetual.jpg",
+      "description": "<p>Pereptually Chic is a Style and culture blog that was previously housed on Tumblr and was looking to migrate to WordPress with a completely custom and original template.</p><p>The design was created by Sarah Wymer from Studio SloMo, and I was contacted to complete the development. Housed in the WordPress CMS, the site uses a completely custom theme and functionality using PHP, Javascript, AJAX, and jQuery to blend a seamless experience for the user.</p><p>Development began at the beginning of September and the new site officially launched in November 2013.</p>",
+      "url": "http://www.perpetuallychic.com/"
+    }
+  ]
+} 

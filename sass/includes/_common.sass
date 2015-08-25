@@ -29,6 +29,9 @@ h1
 
 h2
   font-size: $font-size-h2
+  text-transform: uppercase
+  color: $brand-orange
+  margin-bottom: 10px
 
 h3
   font-size: $font-size-h3
@@ -50,16 +53,17 @@ button
   outline: 0
 
 a
-  color: black
+  color: $link-color
   text-decoration: none
 
 a:hover,
 a:focus
   text-decoration: underline
+  color: $text-color
 
 p
   margin: 10px 0
-  &:first-child
+  &:first-of-type
     margin-top: 0
 
 input[type="text"],
@@ -76,6 +80,17 @@ ul.nolist
   list-style-type: none
   margin: 0
   padding: 0
+
+img.alignleft
+  float: left
+  margin: 0 10px 10px 0
+
+img.alignright
+  float: right
+  margin: 0 0 10px 10px
+
+.clear
+  clear: both
 
 // Hide only visually, but have it available for screenreaders: h5bp.com/v
 .visuallyhidden
@@ -96,12 +111,3 @@ ul.nolist
     overflow: visible
     position: static
     width: auto
-
-/* Header */
-header
-
-/* Navigation */
-nav
-
-/* Footer */
-footer
