@@ -1,5 +1,4 @@
 @import url(http://fonts.googleapis.com/css?family=Lato:400,700|Slabo+27px);
-/* line 5, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -18,140 +17,100 @@ time, mark, audio, video {
   border: 0;
   font: inherit;
   font-size: 100%;
-  vertical-align: baseline;
-}
+  vertical-align: baseline; }
 
-/* line 22, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 html {
-  line-height: 1;
-}
+  line-height: 1; }
 
-/* line 24, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 ol, ul {
-  list-style: none;
-}
+  list-style: none; }
 
-/* line 26, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 table {
   border-collapse: collapse;
-  border-spacing: 0;
-}
+  border-spacing: 0; }
 
-/* line 28, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 caption, th, td {
   text-align: left;
   font-weight: normal;
-  vertical-align: middle;
-}
+  vertical-align: middle; }
 
-/* line 30, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 q, blockquote {
-  quotes: none;
-}
-/* line 103, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
-q:before, q:after, blockquote:before, blockquote:after {
-  content: "";
-  content: none;
-}
+  quotes: none; }
+  q:before, q:after, blockquote:before, blockquote:after {
+    content: "";
+    content: none; }
 
-/* line 32, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 a img {
-  border: none;
-}
+  border: none; }
 
-/* line 116, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
-  display: block;
-}
+  display: block; }
 
 /* Fonts */
-/* line 3, ../sass/includes/_common.sass */
 html {
-  font-size: 62.5%;
-}
+  font-size: 62.5%; }
 
-/* line 6, ../sass/includes/_common.sass */
 .serif {
-  font-family: "Slabo 27px", Times, "Times New Roman", serif;
-}
+  font-family: "Slabo 27px", Times, "Times New Roman", serif; }
 
-/* line 9, ../sass/includes/_common.sass */
 .sans {
-  font-family: "Lato", Helvetica, Arial, sans-serif;
-}
+  font-family: "Lato", Helvetica, Arial, sans-serif; }
 
-/* line 12, ../sass/includes/_common.sass */
 body {
   font-size: 16px;
   font-family: "Slabo 27px", Times, "Times New Roman", serif;
   font-weight: 400;
   color: black;
   background-color: #f7f0e8;
-}
+  line-height: 1.25; }
 
-/* line 19, ../sass/includes/_common.sass */
 strong {
-  font-weight: 700;
-}
+  font-weight: 700; }
 
-/* line 22, ../sass/includes/_common.sass */
 h1, h2, h3 {
   font-family: "Lato", Helvetica, Arial, sans-serif;
-  font-weight: 400;
-}
+  font-weight: 400; }
 
-/* line 26, ../sass/includes/_common.sass */
 h1 {
-  font-size: 24px;
-}
+  font-size: 24px; }
 
-/* line 29, ../sass/includes/_common.sass */
 h2 {
-  font-size: 16px;
-}
+  font-size: 16px; }
 
-/* line 32, ../sass/includes/_common.sass */
 h3 {
-  font-size: 14px;
-}
+  font-size: 14px; }
 
 /* Animation */
-/* line 36, ../sass/includes/_common.sass */
 a, a:visited,
 input[type="submit"],
 button {
   transition: all 0.4s ease;
   -webkit-backface-visibility: hidden;
-  -webkit-transform: translateZ(0) scale(1, 1);
-}
+  -webkit-transform: translateZ(0) scale(1, 1); }
 
 /* General */
-/* line 42, ../sass/includes/_common.sass */
 *,
 *:after,
 *:before {
   box-sizing: border-box;
-  text-rendering: optimizeLegibility;
-}
+  text-rendering: optimizeLegibility; }
 
-/* line 48, ../sass/includes/_common.sass */
 *:focus {
-  outline: 0;
-}
+  outline: 0; }
 
-/* line 51, ../sass/includes/_common.sass */
 a {
   color: black;
-  text-decoration: none;
-}
+  text-decoration: none; }
 
-/* line 55, ../sass/includes/_common.sass */
 a:hover,
 a:focus {
-  text-decoration: underline;
-}
+  text-decoration: underline; }
 
-/* line 59, ../sass/includes/_common.sass */
+p {
+  margin: 10px 0; }
+  p:first-child {
+    margin-top: 0; }
+
 input[type="text"],
 input[type="email"],
 input[type="password"],
@@ -160,17 +119,13 @@ input[type="tel"] {
   -moz-user-select: text;
   cursor: text;
   text-align: start;
-  text-rendering: optimizelegibility;
-}
+  text-rendering: optimizelegibility; }
 
-/* line 69, ../sass/includes/_common.sass */
 ul.nolist {
   list-style-type: none;
   margin: 0;
-  padding: 0;
-}
+  padding: 0; }
 
-/* line 75, ../sass/includes/_common.sass */
 .visuallyhidden {
   border: 0;
   clip: rect(0 0 0 0);
@@ -179,121 +134,18 @@ ul.nolist {
   overflow: hidden;
   padding: 0;
   position: absolute;
-  width: 1px;
-}
-/* line 86, ../sass/includes/_common.sass */
-.visuallyhidden.focusable:active, .visuallyhidden.focusable:focus {
-  clip: auto;
-  height: auto;
-  margin: 0;
-  overflow: visible;
-  position: static;
-  width: auto;
-}
+  width: 1px; }
+  .visuallyhidden.focusable:active, .visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto; }
 
 /* Header */
 /* Navigation */
-/* Page Styles */
 /* Footer */
-/* WordPress Required styles theme requirements as per http://codex.wordpress.org/CSS */
-/* WordPress Required styles theme requirements as per http://codex.wordpress.org/CSS */
-/* line 108, ../sass/includes/_common.sass */
-.alignleft {
-  float: left;
-}
-
-/* line 111, ../sass/includes/_common.sass */
-.alignright {
-  float: right;
-}
-
-/* line 114, ../sass/includes/_common.sass */
-a img.alignright {
-  float: right;
-  margin: 5px 0 20px 20px;
-}
-
-/* line 118, ../sass/includes/_common.sass */
-a img.alignnone {
-  margin: 5px 20px 20px 0;
-}
-
-/* line 121, ../sass/includes/_common.sass */
-a img.alignleft {
-  float: left;
-  margin: 5px 20px 20px 0;
-}
-
-/* line 125, ../sass/includes/_common.sass */
-a img.aligncenter {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-/* line 130, ../sass/includes/_common.sass */
-.aligncenter,
-div.aligncenter {
-  display: block;
-  margin: 5px auto 5px auto;
-}
-
-/* line 135, ../sass/includes/_common.sass */
-a img.alignright {
-  float: right;
-  margin: 5px 0 20px 20px;
-}
-
-/* line 139, ../sass/includes/_common.sass */
-a img.alignnone {
-  margin: 5px 20px 20px 0;
-}
-
-/* line 142, ../sass/includes/_common.sass */
-a img.alignleft {
-  float: left;
-  margin: 5px 20px 20px 0;
-}
-
-/* line 146, ../sass/includes/_common.sass */
-a img.aligncenter {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-/* Text meant only for screen readers. */
-/* line 152, ../sass/includes/_common.sass */
-.screen-reader-text {
-  clip: rect(1px, 1px, 1px, 1px);
-  position: absolute !important;
-  height: 1px;
-  width: 1px;
-  overflow: hidden;
-}
-
-/* line 159, ../sass/includes/_common.sass */
-.screen-reader-text:focus {
-  background-color: #f1f1f1;
-  border-radius: 3px;
-  box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
-  clip: auto !important;
-  color: #21759b;
-  display: block;
-  font-size: 14px;
-  font-size: 0.875rem;
-  font-weight: bold;
-  height: auto;
-  left: 5px;
-  line-height: normal;
-  padding: 15px 23px 14px;
-  text-decoration: none;
-  top: 5px;
-  width: auto;
-  z-index: 100000;
-}
-
-/* line 1, ../sass/layout/_header.sass */
 header#global-header {
   display: inline-block;
   vertical-align: middle;
@@ -301,9 +153,38 @@ header#global-header {
   *zoom: 1;
   *display: inline;
   padding: 15px 0;
-}
+  width: 100%;
+  height: 120px;
+  background-color: black;
+  opacity: 0.8; }
 
-/* line 1, ../sass/layout/_footer.sass */
+.logo {
+  height: 80px; }
+  .logo img {
+    width: auto;
+    height: 100%; }
+
+.social li {
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  *zoom: 1;
+  *display: inline;
+  width: 23px;
+  height: 20px;
+  margin-right: 5px; }
+  .social li:last-child {
+    margin-right: 0; }
+
 footer#global-footer {
-  padding: 15px 0 0;
-}
+  padding: 15px 0 0; }
+
+section {
+  padding: 15px 0;
+  background-color: #f7f0e8; }
+
+.parallax-window {
+  min-height: 250px;
+  background: transparent; }
+
+/*# sourceMappingURL=screen.css.map */
