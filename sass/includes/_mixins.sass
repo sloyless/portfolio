@@ -14,9 +14,6 @@
   top: 50%
   @include vendor-prefix(transform, translateY(-50%))
 
-@mixin imageUrl($fileName, $color: transparent, $vertical: center, $horizontal: center ) 
-  background: $color url('#$imageUrl/#$fileName') no-repeat $vertical $horizontal
-
 @mixin cssAnimate ($property: all, $speed: 0.4s, $easing: ease) 
   transition: $property $speed $easing
   -webkit-backface-visibility: hidden // prevents chrome pixel jumping
