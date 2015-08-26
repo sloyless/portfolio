@@ -49,6 +49,96 @@
       "image": "/images/projects/perpetual.jpg",
       "description": "<p>Pereptually Chic is a Style and culture blog that was previously housed on Tumblr and was looking to migrate to WordPress with a completely custom and original template.</p><p>The design was created by Sarah Wymer from Studio SloMo, and I was contacted to complete the development. Housed in the WordPress CMS, the site uses a completely custom theme and functionality using PHP, Javascript, AJAX, and jQuery to blend a seamless experience for the user.</p><p>Development began at the beginning of September and the new site officially launched in November 2013.</p>",
       "url": "http://www.perpetuallychic.com/"
+    },
+    {
+      "projectID": "20131001",
+      "date": "October 2013",
+      "title": "MargaritaMcClure.com",
+      "client": "Viewers Like You",
+      "thumb": "/images/projects/thumb-margarita.png",
+      "image": "/images/projects/margarita.jpg",
+      "description": "<p>Margarita McClure offers in-depth hand analysis readings & soul-rooted guidance for women, that sets the stage for a deep look into the ‘big picture’ of their relationships, talents, careers, and goals.</p><p>I was brought in to complete a new section on the existing website for the “Client Stories” section, as well as multiple cosmetic and programmable sections of the site that needed improvement. The site is staged on a WordPress CMS and uses custom programming and PHP shortcode functions to allow the client to add complex pre-defined programmable elements to pages.</p>",
+      "url": "http://margaritamcclure.com/"
+    },
+    {
+      "projectID": "20120801",
+      "date": "August 2012",
+      "title": "Left-Hand Crafted",
+      "client": "Left-Hand Crafted",
+      "thumb": "/images/projects/thumb-lefthand.png",
+      "image": "/images/projects/lefthand.jpg",
+      "description": "<p>Candace Guadarrama and Maricette Piña co-founded Left-Hand Crafted in an effort to combine their creative talents and share their love for art with the community. This business started as a project for wine lovers, but after realizing their capabilities in multiple areas of artistic design, fine arts, graphic design and photography, Left-Hand Crafted has expanded its product base.</p><p>The project was built on WordPress using a custom theme and design from Sean Loyless Designs.</p>",
+      "url": "http://margaritamcclure.com/"
+    },
+    {
+      "projectID": "20120101",
+      "date": "January 2012",
+      "title": "ChainMailNinja.com",
+      "client": "Noah Westerfield",
+      "thumb": "/images/projects/thumb-chainmail.png",
+      "image": "/images/projects/chainmail.jpg",
+      "description": "<p>Informational/Blog site promoting a local chain mail armor and accessories business in San Marcos, Texas. Developed in WordPress and uses custom post types and custom plugins/widgets.</p><p><em>Site no longer active.</em></p>",
+      "url": ""
+    },
+    {
+      "projectID": "20120201",
+      "date": "January 2012",
+      "title": "Valero Texas Open Sweepstakes",
+      "client": "Golf San Antonio via VM Foundry",
+      "thumb": "/images/projects/thumb-valero.png",
+      "image": "/images/projects/valero.jpg",
+      "description": "<p>Contracted by VM Foundry to create a sweepstakes page for the Valero Texas Open Golf Tournament. Uses a basic contact form, with HTML5 and jQuery validation.</p><p><em>Site no longer active.</em></p>",
+      "url": ""
+    },
+    {
+      "projectID": "20121001",
+      "date": "October 2011",
+      "title": "Michael Angelo's Store Finder",
+      "client": "Michael Angelo's Frozen Italian Meals via VM Foundry",
+      "thumb": "/images/projects/thumb-valero.png",
+      "image": "/images/projects/valero.jpg",
+      "description": "<p>Tasked with developing a “Store Finder” for Michael Angelo’s Frozen Italian Meals products. Ties into customer database with location placement using Google Maps API. Also created a Facebook canvas application for the client to add to their Facebook page.</p><p><em>Page no longer active.</em></p>",
+      "url": ""
+    },
+    {
+      "projectID": "20110801",
+      "date": "August 2011",
+      "title": "Race To The Alamo",
+      "client": "San Antonio Visitors and Conventions Bureau via VM Foundry",
+      "thumb": "/images/projects/thumb-valero.png",
+      "image": "/images/projects/valero.jpg",
+      "description": "<p>The San Antonio Visitors and Conventions Bureau held a contest in San Antonio featuring three teams of bloggers competing to win prizes and share their stories with their friends and followers. I was tasked to create a microsite with the SACVB Alamo website that allowed users to vote for their favorite contestants, view recent tweets, photos, and videos while they were racing.</p><p>This site won a bronze 2011 Adrian Award. <em>Site no longer active.</em></p>",
+      "url": ""
+    },
+    {
+      "projectID": "20110802",
+      "date": "August 2011",
+      "title": "SACVB Media Room",
+      "client": "San Antonio Visitors and Conventions Bureau via VM Foundry",
+      "thumb": "/images/projects/thumb-valero.png",
+      "image": "/images/projects/valero.jpg",
+      "description": "<p>I was part of a team contracted to update the San Antonio Visitors and Conventions Bureau media room. The site was created in Drupal 7, with heavy custom programming to create the image and video gallery functionality.</p><p><em>Site no longer active.</em></p>",
+      "url": ""
+    },
+    {
+      "projectID": "20110701",
+      "date": "July 2011",
+      "title": "SACVB Partners",
+      "client": "San Antonio Visitors and Conventions Bureau via VM Foundry",
+      "thumb": "/images/projects/thumb-sacvb-partners.png",
+      "image": "/images/projects/valero.jpg",
+      "description": "<p>I was part of a group tasked with creating a Partners subsite within the San Antonio Visits and Conventions Bureau website. The site was developed in Drupal 7.</p><p><em>Site no longer active.</em></p>",
+      "url": ""
+    },
+    {
+      "projectID": "20110601",
+      "date": "June 2011",
+      "title": "Thread Magazine",
+      "client": "Candace Guadarrama",
+      "thumb": "/images/projects/thumb-thread.png",
+      "image": "/images/projects/valero.jpg",
+      "description": "<p>I was part of a group tasked with creating a Partners subsite within the San Antonio Visits and Conventions Bureau website. The site was developed in Drupal 7.</p><p><em>Site no longer active.</em></p>",
+      "url": ""
     }
   ]
 } 
