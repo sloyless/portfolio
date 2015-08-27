@@ -95,8 +95,8 @@
       "date": "October 2011",
       "title": "Michael Angelo's Store Finder",
       "client": "Michael Angelo's Frozen Italian Meals via VM Foundry",
-      "thumb": "/images/projects/thumb-valero.png",
-      "image": "/images/projects/valero.jpg",
+      "thumb": "/images/projects/thumb-michael.png",
+      "image": "/images/projects/michael.jpg",
       "description": "<p>Tasked with developing a “Store Finder” for Michael Angelo’s Frozen Italian Meals products. Ties into customer database with location placement using Google Maps API. Also created a Facebook canvas application for the client to add to their Facebook page.</p><p><em>Page no longer active.</em></p>",
       "url": ""
     },
@@ -105,8 +105,8 @@
       "date": "August 2011",
       "title": "Race To The Alamo",
       "client": "San Antonio Visitors and Conventions Bureau via VM Foundry",
-      "thumb": "/images/projects/thumb-valero.png",
-      "image": "/images/projects/valero.jpg",
+      "thumb": "/images/projects/thumb-raceto.png",
+      "image": "/images/projects/raceto.jpg",
       "description": "<p>The San Antonio Visitors and Conventions Bureau held a contest in San Antonio featuring three teams of bloggers competing to win prizes and share their stories with their friends and followers. I was tasked to create a microsite with the SACVB Alamo website that allowed users to vote for their favorite contestants, view recent tweets, photos, and videos while they were racing.</p><p>This site won a bronze 2011 Adrian Award. <em>Site no longer active.</em></p>",
       "url": ""
     },
@@ -115,8 +115,8 @@
       "date": "August 2011",
       "title": "SACVB Media Room",
       "client": "San Antonio Visitors and Conventions Bureau via VM Foundry",
-      "thumb": "/images/projects/thumb-valero.png",
-      "image": "/images/projects/valero.jpg",
+      "thumb": "/images/projects/thumb-sacvb.png",
+      "image": "/images/projects/sacvb.jpg",
       "description": "<p>I was part of a team contracted to update the San Antonio Visitors and Conventions Bureau media room. The site was created in Drupal 7, with heavy custom programming to create the image and video gallery functionality.</p><p><em>Site no longer active.</em></p>",
       "url": ""
     },
@@ -126,7 +126,7 @@
       "title": "SACVB Partners",
       "client": "San Antonio Visitors and Conventions Bureau via VM Foundry",
       "thumb": "/images/projects/thumb-sacvb-partners.png",
-      "image": "/images/projects/valero.jpg",
+      "image": "/images/projects/sacvb-partners.jpg",
       "description": "<p>I was part of a group tasked with creating a Partners subsite within the San Antonio Visits and Conventions Bureau website. The site was developed in Drupal 7.</p><p><em>Site no longer active.</em></p>",
       "url": ""
     },
@@ -136,8 +136,78 @@
       "title": "Thread Magazine",
       "client": "Candace Guadarrama",
       "thumb": "/images/projects/thumb-thread.png",
-      "image": "/images/projects/valero.jpg",
-      "description": "<p>I was part of a group tasked with creating a Partners subsite within the San Antonio Visits and Conventions Bureau website. The site was developed in Drupal 7.</p><p><em>Site no longer active.</em></p>",
+      "image": "/images/projects/thread.jpg",
+      "description": "<p>In the summer of 2011 I contributed to a project by several Art Institute of Austin fashion design students for a magazine. Articles and photographs were contributed by the students, and I worked closely with the student and magazine editors to publish Thread Magazine. The articles were laid out in InDesign with ads and custom graphics all done in Photoshop.</p><p>The students received high grades for the project, as well as commendations from both the teacher and the head of the department for the quality and professional look of the magazine.</p>",
+      "url": ""
+    },
+    {
+      "projectID": "20100901",
+      "date": "September 2010",
+      "title": "Trumer Pils International Videos",
+      "client": "Gambrinus",
+      "thumb": "/images/projects/thumb-trumer.png",
+      "image": "/images/projects/trumer.jpg",
+      "description": "<p>For the launch of their official website, Trumer Pils needed over 10 short videos produced covering everything from brewing the beer, a factory tour of the brewery, and the owners and brewmasters discussing the history of the company. Original footage shot on location in Berkeley, California and edited in Final Cut Pro.</p>",
+      "url": ""
+    },
+    {
+      "projectID": "20100701",
+      "date": "July 2010",
+      "title": "Smashburger Wedding Contest Website",
+      "client": "Smashburger",
+      "thumb": "/images/projects/thumb-trumer.png",
+      "image": "/images/projects/trumer.jpg",
+      "description": "<p>The fast food chain Smashburger wanted to use social media, YouTube, and the web to increase sales and brand recognition by holding a contest. Users were to record a video at Smashburger describing “why they want to get married at Smashburger.” The winner would receive a fully paid wedding held at a Smashburger location including catering, hair and makeup, photography, and a paid honeymoon to Las Vegas. Along with the web design and development, I also created two short “example” videos using Final Cut Pro.</p><p><em>Site no longer active.</em></p>",
+      "url": ""
+    },
+    {
+      "projectID": "20100401",
+      "date": "April 2010",
+      "title": "SeaWorld San Antonio Adventure Camp Brochure",
+      "client": "SeaWorld San Antonio",
+      "thumb": "/images/projects/thumb-seaworld.png",
+      "image": "/images/projects/seaworld.jpg",
+      "description": "<p>Four panel front-and-back brochure for SeaWorld San Antonio advertising their summer “Adventure Camps.” Graphics created in Photoshop and document layout in InDesign.</p>",
+      "url": ""
+    },
+    {
+      "projectID": "20090901",
+      "date": "September 2009",
+      "title": "FirstOption Staffing Website",
+      "client": "First Option Staffing",
+      "thumb": "/images/projects/thumb-firstoption.png",
+      "image": "/images/projects/firstoption.jpg",
+      "description": "<p>Local San Antonio staffing agency First Option Staffing contacted me about redesigning their current website to a more updated look and feel. I designed and developed a strategy and SEO plan to help increase not only their website visitors but also to increase their visibility on search engines. Developed in strict HTML and integrating their existing job search programming.</p>",
+      "url": ""
+    },
+    {
+      "projectID": "20090601",
+      "date": "June 2009",
+      "title": "Blellow.com",
+      "client": "MediaRich LLC",
+      "thumb": "/images/projects/thumb-blellow.png",
+      "image": "/images/projects/blellow.jpg",
+      "description": "<p>Blellow was a business social networking site developed to make it easier for those in the industry a quick and easy way to communicate with their peers, discuss their fields, and even offer assistance with their projects. Developed in 2008 with a launch during the 2009 South by Southwest Interactive Conference in Austin to great reviews.</p><p>I was brought in as a Community Manager to help usher in new users of the site during the product launch, and also designed the WordPress template that the company blog uses to match the overall site. The site is no longer in operation.</p>",
+      "url": ""
+    },
+    {
+      "projectID": "20040201",
+      "date": "February 2004",
+      "title": "Discover Tomball Poster/Handout/T-Shirt",
+      "client": "The City of Tomball, Texas",
+      "thumb": "/images/projects/thumb-discovertomball.png",
+      "image": "/images/projects/discovertomball.jpg",
+      "description": "<p>The City of Tomball hosts an annual Tomball Night in which local merchants and shop owners open their doors to customers outside of their normal business hours, including prizes, special deals, and more. The design was created and donated for the 2004 event, and also was used in the following 2005 and 2006 events.</p>",
+      "url": ""
+    },
+    {
+      "projectID": "20030901",
+      "date": "September 2003",
+      "title": "Dune.Tx CD Release Poster",
+      "client": "Dune.Tx",
+      "thumb": "/images/projects/thumb-dunetx.png",
+      "image": "/images/projects/dunetx.jpg",
+      "description": "<p>The local Houston area band Dune.Tx needed a display poster to promote the release of their new CD. I was tasked to create a full size poster to display in all local music stores in the Greater Houston area.</p>",
       "url": ""
     }
   ]

@@ -1,8 +1,0 @@
-{
-  "name": "sld-portfolio",
-  "version": "0.0.1",
-  "private": "true",
-  "dependencies": {
-    "foundation": "zurb/bower-foundation"
-  }
-}
