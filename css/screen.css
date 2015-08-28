@@ -1,4 +1,4 @@
-@import url(http://fonts.googleapis.com/css?family=Lato:400,700|Slabo+27px);
+@import url(http://fonts.googleapis.com/css?family=Lato:400,700|Lora:400,700);
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -51,14 +51,14 @@ html {
   font-size: 62.5%; }
 
 .serif {
-  font-family: "Slabo 27px", Times, "Times New Roman", serif; }
+  font-family: "Lora", Times, "Times New Roman", serif; }
 
 .sans {
   font-family: "Lato", Helvetica, Arial, sans-serif; }
 
 body {
   font-size: 16px;
-  font-family: "Slabo 27px", Times, "Times New Roman", serif;
+  font-family: "Lora", Times, "Times New Roman", serif;
   font-weight: 400;
   color: black;
   background-color: #f7f0e8;
@@ -264,38 +264,52 @@ section {
       width: 100%;
       opacity: 0.8;
       text-align: center;
-      font-style: italic; }
+      font-style: italic;
+      font-family: "Lato", Helvetica, Arial, sans-serif;
+      font-size: 12px; }
   .carousel .controls {
     text-align: center; }
     .carousel .controls button {
+      -moz-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+      -webkit-transform: translateY(-50%);
+      transform: translateY(-50%);
       outline: none;
       border: none;
-      background: none;
-      opacity: 0.5;
-      width: 14px;
-      height: 24px;
-      padding: 0;
-      display: block;
+      background: white;
+      border: 1px solid silver;
+      border-radius: 30px;
+      width: 40px;
+      height: 40px;
+      opacity: 0.3;
       position: absolute;
-      top: 50%;
-      transform: translateY(-50%); }
-      .carousel .controls button[data-button-type="previous"] {
-        left: 24px; }
-      .carousel .controls button[data-button-type="next"] {
-        right: 24px; }
-      .carousel .controls button[data-button-type="dot"] {
+      top: 50%; }
+      .carousel .controls button:before {
+        border-style: solid;
+        border-width: 10px 10px 0 0;
+        content: "";
         display: inline-block;
-        vertical-align: middle;
-        *vertical-align: auto;
-        *zoom: 1;
-        *display: inline;
-        position: relative;
-        width: 8px;
-        height: 7px;
-        border-radius: 10px;
-        background: white;
-        margin: 0 4px; }
-      .carousel .controls button.active, .carousel .controls button:hover, .carousel .controls button:focus {
-        opacity: 1; }
+        height: 20px;
+        vertical-align: top;
+        width: 20px;
+        border-color: #f98d00; }
+      .carousel .controls button[data-button-type="previous"] {
+        left: 0; }
+        .carousel .controls button[data-button-type="previous"]:before {
+          -moz-transform: rotate(-135deg);
+          -ms-transform: rotate(-135deg);
+          -webkit-transform: rotate(-135deg);
+          transform: rotate(-135deg);
+          margin-left: 5px; }
+      .carousel .controls button[data-button-type="next"] {
+        right: 5px; }
+        .carousel .controls button[data-button-type="next"]:before {
+          -moz-transform: rotate(45deg);
+          -ms-transform: rotate(45deg);
+          -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+          margin-right: 5px; }
+      .carousel .controls button:hover, .carousel .controls button:focus {
+        opacity: 0.8; }
 
 /*# sourceMappingURL=screen.css.map */
