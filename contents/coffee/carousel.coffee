@@ -8,7 +8,7 @@ class Carousel
     @autoplay_stopped = false
     @initial_number_of_slides = @slides.length
 
-    if @initial_number_of_slides > 1
+    if @initial_number_of_slides > 1 and @initial_number_of_slides < 6
       @slides.clone().appendTo @strip
       @slides = $ '.slide', @housing
     

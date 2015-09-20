@@ -19,6 +19,7 @@
     visibility: hidden
     margin: 0 1.5%
     width: 30%
+    height: 250px
     transition: left 0.4s ease-in-out, visibility 0.4s ease-in-out
     
     &.active
@@ -92,3 +93,9 @@
         
       &:hover, &:focus
         opacity: 0.8
+
+#project-list
+  li
+    display: none
+    &.active
+      +inline-block

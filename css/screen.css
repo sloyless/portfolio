@@ -240,6 +240,7 @@ section {
     visibility: hidden;
     margin: 0 1.5%;
     width: 30%;
+    height: 250px;
     transition: left 0.4s ease-in-out, visibility 0.4s ease-in-out; }
     .carousel .slide.active {
       left: 33%;
@@ -311,5 +312,14 @@ section {
           margin-right: 5px; }
       .carousel .controls button:hover, .carousel .controls button:focus {
         opacity: 0.8; }
+
+#project-list li {
+  display: none; }
+  #project-list li.active {
+    display: inline-block;
+    vertical-align: middle;
+    *vertical-align: auto;
+    *zoom: 1;
+    *display: inline; }
 
 /*# sourceMappingURL=screen.css.map */

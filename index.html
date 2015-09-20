@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en" dir="ltr" ng-app="portfolio">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" media="screen, projection">
     <link rel="stylesheet" href="/css/screen.css" media="screen, projection">
     <link rel="stylesheet" href="/css/print.css" media="print">
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.6/angular.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.6/angular-sanitize.js"></script>
     <script src="/js/vendor/jquery-2.1.4.min.js"></script>
     <script src="/js/vendor/parallax.min.js"></script>
     <script src="/js/carousel.js"> </script>
@@ -62,14 +64,24 @@
     <div data-parallax="scroll" data-image-src="/images/bg02.jpg" data-positionY="190" naturalWidth="1950" naturalHeight="1500" class="parallax-window"></div>
     <section class="container">
       <div class="row">
-        <div class="col-md-12">
+        <div ng-controller="ProjectController as projectData" class="col-md-12">
           <h2>Projects</h2>
-          <div id="project-carousel" class="carousel">
-            <div class="strip"></div>
-            <div class="controls">
-              <button data-button-type="previous" type="button"></button>
-              <button data-button-type="next" type="button"></button>
+          <div id="project-carousel" ng-controller="SelectedProject as tab">
+            <div class="carousel">
+              <div class="strip">
+                <div ng-repeat="project in projectData.projects | orderBy:'-projectID'" data-project-id="{{project.projectID}}" class="slide"><img ng-src="{{project.thumb}}" alt="{{project.title}}" ng-click="tab.setTab({{project.projectID}})"><span>{{project.title}}</span></div>
+              </div>
+              <div class="controls">
+                <button data-button-type="previous" type="button"></button>
+                <button data-button-type="next" type="button"></button>
+              </div>
             </div>
+            <ul id="project-list" class="nolist">
+              <li ng-repeat="project in projectData.projects | orderBy:'-projectID'" ng-class="{ active:tab.isSet({{project.projectID}}) }"><img ng-src="{{project.thumb}}" alt="">
+                <h3>{{project.title}}</h3>
+                <div ng-bind-html="project.description"></div>
+              </li>
+            </ul>
           </div>
           <p>I have worked on many projects both personal and professional since 2001. I love to push the envelope and my development knowledge with every project that I work on. Above you can click on any of the slides and see details on many of the jobs I have worked on.</p>
           <p>The next project could be YOURS!</p>
