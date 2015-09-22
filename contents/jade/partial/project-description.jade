@@ -1,3 +1,15 @@
-h3 {{project.title}}
-h4 Client: {{project.client}}
-p {{project.description}}
+#project-carousel(ng-controller="ProjectController as projectData")
+  .carousel
+    .strip
+      .slide(ng-controller="SelectedProjectController as tab" ng-repeat="project in projectData.projects | orderBy:'-projectID'" data-project-id="{{project.projectID}}")
+        img(ng-src="{{project.thumb}}" alt="{{project.title}}" ng-click="tab.setTab(1)" )
+        span
+          {{project.title}}
+        .project-description(ng-show="tab.isSet(1)")
+          img(ng-src="{{project.thumb}}" alt="")
+          h3 {{project.title}}
+          div(ng-bind-html="project.description")
+
+    .controls
+      button(data-button-type="previous" type="button")
+      button(data-button-type="next" type="button")

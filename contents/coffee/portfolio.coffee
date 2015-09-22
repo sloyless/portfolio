@@ -1,231 +1,27 @@
 app = angular.module 'portfolio', ['ngSanitize']
 
-app.controller 'ProjectController', ->
-  @projects = projectData
+app.controller 'ProjectController', ['$http', ($http) ->
+  projectData = @
+  projectData.projects = []
+  $http.get('/data/projects.json').success (data) ->  
+    projectData.projects = data
   false
-
-app.controller 'SelectedProject', ->
-  this.tab = 1;
-
-  this.isSet = (checkTab) ->
-    return this.tab is checkTab
-
-  this.setTab = (setTab) ->
-    this.tab = setTab
-    console.log(setTab)
-
-projectData = [
-  {
-    "projectID": "20140401",
-    "date": "April 2014",
-    "title": "Grown Up Shoes",
-    "client": "Go Forth Creative",
-    "thumb": "/images/projects/thumb-grownup.png",
-    "image": "/images/projects/grownup.jpg",
-    "description": "<p>I love working with Chelsea from Go Forth Creative! This was a smaller job for an existing blog that just needed to have a “facelift” for a more modern look.</p><p>Chelsea and the site owner Ana Louise worked together on the design, and then turned over the files to me to make it work. After a few delays and some adjustments, the new theme is finally live!</p>",
-    "url": "http://grownupshoes.com/"
-  },
-  {
-    "projectID": "20140301",
-    "date": "March 2014",
-    "title": "Oh! Fox Creative",
-    "client": "Go Forth Creative",
-    "thumb": "/images/projects/thumb-ohfox.png",
-    "image": "/images/projects/ohfox.jpg",
-    "description": "<p>Go Forth Creative contracted me to develop a full site experience for a local Austin designer specializing in vintage aesthetics for homes and small businesses.</p><p>The site is developed in WordPress and uses a combination of PHP and JavaScript. It’s a beautiful design, and I am happy to add this site to my portfolio.</p>",
-    "url": "http://ohfoxcreative.com/"
-  },
-  {
-    "projectID": "20140302",
-    "date": "March 2014",
-    "title": "Studio Slomo",
-    "client": "Studio Slomo/Sarah Wymer",
-    "thumb": "/images/projects/thumb-slomo.png",
-    "image": "/images/projects/slomo.jpg",
-    "description": "<p>Studio Slomo contacted me through a coworker wanting to update her site into WordPress. Originally started back last October, the site was a long collaboration between myself and Sarah Wymer.</p><p>Studio Slomo specializes in letterpress, stationery, and wedding invitations/placecards/etc. Sarah does some beautiful work, so make sure you check out her gallery!</p><p>Design is by Sarah Wymer, and all development by Sean Loyless Designs in WordPress and Javascript.</p>",
-    "url": "http://studioslomo.com/"
-  },
-  {
-    "projectID": "20140201",
-    "date": "February 2014",
-    "title": "Buggy Bagg",
-    "client": "Viewers Like You",
-    "thumb": "/images/projects/thumb-buggy.png",
-    "image": "/images/projects/buggy.jpg",
-    "description": "<p>After doing a small site update for this client, they tasked me with revamping another existing site they owned. Designs by Viewers Like You, coding done by me. Built in WordPress, HTML5, and a little JavaScript and jQuery magic. Site is no longer online.</p>",
-    "url": ""
-  },
-  {
-    "projectID": "20131101",
-    "date": "November 2013",
-    "title": "Perpetually Chic",
-    "client": "Studio SloMo",
-    "thumb": "/images/projects/thumb-perpetual.png",
-    "image": "/images/projects/perpetual.jpg",
-    "description": "<p>Pereptually Chic is a Style and culture blog that was previously housed on Tumblr and was looking to migrate to WordPress with a completely custom and original template.</p><p>The design was created by Sarah Wymer from Studio SloMo, and I was contacted to complete the development. Housed in the WordPress CMS, the site uses a completely custom theme and functionality using PHP, Javascript, AJAX, and jQuery to blend a seamless experience for the user.</p><p>Development began at the beginning of September and the new site officially launched in November 2013.</p>",
-    "url": "http://www.perpetuallychic.com/"
-  },
-  {
-    "projectID": "20131001",
-    "date": "October 2013",
-    "title": "MargaritaMcClure.com",
-    "client": "Viewers Like You",
-    "thumb": "/images/projects/thumb-margarita.png",
-    "image": "/images/projects/margarita.jpg",
-    "description": "<p>Margarita McClure offers in-depth hand analysis readings & soul-rooted guidance for women, that sets the stage for a deep look into the ‘big picture’ of their relationships, talents, careers, and goals.</p><p>I was brought in to complete a new section on the existing website for the “Client Stories” section, as well as multiple cosmetic and programmable sections of the site that needed improvement. The site is staged on a WordPress CMS and uses custom programming and PHP shortcode functions to allow the client to add complex pre-defined programmable elements to pages.</p>",
-    "url": "http://margaritamcclure.com/"
-  },
-  {
-    "projectID": "20120801",
-    "date": "August 2012",
-    "title": "Left-Hand Crafted",
-    "client": "Left-Hand Crafted",
-    "thumb": "/images/projects/thumb-lefthand.png",
-    "image": "/images/projects/lefthand.jpg",
-    "description": "<p>Candace Guadarrama and Maricette Piña co-founded Left-Hand Crafted in an effort to combine their creative talents and share their love for art with the community. This business started as a project for wine lovers, but after realizing their capabilities in multiple areas of artistic design, fine arts, graphic design and photography, Left-Hand Crafted has expanded its product base.</p><p>The project was built on WordPress using a custom theme and design from Sean Loyless Designs.</p>",
-    "url": "http://margaritamcclure.com/"
-  },
-  {
-    "projectID": "20120101",
-    "date": "January 2012",
-    "title": "ChainMailNinja.com",
-    "client": "Noah Westerfield",
-    "thumb": "/images/projects/thumb-chainmail.png",
-    "image": "/images/projects/chainmail.jpg",
-    "description": "<p>Informational/Blog site promoting a local chain mail armor and accessories business in San Marcos, Texas. Developed in WordPress and uses custom post types and custom plugins/widgets.</p><p><em>Site no longer active.</em></p>",
-    "url": ""
-  },
-  {
-    "projectID": "20120201",
-    "date": "January 2012",
-    "title": "Valero Texas Open Sweepstakes",
-    "client": "Golf San Antonio via VM Foundry",
-    "thumb": "/images/projects/thumb-valero.png",
-    "image": "/images/projects/valero.jpg",
-    "description": "<p>Contracted by VM Foundry to create a sweepstakes page for the Valero Texas Open Golf Tournament. Uses a basic contact form, with HTML5 and jQuery validation.</p><p><em>Site no longer active.</em></p>",
-    "url": ""
-  },
-  {
-    "projectID": "20121001",
-    "date": "October 2011",
-    "title": "Michael Angelo's Store Finder",
-    "client": "Michael Angelo's Frozen Italian Meals via VM Foundry",
-    "thumb": "/images/projects/thumb-michael.png",
-    "image": "/images/projects/michael.jpg",
-    "description": "<p>Tasked with developing a “Store Finder” for Michael Angelo’s Frozen Italian Meals products. Ties into customer database with location placement using Google Maps API. Also created a Facebook canvas application for the client to add to their Facebook page.</p><p><em>Page no longer active.</em></p>",
-    "url": ""
-  },
-  {
-    "projectID": "20110801",
-    "date": "August 2011",
-    "title": "Race To The Alamo",
-    "client": "San Antonio Visitors and Conventions Bureau via VM Foundry",
-    "thumb": "/images/projects/thumb-raceto.png",
-    "image": "/images/projects/raceto.jpg",
-    "description": "<p>The San Antonio Visitors and Conventions Bureau held a contest in San Antonio featuring three teams of bloggers competing to win prizes and share their stories with their friends and followers. I was tasked to create a microsite with the SACVB Alamo website that allowed users to vote for their favorite contestants, view recent tweets, photos, and videos while they were racing.</p><p>This site won a bronze 2011 Adrian Award. <em>Site no longer active.</em></p>",
-    "url": ""
-  },
-  {
-    "projectID": "20110802",
-    "date": "August 2011",
-    "title": "SACVB Media Room",
-    "client": "San Antonio Visitors and Conventions Bureau via VM Foundry",
-    "thumb": "/images/projects/thumb-sacvb.png",
-    "image": "/images/projects/sacvb.jpg",
-    "description": "<p>I was part of a team contracted to update the San Antonio Visitors and Conventions Bureau media room. The site was created in Drupal 7, with heavy custom programming to create the image and video gallery functionality.</p><p><em>Site no longer active.</em></p>",
-    "url": ""
-  },
-  {
-    "projectID": "20110701",
-    "date": "July 2011",
-    "title": "SACVB Partners",
-    "client": "San Antonio Visitors and Conventions Bureau via VM Foundry",
-    "thumb": "/images/projects/thumb-sacvb-partners.png",
-    "image": "/images/projects/sacvb-partners.jpg",
-    "description": "<p>I was part of a group tasked with creating a Partners subsite within the San Antonio Visits and Conventions Bureau website. The site was developed in Drupal 7.</p><p><em>Site no longer active.</em></p>",
-    "url": ""
-  },
-  {
-    "projectID": "20110601",
-    "date": "June 2011",
-    "title": "Thread Magazine",
-    "client": "Candace Guadarrama",
-    "thumb": "/images/projects/thumb-thread.jpg",
-    "image": "/images/projects/thread.jpg",
-    "description": "<p>In the summer of 2011 I contributed to a project by several Art Institute of Austin fashion design students for a magazine. Articles and photographs were contributed by the students, and I worked closely with the student and magazine editors to publish Thread Magazine. The articles were laid out in InDesign with ads and custom graphics all done in Photoshop.</p><p>The students received high grades for the project, as well as commendations from both the teacher and the head of the department for the quality and professional look of the magazine.</p>",
-    "url": ""
-  },
-  {
-    "projectID": "20100901",
-    "date": "September 2010",
-    "title": "Trumer Pils International Videos",
-    "client": "Gambrinus",
-    "thumb": "/images/projects/thumb-trumer.jpg",
-    "image": "/images/projects/trumer.jpg",
-    "description": "<p>For the launch of their official website, Trumer Pils needed over 10 short videos produced covering everything from brewing the beer, a factory tour of the brewery, and the owners and brewmasters discussing the history of the company. Original footage shot on location in Berkeley, California and edited in Final Cut Pro.</p>",
-    "url": ""
-  },
-  {
-    "projectID": "20100701",
-    "date": "July 2010",
-    "title": "Smashburger Wedding Contest Website",
-    "client": "Smashburger",
-    "thumb": "/images/projects/thumb-smashburger.png",
-    "image": "/images/projects/smashburger.jpg",
-    "description": "<p>The fast food chain Smashburger wanted to use social media, YouTube, and the web to increase sales and brand recognition by holding a contest. Users were to record a video at Smashburger describing “why they want to get married at Smashburger.” The winner would receive a fully paid wedding held at a Smashburger location including catering, hair and makeup, photography, and a paid honeymoon to Las Vegas. Along with the web design and development, I also created two short “example” videos using Final Cut Pro.</p><p><em>Site no longer active.</em></p>",
-    "url": ""
-  },
-  {
-    "projectID": "20100401",
-    "date": "April 2010",
-    "title": "SeaWorld San Antonio Adventure Camp Brochure",
-    "client": "SeaWorld San Antonio",
-    "thumb": "/images/projects/thumb-seaworld.jpg",
-    "image": "/images/projects/seaworld.jpg",
-    "description": "<p>Four panel front-and-back brochure for SeaWorld San Antonio advertising their summer “Adventure Camps.” Graphics created in Photoshop and document layout in InDesign.</p>",
-    "url": ""
-  },
-  {
-    "projectID": "20090901",
-    "date": "September 2009",
-    "title": "FirstOption Staffing Website",
-    "client": "First Option Staffing",
-    "thumb": "/images/projects/thumb-firstoption.jpg",
-    "image": "/images/projects/firstoption.jpg",
-    "description": "<p>Local San Antonio staffing agency First Option Staffing contacted me about redesigning their current website to a more updated look and feel. I designed and developed a strategy and SEO plan to help increase not only their website visitors but also to increase their visibility on search engines. Developed in strict HTML and integrating their existing job search programming.</p>",
-    "url": ""
-  },
-  {
-    "projectID": "20090601",
-    "date": "June 2009",
-    "title": "Blellow.com",
-    "client": "MediaRich LLC",
-    "thumb": "/images/projects/thumb-blellow.png",
-    "image": "/images/projects/blellow.jpg",
-    "description": "<p>Blellow was a business social networking site developed to make it easier for those in the industry a quick and easy way to communicate with their peers, discuss their fields, and even offer assistance with their projects. Developed in 2008 with a launch during the 2009 South by Southwest Interactive Conference in Austin to great reviews.</p><p>I was brought in as a Community Manager to help usher in new users of the site during the product launch, and also designed the WordPress template that the company blog uses to match the overall site. The site is no longer in operation.</p>",
-    "url": ""
-  },
-  {
-    "projectID": "20040201",
-    "date": "February 2004",
-    "title": "Discover Tomball Poster/Handout/T-Shirt",
-    "client": "The City of Tomball, Texas",
-    "thumb": "/images/projects/thumb-discovertomball.jpg",
-    "image": "/images/projects/discovertomball.jpg",
-    "description": "<p>The City of Tomball hosts an annual Tomball Night in which local merchants and shop owners open their doors to customers outside of their normal business hours, including prizes, special deals, and more. The design was created and donated for the 2004 event, and also was used in the following 2005 and 2006 events.</p>",
-    "url": ""
-  },
-  {
-    "projectID": "20030901",
-    "date": "September 2003",
-    "title": "Dune.Tx CD Release Poster",
-    "client": "Dune.Tx",
-    "thumb": "/images/projects/thumb-dunetx.jpg",
-    "image": "/images/projects/dunetx.jpg",
-    "description": "<p>The local Houston area band Dune.Tx needed a display poster to promote the release of their new CD. I was tasked to create a full size poster to display in all local music stores in the Greater Houston area.</p>",
-    "url": ""
-  }
 ]
+
+app.controller 'SelectedProjectController', ->
+  @tab = 1
+
+  @isSet = (checkTab) ->
+    return @tab is checkTab
+
+  @setTab = (setTab) ->
+    @tab = setTab
+
+app.directive 'projectDescription', ->
+  return {
+    restrict: 'E',
+    templateUrl: '/partials/project-description.html'
+  }
 
 jQuery(document).ready ($) ->
   $(window).bind "load", ->
