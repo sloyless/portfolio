@@ -1,0 +1,17 @@
+
+<div id="project-carousel" ng-controller="ProjectController as projectData">
+  <div class="carousel col-lg-6 col-md-12">
+    <div class="strip">
+      <div ng-controller="SelectedProjectController as tab" ng-repeat="project in projectData.projects | orderBy:'-projectID'" data-project-id="{{project.projectID}}" class="slide"><img ng-src="{{project.thumb}}" alt="{{project.title}}" ng-click="tab.setTab(1)"/><span>{{project.title}}</span>
+        <div ng-show="tab.isSet(1)" class="project-description"><img ng-src="{{project.thumb}}" alt=""/>
+          <h3>{{project.title}}</h3>
+          <div ng-bind-html="project.description"></div>
+        </div>
+      </div>
+    </div>
+    <div class="controls">
+      <button data-button-type="previous" type="button"></button>
+      <button data-button-type="next" type="button"></button>
+    </div>
+  </div>
+</div>

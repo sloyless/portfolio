@@ -2,7 +2,7 @@
 (function() {
   var app;
 
-  app = angular.module('portfolio', ['ngSanitize']);
+  app = angular.module('portfolio', ['ngSanitize', 'ngAnimate']);
 
   app.controller('ProjectController', [
     '$http', function($http) {
@@ -10,21 +10,21 @@
       projectData = this;
       projectData.projects = [];
       $http.get('/data/projects.json').success(function(data) {
+        data.sort;
         return projectData.projects = data;
       });
+      projectData._Index = 0;
+      projectData.isActive = function(index) {
+        return projectData.projects[index] === index;
+      };
+      projectData.showProject = function(index) {
+        projectData._Index = index;
+        projectData.selected = projectData.projects[index];
+        return console.log(index + ' is now active');
+      };
       return false;
     }
   ]);
-
-  app.controller('SelectedProjectController', function() {
-    this.tab = 1;
-    this.isSet = function(checkTab) {
-      return this.tab === checkTab;
-    };
-    return this.setTab = function(setTab) {
-      return this.tab = setTab;
-    };
-  });
 
   app.directive('projectDescription', function() {
     return {
@@ -40,6 +40,3 @@
   });
 
 }).call(this);
-
-
-//# sourceMappingURL=portfolio.js.map

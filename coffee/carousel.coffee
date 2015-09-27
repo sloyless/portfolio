@@ -5,7 +5,7 @@ class Carousel
   constructor: (@housing, @strip, @slides) ->
     @autoplay_interval = null
     @autoplay_started = false
-    @autoplay_stopped = false
+    @autoplay_stopped = true
     @initial_number_of_slides = @slides.length
 
     if @initial_number_of_slides > 1 and @initial_number_of_slides < 6

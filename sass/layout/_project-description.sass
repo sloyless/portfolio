@@ -1,0 +1,30 @@
+.project-description
+  background-color: gray
+  padding: 2% 5%
+  transition: 0.2s ease-out all
+  margin-bottom: 20px
+  box-shadow: inset 0px 9px 31px -12px rgba(0,0,0,0.75)
+  
+  .project-info
+    transition: 0.2s ease-out all
+    opacity: 1
+    &[class*="-add"]
+      opacity: 0
+
+  &.ng-enter
+    opacity: 0
+    &.ng-enter-active
+      opacity: 1
+
+  h3, .white
+    color: white
+
+  h3
+    font-size: 24px
+
+  div.sans
+    padding-bottom: 10px
+    display: block
+    font-size: 14px
+  
+  img.align-right
