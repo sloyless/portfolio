@@ -3,17 +3,19 @@
 @import compass/css3
 @import compass/typography
 
+// Fonts
+@import url(http://fonts.googleapis.com/css?family=Lato:400,700|Lora:400,700)
+
 // Core
 @import includes/variables
 @import includes/mixins
 @import includes/common
   
-// Fonts
-@import url(http://fonts.googleapis.com/css?family=Lato:400,700|Lora:400,700)
-  
-// Components
+// Core
 @import layout/header
 @import layout/footer
 @import layout/main
-@import layout/carousel
-@import layout/project-description
+
+// Modules
+@import ../components/carousel/carousel
+@import ../components/project-description/project-description
