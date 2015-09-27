@@ -328,12 +328,12 @@ section {
 
 .project-description {
   background-color: gray;
-  padding: 2% 5%;
+  padding: 2% 3%;
   transition: 0.2s ease-out all;
   margin-bottom: 20px;
   box-shadow: inset 0px 9px 31px -12px rgba(0, 0, 0, 0.75); }
   .project-description .project-info {
-    transition: 0.2s ease-out all;
+    transition: 0.3s ease-out all;
     opacity: 1; }
     .project-description .project-info[class*="-add"] {
       opacity: 0; }
@@ -348,4 +348,4 @@ section {
   .project-description div.sans {
     padding-bottom: 10px;
     display: block;
-    font-size: 14px; }
+    font-size: 12px; }
