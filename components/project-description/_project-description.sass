@@ -1,15 +1,22 @@
 .project-description
-  background-color: gray
-  padding: 2% 3% 3%
-  transition: 0.2s ease-out all
+  background-color: #202020
+  transition: opacity ease-out 0.4s
   margin-bottom: 20px
-  box-shadow: inset 0px 9px 31px -12px rgba(0,0,0,0.75)
+  box-shadow: inset 0px 9px 31px -12px rgba(255,255,255,255.75)
   
   .project-info
-    transition: 0.3s ease-out all
+    margin: 0 3% 0
+    transition: all ease-in-out 0.3s
     opacity: 1
+    max-height: 1200px
+    overflow: hidden
+    display: block
+    padding: 2% 0 3%
+    color: silver
     &[class*="-add"]
       opacity: 0
+      max-height: 400px
+      padding: 0
 
   &.ng-enter
     opacity: 0
@@ -21,6 +28,28 @@
 
   h3
     font-size: 24px
+    margin-bottom: 3px
+  
+  hr
+    margin: 10px 0 20px
+
+  a.client-link
+    position: relative
+    transition: none
+    font-size: 12px
+    margin-top: 20px
+    display: block
+    &:before
+      +inline-block
+      +style-svg($icon-link, $brand-orange)
+      width: 15px
+      height: 15px
+      margin-right: 5px
+      vertical-align: -3px
+    &:hover, &:focus
+      color: white
+      &:before
+        +style-svg($icon-link, #ffffff)
 
   div.sans
     padding-bottom: 10px

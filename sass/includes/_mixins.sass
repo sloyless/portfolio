@@ -1,20 +1,42 @@
 //
+// Functions
+// --------------------------------------------------
+
+@function create-svg($svg, $fill_color, $stroke_color, $stroke_width, $background)
+  // Convert the CSS property values to strings
+  $fill_color: "" + $fill_color
+  $stroke_color: "" + $stroke_color
+  $stroke_width: "" + $stroke_width
+  $background: "" + $background
+  // Update the SVG with the supplied values
+  $customized_svg: str-replace($svg, "fill_color", $fill_color)
+  $customized_svg: str-replace($customized_svg, "stroke_color", $stroke_color)
+  $customized_svg: str-replace($customized_svg, "stroke_width", $stroke_width)
+  $customized_svg: str-replace($customized_svg, "background", $background)
+  // URL encode any hashes
+  $customized_svg: str-replace($customized_svg, "#", "%23")
+  @return url("data:image/svg+xml;charset=utf-8,#{$customized_svg}")
+
+//
 // Mixins
 // --------------------------------------------------
 
-@mixin vendor-prefix($name, $argument) 
+=vendor-prefix($name, $argument) 
   -webkit-#$name: $argument
   -ms-#$name: $argument
   -moz-#$name: $argument
   -o-#$name: $argument
   #$name: $argument
 
-@mixin centerVert ($position: absolute) 
+=centerVert ($position: absolute) 
   position: $position
   top: 50%
-  @include vendor-prefix(transform, translateY(-50%))
+  +vendor-prefix(transform, translateY(-50%))
 
-@mixin cssAnimate ($property: all, $speed: 0.4s, $easing: ease) 
+=cssAnimate ($property: all, $speed: 0.4s, $easing: ease) 
   transition: $property $speed $easing
   -webkit-backface-visibility: hidden // prevents chrome pixel jumping
   -webkit-transform: translateZ(0) scale(1.0, 1.0)
+
+=style-svg($svg, $fill_color: rgba(0,0,0,0.7), $stroke_color: "", $stroke_width: "", $background: "white")
+  content: create-svg($svg, $fill_color, $stroke_color, $stroke_width, $background)

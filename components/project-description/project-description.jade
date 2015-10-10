@@ -19,5 +19,7 @@
           | {{projectData.selected.client}} &nbsp;|&nbsp; 
           span.white Date: 
           | {{projectData.selected.date}}
-        div(ng-bind-html="projectData.selected.description")
+        hr
+        div(ng-bind-html="projectData.selected.description" class="client-description")
+        a.sans.client-link(ng-if="projectData.selected.url !== ''" ng-href="{{projectData.selected.url}}" target="_blank") Click here to visit site
       img(ng-src="{{projectData.selected.image}}" alt="" class="col-md-8 col-sm-12")
