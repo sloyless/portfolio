@@ -1,0 +1,20 @@
+
+<div id="project-carousel" ng-controller="ProjectController as projectData" class="row">
+  <div class="carousel col-lg-12">
+    <div class="strip"><a href="" ng-repeat="project in projectData.projects" id="project-{{project.projectID}}" ng-click="projectData.showProject($index)" ng-class="{'selected':projectData.isActive($index)}" class="slide"><img ng-src="{{project.thumb}}" alt="{{project.title}}"/><span>{{project.title}}</span></a></div>
+    <div class="controls">
+      <button data-button-type="previous" type="button"></button>
+      <button data-button-type="next" type="button"></button>
+    </div>
+  </div>
+  <div ng-if="projectData.selected" class="project-description col-lg-12">
+    <div class="project-info row project-{{projectData.selected.projectID}}">
+      <div class="col-md-4 col-sm-12">
+        <h3>{{projectData.selected.title}}</h3>
+        <div class="sans"> <span class="white">Client: </span>{{projectData.selected.client}} &nbsp;|&nbsp; <span class="white">Date: </span>{{projectData.selected.date}}</div>
+        <hr/>
+        <div ng-bind-html="projectData.selected.description" class="client-description"></div><a ng-if="projectData.selected.url !== ''" ng-href="{{projectData.selected.url}}" target="_blank" class="sans client-link">Click here to visit site</a>
+      </div><img ng-src="{{projectData.selected.image}}" alt="" class="col-md-8 col-sm-12"/>
+    </div>
+  </div>
+</div>

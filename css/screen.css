@@ -1,315 +1,65 @@
-@import url(http://fonts.googleapis.com/css?family=Lato:400,700|Lora:400,700);
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font: inherit;
-  font-size: 100%;
-  vertical-align: baseline; }
+/*
+Error: File to import not found or unreadable: ../components/carousel/project-description.
+       Load paths:
+         /Users/sloyless/Projects/SLD/sloyless.github.io/sass
+         /Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets
+         /Users/sloyless/Projects/SLD/sloyless.github.io/sass
+         Compass::SpriteImporter
+         Sass::Globbing::Importer
+        on line 21 of /Users/sloyless/Projects/SLD/sloyless.github.io/sass/screen.sass
 
-html {
-  line-height: 1; }
+16: @import layout/footer
+17: @import layout/main
+18: 
+19: // Modules
+20: @import ../components/carousel/carousel
+21: @import ../components/carousel/project-description
 
-ol, ul {
-  list-style: none; }
-
-table {
-  border-collapse: collapse;
-  border-spacing: 0; }
-
-caption, th, td {
-  text-align: left;
-  font-weight: normal;
-  vertical-align: middle; }
-
-q, blockquote {
-  quotes: none; }
-  q:before, q:after, blockquote:before, blockquote:after {
-    content: "";
-    content: none; }
-
-a img {
-  border: none; }
-
-article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
-  display: block; }
-
-/* Fonts */
-html {
-  font-size: 62.5%; }
-
-.serif {
-  font-family: "Lora", Times, "Times New Roman", serif; }
-
-.sans {
-  font-family: "Lato", Helvetica, Arial, sans-serif; }
-
-body {
-  font-size: 16px;
-  font-family: "Lora", Times, "Times New Roman", serif;
-  font-weight: 400;
-  color: black;
-  background-color: #f7f0e8;
-  line-height: 1.25; }
-
-strong {
-  font-weight: 700; }
-
-h1, h2, h3 {
-  font-family: "Lato", Helvetica, Arial, sans-serif;
-  font-weight: 400; }
-
-h1 {
-  font-size: 24px; }
-
-h2 {
-  font-size: 16px;
-  text-transform: uppercase;
-  color: #f98d00;
-  margin-bottom: 10px; }
-
-h3 {
-  font-size: 14px; }
-
-/* Animation */
-a, a:visited,
-input[type="submit"],
-button {
-  transition: all 0.4s ease;
-  -webkit-backface-visibility: hidden;
-  -webkit-transform: translateZ(0) scale(1, 1); }
-
-/* General */
-*,
-*:after,
-*:before {
-  box-sizing: border-box;
-  text-rendering: optimizeLegibility; }
-
-*:focus {
-  outline: 0; }
-
-a {
-  color: #f98d00;
-  text-decoration: none; }
-
-a:hover,
-a:focus {
-  text-decoration: underline;
-  color: black; }
-
-p {
-  margin: 10px 0; }
-  p:first-of-type {
-    margin-top: 0; }
-
-input[type="text"],
-input[type="email"],
-input[type="password"],
-input[type="tel"] {
-  -moz-appearance: textfield;
-  -moz-user-select: text;
-  cursor: text;
-  text-align: start;
-  text-rendering: optimizelegibility; }
-
-ul.nolist {
-  list-style-type: none;
-  margin: 0;
-  padding: 0; }
-
-img.alignleft {
-  float: left;
-  margin: 0 10px 10px 0; }
-
-img.alignright {
-  float: right;
-  margin: 0 0 10px 10px; }
-
-.clear {
-  clear: both; }
-
-.visuallyhidden {
-  border: 0;
-  clip: rect(0 0 0 0);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  width: 1px; }
-  .visuallyhidden.focusable:active, .visuallyhidden.focusable:focus {
-    clip: auto;
-    height: auto;
-    margin: 0;
-    overflow: visible;
-    position: static;
-    width: auto; }
-
-header#global-header {
-  display: inline-block;
-  vertical-align: middle;
-  *vertical-align: auto;
-  *zoom: 1;
-  *display: inline;
-  padding: 5px 0;
-  width: 100%;
-  height: 120px;
-  background-color: black;
-  opacity: 0.8; }
-
-.logo {
-  height: 110px; }
-  .logo img {
-    width: auto;
-    height: 100%; }
-
-.social, .menu {
-  text-align: right; }
-  .social li, .menu li {
-    display: inline-block;
-    vertical-align: middle;
-    *vertical-align: auto;
-    *zoom: 1;
-    *display: inline; }
-    .social li:last-child, .menu li:last-child {
-      margin-right: 0; }
-
-ul.social {
-  margin-top: 55px; }
-  ul.social li {
-    width: 23px;
-    height: 20px;
-    margin-right: 5px; }
-    ul.social li a {
-      opacity: 0.6; }
-      ul.social li a:hover, ul.social li a:focus {
-        opacity: 1; }
-
-nav.menu {
-  font-family: "Lato", Helvetica, Arial, sans-serif;
-  text-transform: uppercase;
-  margin-top: 10px; }
-  nav.menu li {
-    margin-right: 15px; }
-  nav.menu a {
-    color: #f98d00;
-    text-decoration: none; }
-    nav.menu a:hover, nav.menu a:focus {
-      color: white; }
-
-footer#global-footer {
-  padding-top: 15px; }
-
-section {
-  padding: 15px 0;
-  background-color: #f7f0e8; }
-
-.parallax-window {
-  min-height: 250px;
-  background: transparent; }
-
-.carousel {
-  width: 100%;
-  min-height: 250px;
-  position: relative;
-  margin-bottom: 25px; }
-  .carousel .strip {
-    position: relative;
-    white-space: nowrap;
-    overflow: hidden;
-    height: 100%;
-    min-height: 250px;
-    width: 100%; }
-  .carousel .slide {
-    white-space: normal;
-    position: absolute;
-    left: 100%;
-    visibility: hidden;
-    margin: 0 1.5%;
-    width: 30%;
-    transition: left 0.4s ease-in-out, visibility 0.4s ease-in-out; }
-    .carousel .slide.active {
-      left: 33%;
-      visibility: visible; }
-    .carousel .slide.slideLeft {
-      left: 0;
-      visibility: visible; }
-    .carousel .slide.slideRight {
-      left: 66%;
-      visibility: visible; }
-    .carousel .slide img {
-      width: 100%;
-      height: auto;
-      position: relative; }
-    .carousel .slide span {
-      position: absolute;
-      bottom: 5px;
-      left: 0;
-      background: black;
-      padding: 5px;
-      color: white;
-      width: 100%;
-      opacity: 0.8;
-      text-align: center;
-      font-style: italic;
-      font-family: "Lato", Helvetica, Arial, sans-serif;
-      font-size: 12px; }
-  .carousel .controls {
-    text-align: center; }
-    .carousel .controls button {
-      -moz-transform: translateY(-50%);
-      -ms-transform: translateY(-50%);
-      -webkit-transform: translateY(-50%);
-      transform: translateY(-50%);
-      outline: none;
-      border: none;
-      background: white;
-      border: 1px solid silver;
-      border-radius: 30px;
-      width: 40px;
-      height: 40px;
-      opacity: 0.3;
-      position: absolute;
-      top: 50%; }
-      .carousel .controls button:before {
-        border-style: solid;
-        border-width: 10px 10px 0 0;
-        content: "";
-        display: inline-block;
-        height: 20px;
-        vertical-align: top;
-        width: 20px;
-        border-color: #f98d00; }
-      .carousel .controls button[data-button-type="previous"] {
-        left: 0; }
-        .carousel .controls button[data-button-type="previous"]:before {
-          -moz-transform: rotate(-135deg);
-          -ms-transform: rotate(-135deg);
-          -webkit-transform: rotate(-135deg);
-          transform: rotate(-135deg);
-          margin-left: 5px; }
-      .carousel .controls button[data-button-type="next"] {
-        right: 5px; }
-        .carousel .controls button[data-button-type="next"]:before {
-          -moz-transform: rotate(45deg);
-          -ms-transform: rotate(45deg);
-          -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
-          margin-right: 5px; }
-      .carousel .controls button:hover, .carousel .controls button:focus {
-        opacity: 0.8; }
-
-/*# sourceMappingURL=screen.css.map */
+Backtrace:
+/Users/sloyless/Projects/SLD/sloyless.github.io/sass/screen.sass:21
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.16/lib/sass/tree/import_node.rb:67:in `rescue in import'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.16/lib/sass/tree/import_node.rb:45:in `import'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.16/lib/sass/tree/import_node.rb:28:in `imported_file'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.16/lib/sass/tree/import_node.rb:37:in `css_import?'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.16/lib/sass/tree/visitors/perform.rb:311:in `visit_import'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.16/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.16/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.16/lib/sass/stack.rb:79:in `block in with_base'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.16/lib/sass/stack.rb:115:in `with_frame'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.16/lib/sass/stack.rb:79:in `with_base'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.16/lib/sass/tree/visitors/perform.rb:158:in `visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.16/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.16/lib/sass/tree/visitors/base.rb:52:in `map'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.16/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.16/lib/sass/tree/visitors/perform.rb:167:in `block in visit_children'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.16/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.16/lib/sass/tree/visitors/perform.rb:166:in `visit_children'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.16/lib/sass/tree/visitors/base.rb:36:in `block in visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.16/lib/sass/tree/visitors/perform.rb:186:in `visit_root'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.16/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.16/lib/sass/tree/visitors/perform.rb:157:in `visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.16/lib/sass/tree/visitors/perform.rb:8:in `visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.16/lib/sass/tree/root_node.rb:36:in `css_tree'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.16/lib/sass/tree/root_node.rb:20:in `render'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.16/lib/sass/engine.rb:278:in `render'
+/Library/Ruby/Gems/2.0.0/gems/compass-import-once-1.0.5/lib/compass/import-once/engine.rb:17:in `block in render'
+/Library/Ruby/Gems/2.0.0/gems/compass-import-once-1.0.5/lib/compass/import-once/engine.rb:29:in `with_import_scope'
+/Library/Ruby/Gems/2.0.0/gems/compass-import-once-1.0.5/lib/compass/import-once/engine.rb:16:in `render'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.16/lib/sass/plugin/compiler.rb:492:in `update_stylesheet'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.16/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.16/lib/sass/plugin/compiler.rb:209:in `each'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.16/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
+/Library/Ruby/Gems/2.0.0/gems/compass-1.0.3/lib/compass/sass_compiler.rb:40:in `compile!'
+/Library/Ruby/Gems/2.0.0/gems/compass-1.0.3/lib/compass/commands/update_project.rb:49:in `perform'
+/Library/Ruby/Gems/2.0.0/gems/compass-1.0.3/lib/compass/commands/base.rb:18:in `execute'
+/Library/Ruby/Gems/2.0.0/gems/compass-1.0.3/lib/compass/commands/project_base.rb:19:in `execute'
+/Library/Ruby/Gems/2.0.0/gems/compass-1.0.3/lib/compass/exec/sub_command_ui.rb:43:in `perform!'
+/Library/Ruby/Gems/2.0.0/gems/compass-1.0.3/lib/compass/exec/sub_command_ui.rb:15:in `run!'
+/Applications/CodeKit.app/Contents/Resources/engines/compass/compass/bin/compass:52:in `block in <main>'
+/Applications/CodeKit.app/Contents/Resources/engines/compass/compass/bin/compass:66:in `call'
+/Applications/CodeKit.app/Contents/Resources/engines/compass/compass/bin/compass:66:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: File to import not found or unreadable: ../components/carousel/project-description.\A        Load paths:\A          /Users/sloyless/Projects/SLD/sloyless.github.io/sass\A          /Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets\A          /Users/sloyless/Projects/SLD/sloyless.github.io/sass\A          Compass::SpriteImporter\A          Sass::Globbing::Importer\A         on line 21 of /Users/sloyless/Projects/SLD/sloyless.github.io/sass/screen.sass\A \A 16: @import layout/footer\A 17: @import layout/main\A 18: \A 19: // Modules\A 20: @import ../components/carousel/carousel\A 21: @import ../components/carousel/project-description"; }

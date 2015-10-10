@@ -9,5 +9,6 @@ Languages/Frameworks used in this project:
 * Jade
 * Coffeescript
 * JSON (for Project data)
+* AngularJS v1.46
 
 Parallax.js by http://pixelcog.github.io/parallax.js/
