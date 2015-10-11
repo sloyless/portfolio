@@ -1,0 +1,9 @@
+.carousel.col-lg-12
+  .strip
+    a.slide(href="" ng-repeat="project in projectData.projects" id="project-{{project.projectID}}" ng-click="projectData.showProject($index)" ng-class="{'selected':projectData.isActive($index)}")
+      img(ng-src="{{project.thumb}}" alt="{{project.title}}")
+      span {{project.title}}
+
+  .controls
+    button(data-button-type="previous" type="button")
+    button(data-button-type="next" type="button")

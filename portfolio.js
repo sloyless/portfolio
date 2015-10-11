@@ -2,7 +2,7 @@
 (function() {
   var app;
 
-  app = angular.module('portfolio', ['ngSanitize', 'ngAnimate']);
+  app = angular.module('portfolio', ['ngSanitize', 'ngAnimate', 'projectDescription', 'projectCarousel']);
 
   app.controller('ProjectController', [
     '$http', function($http) {
@@ -26,13 +26,6 @@
     }
   ]);
 
-  app.directive('projectDescription', function() {
-    return {
-      restrict: 'E',
-      templateUrl: '/partials/project-description.html'
-    };
-  });
-
   jQuery(document).ready(function($) {
     return $(window).bind("load", function() {
       return $('#project-carousel').carouselize();
@@ -40,3 +33,6 @@
   });
 
 }).call(this);
+
+
+//# sourceMappingURL=portfolio.js.map

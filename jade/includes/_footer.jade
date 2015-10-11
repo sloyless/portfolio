@@ -2,3 +2,20 @@ footer.container(id="global-footer")
   .row
     .col-md-12
       p(style="text-align: center") All content &copy; 2012 - #{new Date().getFullYear()} Sean Loyless, unless specified. Design and Development by Sean Loyless.
+
+block scripts
+  //- Angular Core
+  script(src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.6/angular.min.js")
+  script(src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.6/angular-sanitize.js")
+  script(src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.6/angular-animate.js")
+  //- jQuery
+  script(src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js")
+  //- Local Vendor scripts
+  script(src="/vendor/parallax.min.js")
+  //- Carousel
+  script(src="/components/carousel/carousel.js")
+  //- Angular app
+  script(src="portfolio.js")
+  //- Angular components
+  script(src="/components/project-carousel/project-carousel.js")
+  script(src="/components/project-description/project-description.js")

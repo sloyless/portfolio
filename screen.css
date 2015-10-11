@@ -131,12 +131,20 @@ ul.nolist {
   padding: 0; }
 
 img.alignleft {
-  float: left;
-  margin: 0 10px 10px 0; }
+  float: none;
+  margin: 0 auto 10px; }
+  @media (min-width: 480px) {
+    img.alignleft {
+      float: left;
+      margin: 0 10px 10px 0; } }
 
 img.alignright {
-  float: right;
-  margin: 0 0 10px 10px; }
+  float: none;
+  margin: 0 auto 10px; }
+  @media (min-width: 480px) {
+    img.alignright {
+      float: right;
+      margin: 0 0 10px 10px; } }
 
 .clear {
   clear: both; }
@@ -381,7 +389,7 @@ section {
     position: relative;
     transition: none;
     font-size: 12px;
-    margin-top: 20px;
+    margin: 20px 0;
     display: block; }
     .project-description a.client-link:before {
       display: inline-block;

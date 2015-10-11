@@ -82,12 +82,18 @@ ul.nolist
   padding: 0
 
 img.alignleft
-  float: left
-  margin: 0 10px 10px 0
+  float: none
+  margin: 0 auto 10px
+  @media (min-width: $screen-sm)
+    float: left
+    margin: 0 10px 10px 0
 
 img.alignright
-  float: right
-  margin: 0 0 10px 10px
+  float: none
+  margin: 0 auto 10px
+  @media (min-width: $screen-sm)
+    float: right
+    margin: 0 0 10px 10px
 
 .clear
   clear: both

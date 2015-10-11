@@ -1,0 +1,1 @@
+(function(){angular.module("projectDescription",[]).directive("projectDescription",function(){return{restrict:"E",templateUrl:"/partials/project-description.html"}})}).call(this);

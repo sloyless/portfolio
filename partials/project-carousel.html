@@ -1,0 +1,8 @@
+
+<div class="carousel col-lg-12">
+  <div class="strip"><a href="" ng-repeat="project in projectData.projects" id="project-{{project.projectID}}" ng-click="projectData.showProject($index)" ng-class="{'selected':projectData.isActive($index)}" class="slide"><img ng-src="{{project.thumb}}" alt="{{project.title}}"/><span>{{project.title}}</span></a></div>
+  <div class="controls">
+    <button data-button-type="previous" type="button"></button>
+    <button data-button-type="next" type="button"></button>
+  </div>
+</div>

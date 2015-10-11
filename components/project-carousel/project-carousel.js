@@ -1,0 +1,2 @@
+(function(){angular.module("projectCarousel",[]).directive("projectCarousel",function(){return{restrict:"E",templateUrl:"/partials/project-carousel.html"}})}).call(this);
+//# sourceMappingURL=./project-carousel.js.map

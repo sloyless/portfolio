@@ -1,4 +1,9 @@
-app = angular.module 'portfolio', ['ngSanitize', 'ngAnimate']
+app = angular.module 'portfolio', [
+  'ngSanitize', 
+  'ngAnimate', 
+  'projectDescription', 
+  'projectCarousel'
+]
 
 app.controller 'ProjectController', ['$http', ($http) ->
   projectData = @
@@ -17,12 +22,6 @@ app.controller 'ProjectController', ['$http', ($http) ->
     console.log(index + ' is now active')
   false
 ]
-
-app.directive 'projectDescription', ->
-  return {
-    restrict: 'E',
-    templateUrl: '/partials/project-description.html'
-  }
 
 jQuery(document).ready ($) ->
   $(window).bind "load", ->
