@@ -1,1 +1,2 @@
-(function(){angular.module("projectDescription",[]).directive("projectDescription",function(){return{restrict:"E",templateUrl:"/partials/project-description.html"}})}).call(this);
+(function(){angular.module("projectDescription",[]).directive("projectDescription",function(){return{restrict:"E",templateUrl:"/components/project-description/project-description.html"}})}).call(this);
+//# sourceMappingURL=./project-description.js.map

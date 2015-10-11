@@ -1,5 +1,5 @@
 angular.module('projectDescription', []).directive 'projectDescription', ->
   return {
     restrict: 'E',
-    templateUrl: '/partials/project-description.html'
+    templateUrl: '/components/project-description/project-description.html'
   }
