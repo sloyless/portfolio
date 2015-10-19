@@ -1,1 +1,10 @@
-{"version":3,"file":"project-carousel.js","sources":["project-carousel.coffee"],"names":["angular","module","directive","restrict","templateUrl"],"mappings":"CAAA,WAAAA,QAAQC,OAAO,sBAAuBC,UAAU,kBAAmB,WACjE,OACEC,SAAU,IACVC,YAAa;AAHjB;EAAA,OAAO,CAAC,MAAR,CAAe,iBAAf,EAAkC,EAAlC,CAAqC,CAAC,SAAtC,CAAgD,iBAAhD,EAAmE,SAAA;AACjE,WAAO;MACL,QAAA,EAAU,GADL;MAEL,WAAA,EAAa,oDAFR;;EAD0D,CAAnE;AAAA"}
+{
+  "version": 3,
+  "file": "project-carousel.js",
+  "sourceRoot": "",
+  "sources": [
+    "project-carousel.coffee"
+  ],
+  "names": [],
+  "mappings": "AAAA,OAAO,CAAC,MAAR,CAAe,iBAAf,EAAkC,EAAlC,CAAqC,CAAC,SAAtC,CAAgD,iBAAhD,EAAmE,SAAA;AACjE,SAAO;IACL,QAAA,EAAU,GADL;IAEL,WAAA,EAAa,oDAFR;;AAD0D,CAAnE"
+}
