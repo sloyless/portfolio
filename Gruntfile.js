@@ -131,7 +131,7 @@ module.exports = function(grunt) {
         livereload: true,
       },
       sass: {
-        files: ['<%= project.css %>/{,*/}*.{scss,sass}'],
+        files: ['**/*.sass'],
         tasks: ['sass', 'cssmin','notify:sass']
       },
       coffee: {

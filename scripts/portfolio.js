@@ -26,8 +26,7 @@ app.controller('ProjectController', [
 
 jQuery(document).ready(function($) {
   return $(window).bind("load", function() {
-    $('#project-carousel').carouselize();
-    return console.log('Stuff');
+    return $('#project-carousel').carouselize();
   });
 });
 
