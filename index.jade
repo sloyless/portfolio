@@ -1,4 +1,4 @@
-extends ./includes/_layout.jade
+extends ./views/includes/_layout.jade
 
 block title
   title Home | Sean Loyless Designs
@@ -8,14 +8,17 @@ block content
   section#content.container
     .row
       .col-md-8
-        include _about.jade
+        include ./views/_about.jade
 
       .col-md-4
-        include _follow.jade
+        include ./views/_follow.jade
 
   .parallax-window(data-parallax="scroll" data-image-src="https://s3-us-west-2.amazonaws.com/seanloyless-portfolio/images/bg/bg02.jpg" data-positionY="190" naturalWidth="1950" naturalHeight="1500")
   section.container
     .row
       .col-md-12
-        include _projects.jade
-          
+        include ./views/_projects.jade
+  section.container
+    .row
+      .col-md-12
+        p Contact form here!
