@@ -131,16 +131,16 @@ module.exports = function(grunt) {
         livereload: true,
       },
       sass: {
-        files: ['**/*.sass'],
-        tasks: ['sass', 'cssmin','notify:sass']
+        files: ['**/*.{scss,sass}'],
+        tasks: ['newer:sass', 'cssmin','notify:sass']
       },
       coffee: {
-        files: ['**/*.coffee'],
-        tasks: ['coffee', 'notify:coffee']
+        files: ['**/*.{coffee,litcoffee}'],
+        tasks: ['newer:coffee', 'notify:coffee']
       },
       jade: {
         files: ['**/*.jade'],
-        tasks: ['jade', 'notify:jade']
+        tasks: ['newer:jade', 'notify:jade']
       },
       autoprefixer:{
         files: ['<%= project.css %>/screen.css'],
@@ -159,17 +159,18 @@ module.exports = function(grunt) {
   });
 
   // Load the plugin that provides the "uglify" task.
+  grunt.loadNpmTasks('grunt-autoprefixer');
+  grunt.loadNpmTasks('grunt-contrib-coffee');
+  grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-contrib-jade');
-  grunt.loadNpmTasks('grunt-contrib-coffee');
-  grunt.loadNpmTasks('grunt-autoprefixer');
-  grunt.loadNpmTasks('grunt-contrib-cssmin');
-  grunt.loadNpmTasks('grunt-contrib-uglify');
-  grunt.loadNpmTasks('grunt-notify');
-  grunt.loadNpmTasks('grunt-express');
-  grunt.loadNpmTasks('grunt-open');
   grunt.loadNpmTasks('grunt-contrib-watch');
-
+  grunt.loadNpmTasks('grunt-contrib-uglify');
+  grunt.loadNpmTasks('grunt-express');
+  grunt.loadNpmTasks('grunt-newer');
+  grunt.loadNpmTasks('grunt-notify');
+  grunt.loadNpmTasks('grunt-open');
+  
   // Default task(s).
   grunt.registerTask('default', [
     'express',
