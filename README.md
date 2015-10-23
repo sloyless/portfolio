@@ -14,13 +14,15 @@ Languages/Frameworks used in this project:
 Parallax.js by http://pixelcog.github.io/parallax.js/
 
 ## Dev Setup
-Development is setup and compiled using Grunt.js. It will watch for Sass, Jade, and Coffeescript file changes, compile, autoprefix CSS, and minify. A web server is loaded using Express and then detects changes using LiveReload.
+Development is setup and compiled using Grunt.js. It will watch for Sass, Jade, and Coffeescript file changes, compile, autoprefix CSS, and minify. A web server is loaded using BrowserSync which will inject any new changes without a page reload.
 
-Requirements:
-* Node
+Requirements: (Install at global level)
+* Node (>= 0.12.7)
 * Bower
+* Sass
 * Compass
 * Grunt
+* BrowserSync
 
 Download/Fork the project, navigate to project folder in Terminal and run:
 * bower install

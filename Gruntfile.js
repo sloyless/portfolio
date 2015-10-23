@@ -12,17 +12,6 @@ module.exports = function(grunt) {
       js: ['<%= project.app %>/scripts'],
       components: ['<%= project.app %>/components']
     },
-    // Server setup
-    express: {
-      all: {
-        options: {
-          bases: ['../'],
-          port: 9000,
-          livereload: true,
-          hostname: 'localhost'
-        }
-      }
-    },
     // Sass -> CSS
     sass: {
       dist: {
@@ -59,7 +48,7 @@ module.exports = function(grunt) {
         files: [{
           expand: true,
           cwd: '<%= project.app %>/',
-          src: ['**/*.jade','!**/_*.jade'],
+          src: ['index.jade','<%= project.components %>/**/*.jade','!**/_*.jade'],
           dest: '<%= project.app %>/',
           ext: '.html'
         }]
@@ -130,48 +119,57 @@ module.exports = function(grunt) {
       }
     },
     watch: {
-      options: {
-        livereload: true,
-      },
       sass: {
         files: ['<%= project.css %>/**/*.{scss,sass}','<%= project.components %>/**/*.{scss,sass}'],
-        tasks: ['newer:sass', 'cssmin','notify:sass']
+        tasks: ['sass','notify:sass']
       },
       coffee: {
         files: ['<%= project.js %>/**/*.{coffee,litcoffee}','<%= project.components %>/**/*.{coffee,litcoffee}'],
-        tasks: ['newer:coffee', 'notify:coffee']
+        tasks: ['coffee', 'notify:coffee']
       },
       jade: {
-        files: ['views/**/*.jade','<%= project.components %>/**/*.jade'],
-        tasks: ['newer:jade', 'notify:jade']
+        files: ['<%= project.app %>/index.jade','views/**/*.jade','<%= project.components %>/**/*.jade'],
+        tasks: ['jade', 'notify:jade']
       },
       autoprefixer:{
         files: ['<%= project.css %>/screen.css'],
-        tasks: ['autoprefixer', 'cssmin']
+        tasks: ['autoprefixer']
       },
       uglify: {
         files: ['<%= project.js %>/*.js'],
         tasks:['uglify','notify:uglify']
       }
     },
-    open: {
-      all: {
-        path: 'http://localhost:<%= express.all.options.port%>/index.html'
+    // Server setup
+    browserSync: {
+      dev: {
+        bsFiles: {
+          src : [
+              '<%= project.css %>/screen.css',
+              '<%= project.js %>/**/*.js',
+              '<%= project.components %>/**/*.js',
+              '**/*.html'
+          ]
+        },
+        options: {
+          watchTask: true,
+          server: '<%= project.app %>'
+        }
       }
     }
   });
   
   // Default task(s).
   grunt.registerTask('default', [
-    'express',
+    'browserSync', 
+    'watch'
+  ]);
+  grunt.registerTask('build', [
     'sass',
     'coffee',
     'jade',
     'autoprefixer',
     'cssmin',
-    'uglify', 
-    'open',
-    'watch'
+    'uglify'
   ]);
-
 };
