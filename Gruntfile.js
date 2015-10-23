@@ -1,19 +1,22 @@
 'use strict';
 
 module.exports = function(grunt) {
+  require('load-grunt-tasks')(grunt);
 
   // Project configuration.
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
     project: {
       app: ['.'],
-      css: ['<%= project.app %>/styles/']
+      css: ['<%= project.app %>/styles'],
+      js: ['<%= project.app %>/scripts'],
+      components: ['<%= project.app %>/components']
     },
     // Server setup
     express: {
       all: {
         options: {
-          bases: ['/Users/sloyless/Projects/SLD/sloyless.github.io/'],
+          bases: ['../'],
           port: 9000,
           livereload: true,
           hostname: 'localhost'
@@ -42,7 +45,7 @@ module.exports = function(grunt) {
         expand: true,
         flatten: false,
         cwd: '<%= project.app %>/',
-        src: ['**/*.coffee'],
+        src: ['<%= project.js %>/**/*.{coffee,litcoffee}','<%= project.components %>/**/*.{coffee,litcoffee}'],
         dest: '<%= project.app %>/',
         ext: '.js'
       }
@@ -131,15 +134,15 @@ module.exports = function(grunt) {
         livereload: true,
       },
       sass: {
-        files: ['**/*.{scss,sass}'],
+        files: ['<%= project.css %>/**/*.{scss,sass}','<%= project.components %>/**/*.{scss,sass}'],
         tasks: ['newer:sass', 'cssmin','notify:sass']
       },
       coffee: {
-        files: ['**/*.{coffee,litcoffee}'],
+        files: ['<%= project.js %>/**/*.{coffee,litcoffee}','<%= project.components %>/**/*.{coffee,litcoffee}'],
         tasks: ['newer:coffee', 'notify:coffee']
       },
       jade: {
-        files: ['**/*.jade'],
+        files: ['views/**/*.jade','<%= project.components %>/**/*.jade'],
         tasks: ['newer:jade', 'notify:jade']
       },
       autoprefixer:{
@@ -157,19 +160,6 @@ module.exports = function(grunt) {
       }
     }
   });
-
-  // Load the plugin that provides the "uglify" task.
-  grunt.loadNpmTasks('grunt-autoprefixer');
-  grunt.loadNpmTasks('grunt-contrib-coffee');
-  grunt.loadNpmTasks('grunt-contrib-cssmin');
-  grunt.loadNpmTasks('grunt-contrib-sass');
-  grunt.loadNpmTasks('grunt-contrib-jade');
-  grunt.loadNpmTasks('grunt-contrib-watch');
-  grunt.loadNpmTasks('grunt-contrib-uglify');
-  grunt.loadNpmTasks('grunt-express');
-  grunt.loadNpmTasks('grunt-newer');
-  grunt.loadNpmTasks('grunt-notify');
-  grunt.loadNpmTasks('grunt-open');
   
   // Default task(s).
   grunt.registerTask('default', [
