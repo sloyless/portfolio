@@ -1,1 +1,10 @@
-{"version":3,"file":"project-description.js","sources":["project-description.coffee"],"names":["angular","module","directive","restrict","templateUrl"],"mappings":"CAAA,WAAAA,QAAQC,OAAO,yBAA0BC,UAAU,qBAAsB,WACvE,OACEC,SAAU,IACVC,YAAa;AAHjB;EAAA,OAAO,CAAC,MAAR,CAAe,oBAAf,EAAqC,EAArC,CAAwC,CAAC,SAAzC,CAAmD,oBAAnD,EAAyE,SAAA;AACvE,WAAO;MACL,QAAA,EAAU,GADL;MAEL,WAAA,EAAa,0DAFR;;EADgE,CAAzE;AAAA"}
+{
+  "version": 3,
+  "file": "project-description.js",
+  "sourceRoot": "",
+  "sources": [
+    "project-description.coffee"
+  ],
+  "names": [],
+  "mappings": "AAAA,OAAO,CAAC,MAAR,CAAe,oBAAf,EAAqC,EAArC,CAAwC,CAAC,SAAzC,CAAmD,oBAAnD,EAAyE,SAAA;AACvE,SAAO;IACL,QAAA,EAAU,GADL;IAEL,WAAA,EAAa,0DAFR;;AADgE,CAAzE"
+}

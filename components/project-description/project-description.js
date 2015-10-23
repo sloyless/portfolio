@@ -1,2 +1,8 @@
-(function(){angular.module("projectDescription",[]).directive("projectDescription",function(){return{restrict:"E",templateUrl:"/components/project-description/project-description.html"}})}).call(this);
-//# sourceMappingURL=./project-description.js.map
+angular.module('projectDescription', []).directive('projectDescription', function() {
+  return {
+    restrict: 'E',
+    templateUrl: '/components/project-description/project-description.html'
+  };
+});
+
+//# sourceMappingURL=project-description.js.map
