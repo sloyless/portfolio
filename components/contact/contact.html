@@ -1,0 +1,44 @@
+
+<h2>Contact Me!</h2>
+<div ng-controller="contactController" class="contact-form sans">
+  <script src="https://www.google.com/recaptcha/api.js"></script>
+  <form name="contactForm" novalidate="novalidate" class="row">
+    <div class="col-md-3">
+      <div class="contact-field">
+        <label for="firstname">First Name<sup>*</sup></label>
+        <input name="firstname" id="contact-firstname" type="text" ng-model="firstName" required="required"/>
+      </div>
+      <div class="contact-field">
+        <label for="lastname">Last Name<sup>*</sup></label>
+        <input name="lastname" id="contact-lastname" type="text" ng-model="lastName" required="required"/>
+      </div>
+      <div class="contact-field">
+        <label for="email">Email Address<sup>*</sup></label>
+        <input name="email" id="contact-email" type="email" ng-model="email" required="required" validate="validate"/>
+      </div>
+      <div class="contact-field">
+        <label for="phone">Phone Number</label>
+        <input name="phone" id="contact-firstname" type="tel" ng-model="phone"/>
+      </div>
+    </div>
+    <div class="col-md-5">
+      <div class="contact-field">
+        <label for="contact-firstname">Message<sup>*</sup></label>
+        <textarea ng-model="message"></textarea>
+      </div>
+      <div class="contact-field">
+        <div data-sitekey="6LfLfQ8TAAAAAJVsclEMONxkmtfh3YhCzp4Klz3J" class="g-recaptcha"></div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <h3 class="hidden-xs">Preview</h3>
+      <div class="contact-preview hidden-md">
+        <p>From: <a ng-href="mailto:{{email}}">{{firstName}} {{lastName}}</a></p>
+        <p>Phone: <a ng-href="tel:{{phone}}">{{phone}}</a></p>
+        <p>Message: {{message}}</p>
+      </div>
+      <button type="submit" ng-click="processForm()" ng-disabled="contactForm.$invalid">Submit</button>
+      <button type="reset">Reset</button>
+    </div>
+  </form>
+</div>

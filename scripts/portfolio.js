@@ -1,6 +1,6 @@
 var app;
 
-app = angular.module('portfolio', ['ngSanitize', 'ngAnimate', 'projectDescription', 'projectCarousel']);
+app = angular.module('portfolio', ['ngSanitize', 'ngAnimate', 'projectDescription', 'projectCarousel', 'contactController']);
 
 app.controller('ProjectController', [
   '$http', function($http) {
@@ -21,6 +21,21 @@ app.controller('ProjectController', [
       return console.log(index + ' is now active');
     };
     return false;
+  }
+]);
+
+app.controller('contactController', [
+  '$http', function($scope, $http) {
+    $scope.formData = {};
+    return $scope.processForm = function() {
+      return $http({
+        method: 'POST',
+        data: $scope.formData,
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded'
+        }
+      });
+    };
   }
 ]);
 

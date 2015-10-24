@@ -2,7 +2,8 @@ app = angular.module 'portfolio', [
   'ngSanitize', 
   'ngAnimate', 
   'projectDescription', 
-  'projectCarousel'
+  'projectCarousel',
+  'contactController'
 ]
 
 app.controller 'ProjectController', ['$http', ($http) ->
@@ -22,6 +23,16 @@ app.controller 'ProjectController', ['$http', ($http) ->
     console.log(index + ' is now active')
   false
 ]
+
+app.controller 'contactController', ['$http', ($scope, $http) ->
+  $scope.formData = {}
+  $scope.processForm = ->
+    $http({
+      method: 'POST',
+      data: $scope.formData,
+      headers: {'Content-Type': 'application/x-www-form-urlencoded'}
+    })
+  ]
 
 jQuery(document).ready ($) ->
   $(window).bind "load", ->

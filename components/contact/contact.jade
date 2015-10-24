@@ -1,0 +1,38 @@
+h2 Contact Me!
+.contact-form.sans(ng-controller="contactController")
+  script(src='https://www.google.com/recaptcha/api.js')
+  form.row(name="contactForm" novalidate)
+    .col-md-3
+      .contact-field
+        label(for="firstname") First Name
+          sup *
+        input(name="firstname" id="contact-firstname" type="text" ng-model="firstName" required)
+      .contact-field
+        label(for="lastname") Last Name
+          sup *
+        input(name="lastname" id="contact-lastname" type="text" ng-model="lastName" required)
+      .contact-field
+        label(for="email") Email Address
+          sup *
+        input(name="email" id="contact-email" type="email" ng-model="email" required validate)
+      .contact-field
+        label(for="phone") Phone Number
+        input(name="phone" id="contact-firstname" type="tel" ng-model="phone")
+    .col-md-5
+      .contact-field
+        label(for="contact-firstname") Message
+          sup *
+        textarea(ng-model="message")
+      .contact-field
+        .g-recaptcha(data-sitekey="6LfLfQ8TAAAAAJVsclEMONxkmtfh3YhCzp4Klz3J")
+        
+    .col-md-4
+      h3.hidden-xs Preview
+      .contact-preview.hidden-md
+        p From: 
+          a(ng-href="mailto:{{email}}") {{firstName}} {{lastName}}
+        p Phone: 
+          a(ng-href="tel:{{phone}}") {{phone}}
+        p Message: {{message}}
+      button(type="submit" ng-click="processForm()" ng-disabled="contactForm.$invalid") Submit
+      button(type="reset") Reset
