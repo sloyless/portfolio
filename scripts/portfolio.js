@@ -17,8 +17,7 @@ app.controller('ProjectController', [
     };
     projectData.showProject = function(index) {
       projectData._Index = index;
-      projectData.selected = projectData.projects[index];
-      return console.log(index + ' is now active');
+      return projectData.selected = projectData.projects[index];
     };
     return false;
   }
@@ -31,11 +30,9 @@ jQuery(document).ready(function($) {
     nav = $('#global-header');
     if (scroll >= 80) {
       $(nav).addClass('compact');
-      console.log('past 120');
     }
     if (scroll < 200) {
       nav.removeClass('compact');
-      console.log('before 120');
     }
     return false;
   }).bind("load", function() {

@@ -19,7 +19,6 @@ app.controller 'ProjectController', ['$http', ($http) ->
   projectData.showProject = (index) ->
     projectData._Index = index
     projectData.selected = projectData.projects[index]
-    console.log(index + ' is now active')
   false
 ]
 
@@ -30,10 +29,8 @@ jQuery(document).ready ($) ->
 
     if scroll >= 80
       $(nav).addClass('compact')
-      console.log('past 120')
     if scroll < 200
       nav.removeClass('compact')
-      console.log('before 120')
     false
   .bind "load", ->
     do $('#project-carousel').carouselize

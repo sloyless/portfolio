@@ -2,7 +2,6 @@ app.controller 'contactController', ($scope, $http) ->
   $scope.formData = {}
   
   $scope.processForm = ->
-    console.log($scope.formData)
     $http({
       url: '//formspree.io/loyless.sean@gmail.com',
       method: 'POST',

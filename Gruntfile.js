@@ -57,7 +57,8 @@ module.exports = function(grunt) {
     // Adds any relevate autoprefixers supporting IE 9 and above
     autoprefixer: {
       options: {
-        browsers: ["> 1%", "ie > 8"]
+        browsers: ["> 1%", "ie > 8"],
+        map: true
       },
       target: {
         files: {
@@ -67,6 +68,9 @@ module.exports = function(grunt) {
     },
     // Minify CSS
     cssmin: {
+      options: {
+        sourceMap: true
+      },
       target: {
         files: {
           "<%= project.css %>/screen.min.css": ['<%= project.css %>/screen.css']
@@ -133,7 +137,7 @@ module.exports = function(grunt) {
       },
       autoprefixer:{
         files: ['<%= project.css %>/screen.css'],
-        tasks: ['autoprefixer']
+        tasks: ['autoprefixer', 'cssmin']
       },
       uglify: {
         files: ['<%= project.js %>/*.js'],
@@ -145,7 +149,7 @@ module.exports = function(grunt) {
       dev: {
         bsFiles: {
           src : [
-              '<%= project.css %>/screen.css',
+              '<%= project.css %>/screen.min.css',
               '<%= project.js %>/**/*.js',
               '<%= project.components %>/**/*.js',
               '**/*.html'
