@@ -24,5 +24,16 @@ app.controller 'ProjectController', ['$http', ($http) ->
 ]
 
 jQuery(document).ready ($) ->
-  $(window).bind "load", ->
+  $(window).scroll ->
+    scroll = $(window).scrollTop()
+    nav = $('#global-header')
+
+    if scroll >= 80
+      $(nav).addClass('compact')
+      console.log('past 120')
+    if scroll < 200
+      nav.removeClass('compact')
+      console.log('before 120')
+    false
+  .bind "load", ->
     do $('#project-carousel').carouselize

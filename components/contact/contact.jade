@@ -1,0 +1,52 @@
+h2 Contact Me!
+.contact-form.sans(ng-controller="contactController")
+  script(src='https://www.google.com/recaptcha/api.js')
+  form.row(name="contactForm" novalidate)
+    .col-md-3
+      .contact-field
+        label(for="firstname") First Name
+          sup *
+        input(name="firstname" type="text" ng-model="user.firstName" required)
+        div(ng-show="contactForm.$submitted || contactForm.firstname.$touched")
+          span.error(ng-show="contactForm.firstname.$error.required") Please enter your first name.
+      .contact-field
+        label(for="lastname") Last Name
+          sup *
+        input(name="lastname" type="text" ng-model="user.lastName" required)
+        div(ng-show="contactForm.$submitted || contactForm.lastname.$touched")
+          span.error(ng-show="contactForm.lastname.$error.required") Please enter your last name.
+      .contact-field
+        label(for="email") Email Address
+          sup *
+        input(name="email" type="email" ng-model="user.email" required validate)
+        div(ng-show="contactForm.$submitted || contactForm.email.$touched")
+          span.error(ng-show="contactForm.email.$error.email") This is not a valid email.
+          span.error(ng-show="contactForm.email.$error.required") Please enter your email address.
+      .contact-field
+        label(for="phone") Phone Number
+        input(name="phone" type="tel" ng-model="user.phone")
+
+    .col-md-5
+      .contact-field
+        label(for="message") Message
+          sup *
+        textarea(ng-model="user.message" required name="message")
+        div(ng-show="contactForm.$submitted || contactForm.message.$touched")
+          span.error(ng-show="contactForm.message.$error.required") Please enter a message.
+        
+    .col-md-4
+      h3.hidden-xs Preview
+      .contact-preview.hidden-xs
+        p From: 
+          a(ng-href="mailto:{{user.email}}") {{user.firstName}} {{user.lastName}}
+        p Phone: 
+          a(ng-href="tel:{{phone}}") {{user.phone}}
+        p Message: 
+          br
+          | {{user.message}}
+
+      input(type="hidden" name="_subject" value="New submission!")
+      input.visuallyhidden(type="text" name="_gotcha")
+
+      button(type="submit" ng-click="processForm()" ng-disabled="contactForm.$invalid") Submit
+      button(type="reset" ng-click="reset()") Reset

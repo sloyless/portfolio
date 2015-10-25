@@ -25,7 +25,20 @@ app.controller('ProjectController', [
 ]);
 
 jQuery(document).ready(function($) {
-  return $(window).bind("load", function() {
+  return $(window).scroll(function() {
+    var nav, scroll;
+    scroll = $(window).scrollTop();
+    nav = $('#global-header');
+    if (scroll >= 80) {
+      $(nav).addClass('compact');
+      console.log('past 120');
+    }
+    if (scroll < 200) {
+      nav.removeClass('compact');
+      console.log('before 120');
+    }
+    return false;
+  }).bind("load", function() {
     return $('#project-carousel').carouselize();
   });
 });

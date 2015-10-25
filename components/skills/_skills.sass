@@ -1,0 +1,58 @@
+#skills
+  position: relative
+  &:before
+    background: url('../images/bg-skills.jpg') no-repeat
+    content: ''
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    opacity: 0.2
+    background-position: 50% 50%
+    background-size: cover
+
+  ul
+    text-align: center
+    width: 80%
+    margin: 25px auto 0
+
+    li
+      +inline-block(middle)
+      margin: 10px 20px
+  .icon
+    opacity: 0.6
+    font-size: 0
+    &:hover, &:focus
+      opacity: 1
+
+    // Icons
+    &.icon-sass
+      &:before
+        +style-svg($icon-sass)
+        width: 100px
+
+    &.icon-angular
+      &:before
+        +style-svg($icon-angular)
+        width: 200px
+
+    &.icon-react
+      &:before
+        +style-svg($icon-react)
+        width: 80px
+
+    &.icon-jade
+      &:before
+        +style-svg($icon-jade)
+        width: 120px
+
+    &.icon-coffeescript
+      &:before
+        +style-svg($icon-coffeescript)
+        width: 220px
+
+    &.icon-wordpress
+      &:before
+        +style-svg($icon-wordpress)
+        width: 80px

@@ -11,9 +11,9 @@
     <header id="global-header">
       <div class="container">
         <div class="row">
-          <div class="col-md-6 col-xs-12 logo"><img src="../images/common/logo.png" alt="Sean Loyless"></div>
-          <div class="col-md-6 hidden-xs">
-            <ul class="nolist social">
+          <div class="col-sm-6 col-xs-12 logo"><img src="../images/common/logo.png" alt="Sean Loyless"></div>
+          <div class="col-sm-6">
+            <ul class="nolist social hidden-xs hidden-sm">
               <li><a href="" title="Subscribe to updates to this website via RSS"><img src="/images/common/head-rss.png" alt="Sean Loyless RSS icon"></a></li>
               <li><a href="http://facebook.com/seanloyless/" title="Subscribe to updates on Sean Loyless on Facebook"><img src="/images/common/head-fb.png" alt="Sean Loyless Facebook icon"></a></li>
               <li><a href="http://twitter.com/SeanLoyless" title="Follow me on Twitter"><img src="/images/common/head-twitter.png" alt="Sean Loyless Twitter icon"></a></li>
@@ -27,50 +27,131 @@
                 <li><a href="#about">Blog</a></li>
                 <li><a href="#contact">Contact</a></li>
               </ul>
+              <div class="mobilemenu visible-xs">
+                <button id="menu-mobile">
+                  <div class="bar"></div>
+                  <div class="bar"></div>
+                  <div class="bar"></div>
+                </button>
+              </div>
             </nav>
           </div>
         </div>
       </div>
     </header>
-    <div data-parallax="scroll" data-image-src="https://s3-us-west-2.amazonaws.com/seanloyless-portfolio/images/bg/bg01.jpg" data-positionY="190" naturalWidth="1950" naturalHeight="1500" class="parallax-window"></div>
-    <section id="content" class="container">
-      <div class="row">
-        <div class="col-md-8"><a id="about" name="about"></a>
-          <h2>Hi! I'm Sean, and I love to code.</h2><img src="/images/common/avatar.jpg" class="alignleft hidden-xs">
-          <p>I am a Web Developer (Presentation Layer Engineer) in Austin, Texas, specializing in HTML, PHP, Javascript, <a href="https://jquery.com/" target="_blank">jQuery</a>, <a href="http://facebook.github.io/react/" target="_blank">React.js</a>, <a href="https://angularjs.org/" target="_blank">Angular</a>, <a href="https://www.meteor.com/" target="_blank">Meteor</a>, MySQL, CSS, Sass, Less, <a href="http://jade-lang.com/" target="_blank">Jade</a>, <a href="http://coffeescript.org/" target="_blank">Coffeescript</a>, <a href="http://wordpress.org" target="_blank">Wordpress</a>, Facebook Apps, Social Media Integration, and much more. </p>
-          <p>I have been working in the design and development field since 2001.  I graduated from the Art Institute of Houston under the Multimedia program, which encompassed web design and development, graphic design, video and sound editing, and more.</p>
-          <p class="clear"> <strong>SERVICES INCLUDE: </strong>Web development, Video editing, search engine optimization, social media, technical writing, graphic design, logo design, print design, web design, template design, spreadsheet design</p>
-        </div>
-        <div class="col-md-4">
-          <h2>Follow me on the Internets</h2>
-          <div data-github="sloyless" class="github-card"></div>
-          <script src="//cdn.jsdelivr.net/github-cards/latest/widget.js"></script>
-          <ul class="nolist">
-            <li><a href="http://facebook.com/seanloyless">Facebook</a></li>
-            <li><a href="https://www.linkedin.com/in/seanloyless">LinkedIn</a></li>
-            <li><a href="https://github.com/sloyless">GitHub</a></li>
-          </ul>
-        </div>
-      </div>
-    </section>
-    <div data-parallax="scroll" data-image-src="https://s3-us-west-2.amazonaws.com/seanloyless-portfolio/images/bg/bg02.jpg" data-positionY="190" naturalWidth="1950" naturalHeight="1500" class="parallax-window"></div>
-    <section class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <h2>Projects</h2>
-          <div id="project-carousel" ng-controller="ProjectController as projectData" class="row">
-            <project-carousel></project-carousel>
-            <project-description></project-description>
+    <div data-parallax="scroll" data-image-src="https://s3-us-west-2.amazonaws.com/seanloyless-portfolio/images/bg/bg01.jpg" data-positionY="190" naturalWidth="1950" naturalHeight="1500" class="parallax-window"></div><a name="about" class="visuallyhidden"></a>
+    <section id="about">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <h2>Hi! I'm Sean, and I love to code.</h2>
+            <p>I am a Web Developer (Presentation Layer Engineer) in Austin, Texas, specializing in front-end web development.</p>
+            <p>I have been working in the design and development field since 2001.  I graduated from the Art Institute of Houston under the Multimedia program, which encompassed web design and development, graphic design, video and sound editing, and more.</p>
+            <p class="clear"> <strong>SERVICES INCLUDE: </strong>Web development, Video editing, search engine optimization, social media, technical writing, graphic design, logo design, print design, web design, template design, spreadsheet design</p>
           </div>
-          <p>I have worked on many projects both personal and professional since 2001. I love to push the envelope and my development knowledge with every project that I work on. Above you can click on any of the slides and see details on many of the jobs I have worked on.</p>
-          <p>The next project could be YOURS!</p>
+        </div>
+      </div>
+    </section><a name="skills" class="visuallyhidden"></a>
+    <section id="skills">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <h2>My Skills</h2>
+            <p>I specialize in HTML, PHP, Javascript, <a href="//jquery.com/" target="_blank">jQuery</a>, <a href="//facebook.github.io/react/" target="_blank">React.js</a>, <a href="//angularjs.org/" target="_blank">Angular</a>, <a href="//www.meteor.com/" target="_blank">Meteor</a>, MySQL, CSS, Sass, Less, <a href="//jade-lang.com/" target="_blank">Jade</a>, <a href="//coffeescript.org/" target="_blank">Coffeescript</a>, <a href="//wordpress.org" target="_blank">Wordpress</a>, Facebook Apps, Social Media Integration, and much more.</p>
+            <ul class="nolist hidden-xs">
+              <li><a href="//sass-lang.com/" target="_blank" class="icon icon-sass">Sass</a></li>
+              <li><a href="//angularjs.org/" target="_blank" class="icon icon-angular">Angular</a></li>
+              <li><a href="//facebook.github.io/react/" target="_blank" class="icon icon-react">React</a></li>
+              <li><a href="//jade-lang.com/" target="_blank" class="icon icon-jade">Jade</a></li>
+              <li><a href="//coffeescript.org/" target="_blank" class="icon icon-coffeescript">CoffeeScript</a></li>
+              <li><a href="//wordpress.org/" target="_blank" class="icon icon-wordpress">WordPress</a></li>
+            </ul>
+          </div>
         </div>
       </div>
     </section>
-    <section class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <p>Contact form here!@</p>
+    <div data-parallax="scroll" data-image-src="https://s3-us-west-2.amazonaws.com/seanloyless-portfolio/images/bg/bg02.jpg" data-positionY="190" naturalWidth="1950" naturalHeight="1500" class="parallax-window"></div><a name="projects" class="visuallyhidden"></a>
+    <section id="projects">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <h2>Projects</h2>
+            <p>I have worked on many projects both personal and professional since 2001. I love to push the envelope and my development knowledge with every project that I work on. Above you can click on any of the slides and see details on many of the jobs I have worked on.</p>
+            <p>The next project could be YOURS!</p>
+            <div id="project-carousel" ng-controller="ProjectController as projectData" class="row">
+              <project-carousel></project-carousel>
+              <project-description></project-description>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section><a name="contact" class="visuallyhidden"></a>
+    <section id="contact">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <h2>Contact Me!</h2>
+            <div ng-controller="contactController" class="contact-form sans">
+              <script src="https://www.google.com/recaptcha/api.js"></script>
+              <form name="contactForm" novalidate class="row">
+                <div class="col-md-3">
+                  <div class="contact-field">
+                    <label for="firstname">First Name<sup>*</sup></label>
+                    <input name="firstname" type="text" ng-model="user.firstName" required>
+                    <div ng-show="contactForm.$submitted || contactForm.firstname.$touched"><span ng-show="contactForm.firstname.$error.required" class="error">Please enter your first name.</span></div>
+                  </div>
+                  <div class="contact-field">
+                    <label for="lastname">Last Name<sup>*</sup></label>
+                    <input name="lastname" type="text" ng-model="user.lastName" required>
+                    <div ng-show="contactForm.$submitted || contactForm.lastname.$touched"><span ng-show="contactForm.lastname.$error.required" class="error">Please enter your last name.</span></div>
+                  </div>
+                  <div class="contact-field">
+                    <label for="email">Email Address<sup>*</sup></label>
+                    <input name="email" type="email" ng-model="user.email" required validate>
+                    <div ng-show="contactForm.$submitted || contactForm.email.$touched"><span ng-show="contactForm.email.$error.email" class="error">This is not a valid email.</span><span ng-show="contactForm.email.$error.required" class="error">Please enter your email address.</span></div>
+                  </div>
+                  <div class="contact-field">
+                    <label for="phone">Phone Number</label>
+                    <input name="phone" type="tel" ng-model="user.phone">
+                  </div>
+                </div>
+                <div class="col-md-5">
+                  <div class="contact-field">
+                    <label for="message">Message<sup>*</sup></label>
+                    <textarea ng-model="user.message" required name="message"></textarea>
+                    <div ng-show="contactForm.$submitted || contactForm.message.$touched"><span ng-show="contactForm.message.$error.required" class="error">Please enter a message.</span></div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <h3 class="hidden-xs">Preview</h3>
+                  <div class="contact-preview hidden-xs">
+                    <p>From: <a ng-href="mailto:{{user.email}}">{{user.firstName}} {{user.lastName}}</a></p>
+                    <p>Phone: <a ng-href="tel:{{phone}}">{{user.phone}}</a></p>
+                    <p>Message: <br>{{user.message}}</p>
+                  </div>
+                  <input type="hidden" name="_subject" value="New submission!">
+                  <input type="text" name="_gotcha" class="visuallyhidden">
+                  <button type="submit" ng-click="processForm()" ng-disabled="contactForm.$invalid">Submit</button>
+                  <button type="reset" ng-click="reset()">Reset</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="follow">
+      <div class="container">
+        <div class="row">
+          <div id="follow" class="col-md-12">
+            <h2>Stay Connected With Me</h2>
+            <ul class="nolist sans row">
+              <li class="col-xs-6 col-sm-3"><a href="http://facebook.com/seanloyless" class="icon icon-facebook"> <span> <strong>Facebook</strong><br>Like me on Facebook to follow updates.</span></a></li>
+              <li class="col-xs-6 col-sm-3"><a href="https://www.linkedin.com/in/seanloyless" class="icon icon-linkedin"> <span> <strong>LinkedIn</strong><br>See my resume and skills on LinkedIn.</span></a></li>
+              <li class="col-xs-6 col-sm-3"><a href="https://github.com/sloyless" class="icon icon-github"> <span> <strong>GitHub</strong><br>See some code examples I have published on GitHub.</span></a></li>
+              <li class="col-xs-6 col-sm-3"><a href="http://twitter.com/seanloyless" class="icon icon-twitter"> <span> <strong>Twitter</strong><br>Follow me on Twitter for some randomness.</span></a></li>
+            </ul>
+          </div>
         </div>
       </div>
     </section>
@@ -78,6 +159,8 @@
       <div class="row">
         <div class="col-md-12">
           <p style="text-align: center">All content &copy; 2012 - 2015 Sean Loyless, unless specified. Design and Development by Sean Loyless.</p>
+          <p style="text-align: center">"Downtown Austin Streaks By" by Andy (<a href="//www.flickr.com/photos/atmtx/4829056643/" target="_blank">source</a>)</p>
+          <p style="text-align: center">"Code Orange" by 林 慕尧 / Chris Lim (<a href="//www.flickr.com/photos/cats-eye-view/205561855/" target="_blank">source</a>)</p>
         </div>
       </div>
     </footer>
@@ -90,5 +173,6 @@
     <script src="/scripts/portfolio.js"></script>
     <script src="/components/project-carousel/project-carousel.js"></script>
     <script src="/components/project-description/project-description.js"></script>
+    <script src="/components/contact/contact.js"></script>
   </body>
 </html>
