@@ -11,9 +11,9 @@
     <header id="global-header">
       <div class="container">
         <div class="row">
-          <div class="col-md-6 col-xs-12 logo"><img src="../images/common/logo.png" alt="Sean Loyless"></div>
-          <div class="col-md-6 hidden-xs">
-            <ul class="nolist social">
+          <div class="col-sm-6 col-xs-12 logo"><img src="../images/common/logo.png" alt="Sean Loyless"></div>
+          <div class="col-sm-6">
+            <ul class="nolist social hidden-xs hidden-sm">
               <li><a href="" title="Subscribe to updates to this website via RSS"><img src="/images/common/head-rss.png" alt="Sean Loyless RSS icon"></a></li>
               <li><a href="http://facebook.com/seanloyless/" title="Subscribe to updates on Sean Loyless on Facebook"><img src="/images/common/head-fb.png" alt="Sean Loyless Facebook icon"></a></li>
               <li><a href="http://twitter.com/SeanLoyless" title="Follow me on Twitter"><img src="/images/common/head-twitter.png" alt="Sean Loyless Twitter icon"></a></li>
@@ -27,6 +27,13 @@
                 <li><a href="#about">Blog</a></li>
                 <li><a href="#contact">Contact</a></li>
               </ul>
+              <div class="mobilemenu visible-xs">
+                <button id="menu-mobile">
+                  <div class="bar"></div>
+                  <div class="bar"></div>
+                  <div class="bar"></div>
+                </button>
+              </div>
             </nav>
           </div>
         </div>
@@ -69,12 +76,12 @@
         <div class="row">
           <div class="col-md-12">
             <h2>Projects</h2>
+            <p>I have worked on many projects both personal and professional since 2001. I love to push the envelope and my development knowledge with every project that I work on. Above you can click on any of the slides and see details on many of the jobs I have worked on.</p>
+            <p>The next project could be YOURS!</p>
             <div id="project-carousel" ng-controller="ProjectController as projectData" class="row">
               <project-carousel></project-carousel>
               <project-description></project-description>
             </div>
-            <p>I have worked on many projects both personal and professional since 2001. I love to push the envelope and my development knowledge with every project that I work on. Above you can click on any of the slides and see details on many of the jobs I have worked on.</p>
-            <p>The next project could be YOURS!</p>
           </div>
         </div>
       </div>
@@ -90,39 +97,42 @@
                 <div class="col-md-3">
                   <div class="contact-field">
                     <label for="firstname">First Name<sup>*</sup></label>
-                    <input name="firstname" id="contact-firstname" type="text" ng-model="firstName" required>
+                    <input name="firstname" type="text" ng-model="user.firstName" required>
+                    <div ng-show="contactForm.$submitted || contactForm.firstname.$touched"><span ng-show="contactForm.firstname.$error.required" class="error">Please enter your first name.</span></div>
                   </div>
                   <div class="contact-field">
                     <label for="lastname">Last Name<sup>*</sup></label>
-                    <input name="lastname" id="contact-lastname" type="text" ng-model="lastName" required>
+                    <input name="lastname" type="text" ng-model="user.lastName" required>
+                    <div ng-show="contactForm.$submitted || contactForm.lastname.$touched"><span ng-show="contactForm.lastname.$error.required" class="error">Please enter your last name.</span></div>
                   </div>
                   <div class="contact-field">
                     <label for="email">Email Address<sup>*</sup></label>
-                    <input name="email" id="contact-email" type="email" ng-model="email" required validate>
+                    <input name="email" type="email" ng-model="user.email" required validate>
+                    <div ng-show="contactForm.$submitted || contactForm.email.$touched"><span ng-show="contactForm.email.$error.email" class="error">This is not a valid email.</span><span ng-show="contactForm.email.$error.required" class="error">Please enter your email address.</span></div>
                   </div>
                   <div class="contact-field">
                     <label for="phone">Phone Number</label>
-                    <input name="phone" id="contact-firstname" type="tel" ng-model="phone">
+                    <input name="phone" type="tel" ng-model="user.phone">
                   </div>
                 </div>
                 <div class="col-md-5">
                   <div class="contact-field">
-                    <label for="contact-firstname">Message<sup>*</sup></label>
-                    <textarea ng-model="message"></textarea>
-                  </div>
-                  <div class="contact-field">
-                    <div data-sitekey="6LfLfQ8TAAAAAJVsclEMONxkmtfh3YhCzp4Klz3J" class="g-recaptcha"></div>
+                    <label for="message">Message<sup>*</sup></label>
+                    <textarea ng-model="user.message" required name="message"></textarea>
+                    <div ng-show="contactForm.$submitted || contactForm.message.$touched"><span ng-show="contactForm.message.$error.required" class="error">Please enter a message.</span></div>
                   </div>
                 </div>
                 <div class="col-md-4">
                   <h3 class="hidden-xs">Preview</h3>
-                  <div class="contact-preview hidden-md">
-                    <p>From: <a ng-href="mailto:{{email}}">{{firstName}} {{lastName}}</a></p>
-                    <p>Phone: <a ng-href="tel:{{phone}}">{{phone}}</a></p>
-                    <p>Message: {{message}}</p>
+                  <div class="contact-preview hidden-xs">
+                    <p>From: <a ng-href="mailto:{{user.email}}">{{user.firstName}} {{user.lastName}}</a></p>
+                    <p>Phone: <a ng-href="tel:{{phone}}">{{user.phone}}</a></p>
+                    <p>Message: <br>{{user.message}}</p>
                   </div>
+                  <input type="hidden" name="_subject" value="New submission!">
+                  <input type="text" name="_gotcha" class="visuallyhidden">
                   <button type="submit" ng-click="processForm()" ng-disabled="contactForm.$invalid">Submit</button>
-                  <button type="reset">Reset</button>
+                  <button type="reset" ng-click="reset()">Reset</button>
                 </div>
               </form>
             </div>
@@ -135,11 +145,11 @@
         <div class="row">
           <div id="follow" class="col-md-12">
             <h2>Stay Connected With Me</h2>
-            <ul class="nolist sans">
-              <li><a href="http://facebook.com/seanloyless" class="icon icon-facebook"> <span> <strong>Facebook</strong><br>Like me on Facebook to follow updates.</span></a></li>
-              <li><a href="https://www.linkedin.com/in/seanloyless" class="icon icon-linkedin"> <span> <strong>LinkedIn</strong><br>See my resume and skills on LinkedIn.</span></a></li>
-              <li><a href="https://github.com/sloyless" class="icon icon-github"> <span> <strong>GitHub</strong><br>See some code examples I have published on GitHub.</span></a></li>
-              <li><a href="http://twitter.com/seanloyless" class="icon icon-twitter"> <span> <strong>Twitter</strong><br>Follow me on Twitter for some randomness.</span></a></li>
+            <ul class="nolist sans row">
+              <li class="col-xs-6 col-sm-3"><a href="http://facebook.com/seanloyless" class="icon icon-facebook"> <span> <strong>Facebook</strong><br>Like me on Facebook to follow updates.</span></a></li>
+              <li class="col-xs-6 col-sm-3"><a href="https://www.linkedin.com/in/seanloyless" class="icon icon-linkedin"> <span> <strong>LinkedIn</strong><br>See my resume and skills on LinkedIn.</span></a></li>
+              <li class="col-xs-6 col-sm-3"><a href="https://github.com/sloyless" class="icon icon-github"> <span> <strong>GitHub</strong><br>See some code examples I have published on GitHub.</span></a></li>
+              <li class="col-xs-6 col-sm-3"><a href="http://twitter.com/seanloyless" class="icon icon-twitter"> <span> <strong>Twitter</strong><br>Follow me on Twitter for some randomness.</span></a></li>
             </ul>
           </div>
         </div>
@@ -149,7 +159,8 @@
       <div class="row">
         <div class="col-md-12">
           <p style="text-align: center">All content &copy; 2012 - 2015 Sean Loyless, unless specified. Design and Development by Sean Loyless.</p>
-          <p style="text-align: center">Background image of Austin by Andy (<a href="https://www.flickr.com/photos/atmtx/4829056643/" target="_blank">source</a>)</p>
+          <p style="text-align: center">"Downtown Austin Streaks By" by Andy (<a href="//www.flickr.com/photos/atmtx/4829056643/" target="_blank">source</a>)</p>
+          <p style="text-align: center">"Code Orange" by 林 慕尧 / Chris Lim (<a href="//www.flickr.com/photos/cats-eye-view/205561855/" target="_blank">source</a>)</p>
         </div>
       </div>
     </footer>

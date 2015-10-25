@@ -2,8 +2,7 @@ app = angular.module 'portfolio', [
   'ngSanitize', 
   'ngAnimate', 
   'projectDescription', 
-  'projectCarousel',
-  'contactController'
+  'projectCarousel'
 ]
 
 app.controller 'ProjectController', ['$http', ($http) ->
@@ -24,16 +23,17 @@ app.controller 'ProjectController', ['$http', ($http) ->
   false
 ]
 
-app.controller 'contactController', ['$http', ($scope, $http) ->
-  $scope.formData = {}
-  $scope.processForm = ->
-    $http({
-      method: 'POST',
-      data: $scope.formData,
-      headers: {'Content-Type': 'application/x-www-form-urlencoded'}
-    })
-  ]
-
 jQuery(document).ready ($) ->
-  $(window).bind "load", ->
+  $(window).scroll ->
+    scroll = $(window).scrollTop()
+    nav = $('#global-header')
+
+    if scroll >= 80
+      $(nav).addClass('compact')
+      console.log('past 120')
+    if scroll < 200
+      nav.removeClass('compact')
+      console.log('before 120')
+    false
+  .bind "load", ->
     do $('#project-carousel').carouselize

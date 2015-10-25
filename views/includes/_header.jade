@@ -1,10 +1,10 @@
 header(id="global-header")
   .container
     .row
-      .col-md-6.col-xs-12.logo
+      .col-sm-6.col-xs-12.logo
         img(src="../images/common/logo.png" alt="Sean Loyless")
-      .col-md-6.hidden-xs
-        ul.nolist.social
+      .col-sm-6
+        ul.nolist.social.hidden-xs.hidden-sm
           li
             a(href="" title="Subscribe to updates to this website via RSS")
               img(src="/images/common/head-rss.png", alt="Sean Loyless RSS icon")
@@ -29,3 +29,8 @@ header(id="global-header")
               a(href="#about") Blog
             li
               a(href="#contact") Contact
+          div.mobilemenu.visible-xs
+            button#menu-mobile
+              .bar
+              .bar
+              .bar

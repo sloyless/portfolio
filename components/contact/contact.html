@@ -6,39 +6,42 @@
     <div class="col-md-3">
       <div class="contact-field">
         <label for="firstname">First Name<sup>*</sup></label>
-        <input name="firstname" id="contact-firstname" type="text" ng-model="firstName" required="required"/>
+        <input name="firstname" type="text" ng-model="user.firstName" required="required"/>
+        <div ng-show="contactForm.$submitted || contactForm.firstname.$touched"><span ng-show="contactForm.firstname.$error.required" class="error">Please enter your first name.</span></div>
       </div>
       <div class="contact-field">
         <label for="lastname">Last Name<sup>*</sup></label>
-        <input name="lastname" id="contact-lastname" type="text" ng-model="lastName" required="required"/>
+        <input name="lastname" type="text" ng-model="user.lastName" required="required"/>
+        <div ng-show="contactForm.$submitted || contactForm.lastname.$touched"><span ng-show="contactForm.lastname.$error.required" class="error">Please enter your last name.</span></div>
       </div>
       <div class="contact-field">
         <label for="email">Email Address<sup>*</sup></label>
-        <input name="email" id="contact-email" type="email" ng-model="email" required="required" validate="validate"/>
+        <input name="email" type="email" ng-model="user.email" required="required" validate="validate"/>
+        <div ng-show="contactForm.$submitted || contactForm.email.$touched"><span ng-show="contactForm.email.$error.email" class="error">This is not a valid email.</span><span ng-show="contactForm.email.$error.required" class="error">Please enter your email address.</span></div>
       </div>
       <div class="contact-field">
         <label for="phone">Phone Number</label>
-        <input name="phone" id="contact-firstname" type="tel" ng-model="phone"/>
+        <input name="phone" type="tel" ng-model="user.phone"/>
       </div>
     </div>
     <div class="col-md-5">
       <div class="contact-field">
-        <label for="contact-firstname">Message<sup>*</sup></label>
-        <textarea ng-model="message"></textarea>
-      </div>
-      <div class="contact-field">
-        <div data-sitekey="6LfLfQ8TAAAAAJVsclEMONxkmtfh3YhCzp4Klz3J" class="g-recaptcha"></div>
+        <label for="message">Message<sup>*</sup></label>
+        <textarea ng-model="user.message" required="required" name="message"></textarea>
+        <div ng-show="contactForm.$submitted || contactForm.message.$touched"><span ng-show="contactForm.message.$error.required" class="error">Please enter a message.</span></div>
       </div>
     </div>
     <div class="col-md-4">
       <h3 class="hidden-xs">Preview</h3>
-      <div class="contact-preview hidden-md">
-        <p>From: <a ng-href="mailto:{{email}}">{{firstName}} {{lastName}}</a></p>
-        <p>Phone: <a ng-href="tel:{{phone}}">{{phone}}</a></p>
-        <p>Message: {{message}}</p>
+      <div class="contact-preview hidden-xs">
+        <p>From: <a ng-href="mailto:{{user.email}}">{{user.firstName}} {{user.lastName}}</a></p>
+        <p>Phone: <a ng-href="tel:{{phone}}">{{user.phone}}</a></p>
+        <p>Message: <br/>{{user.message}}</p>
       </div>
+      <input type="hidden" name="_subject" value="New submission!"/>
+      <input type="text" name="_gotcha" class="visuallyhidden"/>
       <button type="submit" ng-click="processForm()" ng-disabled="contactForm.$invalid">Submit</button>
-      <button type="reset">Reset</button>
+      <button type="reset" ng-click="reset()">Reset</button>
     </div>
   </form>
 </div>

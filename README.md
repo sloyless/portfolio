@@ -18,14 +18,13 @@ Development is setup and compiled using Grunt.js. It will watch for Sass, Jade, 
 
 Requirements: (Install at global level)
 * Node (>= 0.12.7)
-* Bower
 * Sass
 * Compass
+* Bootstrap for Sass (https://github.com/twbs/bootstrap-sass)
 * Grunt
 * BrowserSync
 
 Download/Fork the project, navigate to project folder in Terminal and run:
-* bower install
 * npm install
 * grunt
 

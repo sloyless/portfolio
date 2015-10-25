@@ -1,6 +1,6 @@
 var app;
 
-app = angular.module('portfolio', ['ngSanitize', 'ngAnimate', 'projectDescription', 'projectCarousel', 'contactController']);
+app = angular.module('portfolio', ['ngSanitize', 'ngAnimate', 'projectDescription', 'projectCarousel']);
 
 app.controller('ProjectController', [
   '$http', function($http) {
@@ -24,23 +24,21 @@ app.controller('ProjectController', [
   }
 ]);
 
-app.controller('contactController', [
-  '$http', function($scope, $http) {
-    $scope.formData = {};
-    return $scope.processForm = function() {
-      return $http({
-        method: 'POST',
-        data: $scope.formData,
-        headers: {
-          'Content-Type': 'application/x-www-form-urlencoded'
-        }
-      });
-    };
-  }
-]);
-
 jQuery(document).ready(function($) {
-  return $(window).bind("load", function() {
+  return $(window).scroll(function() {
+    var nav, scroll;
+    scroll = $(window).scrollTop();
+    nav = $('#global-header');
+    if (scroll >= 80) {
+      $(nav).addClass('compact');
+      console.log('past 120');
+    }
+    if (scroll < 200) {
+      nav.removeClass('compact');
+      console.log('before 120');
+    }
+    return false;
+  }).bind("load", function() {
     return $('#project-carousel').carouselize();
   });
 });

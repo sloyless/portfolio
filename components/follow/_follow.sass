@@ -7,10 +7,11 @@
 
   li
     +inline-block(top)
-    margin: 0 10px
 
   .icon
-    width: 160px
+    width: 100%
+    @media (min-width: $screen-lg)
+      width: 160px
     line-height: 1
 
     &:before

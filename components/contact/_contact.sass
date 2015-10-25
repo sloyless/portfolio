@@ -16,7 +16,7 @@
   h3
     color: white
     text-transform: uppercase
-    padding-bottom: 10px
+    padding-bottom: 6px
     margin-bottom: 10px
     border-bottom: 1px dotted white
 
@@ -25,9 +25,8 @@
   
   form
     input, textarea
-      &.ng-valid.ng-touched
+      &.ng-valid-required.ng-touched
         border-color: #78FA89
-    input, textarea
       &.ng-invalid.ng-touched
         border-color: red
 
@@ -52,6 +51,13 @@
       padding: 5px 10px
       width: 100%
       opacity: 0.9
+  
+  span.error
+    color: red
+    font-size: 10px
+    position: absolute
+    bottom: -15px
+    left: 0
 
   textarea
     border: 1px solid transparent
@@ -68,24 +74,40 @@
     padding: 10px 35px
     text-transform: uppercase
     color: white
+    cursor: hover
     +inline-block(top)
     
     &[type="submit"]
       background: $brand-orange
       margin-right: 10px
+      &[disabled]
+        background: gray
+        color: silver
+        &:hover
+          background: gray
       &:hover
-        background: black
+        background: darken($brand-orange, 15%)
 
     &[type="reset"]
-      background: red
+      background: white
+      color: red
       &:hover
-        background: white
-        color: $text-color
+        background: darken(red, 25%)
+        color: white
 
 
 .contact-field
   margin: 0 0 30px
+  position: relative
+
+  .g-recaptcha
+    opacity: 0.8
 
 .contact-preview
   color: white
-  margin-bottom: 45px
+  margin-bottom: 25px
+  height: 208px
+  overflow-y: auto
+
+  p:last-child
+    margin-bottom: 0
