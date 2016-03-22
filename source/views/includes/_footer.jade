@@ -1,0 +1,30 @@
+footer.container(id="global-footer")
+  .row
+    .col-md-12
+      p(style="text-align: center") All content &copy; 2012 - #{new Date().getFullYear()} Sean Loyless, unless specified. Design and Development by Sean Loyless.
+      p(style="text-align: center") "Downtown Austin Streaks By" by Andy (
+        a(href="//www.flickr.com/photos/atmtx/4829056643/" target="_blank") source
+        | )
+      p(style="text-align: center") "Code Orange" by 林 慕尧 / Chris Lim (
+        a(href="//www.flickr.com/photos/cats-eye-view/205561855/" target="_blank") source
+        | )
+
+block scripts
+  //- Angular Core
+  script(src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.2/angular.min.js")
+  script(src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.2/angular-sanitize.js")
+  script(src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.2/angular-animate.js")
+  //- jQuery
+  script(src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js")
+  //- Bootstrap Scripts
+  script(src="/scripts/vendor/ui-bootstrap-1.2.5.min.js")
+  script(src="/scripts/vendor/ui-bootstrap-tpls-1.2.5.min.js")
+  script(src="/scripts/vendor/transition.js")
+  //- Local Vendor scripts
+  script(src="/scripts/vendor/parallax.min.js")
+  //- Angular app
+  script(src="/scripts/portfolio.min.js")
+  //- Angular components
+  script(src="/components/project-carousel/project-carousel.js")
+  script(src="/components/project-description/project-description.js")
+  script(src="/components/contact/contact.js")

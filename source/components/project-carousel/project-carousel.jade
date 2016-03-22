@@ -1,0 +1,13 @@
+#carousel-projects
+  uib-carousel.slide(active="active")
+    uib-slide(ng-repeat="project in projectData.projects track by project.projectID" id="project-{{project.projectID}}" ng-click="projectData.showProject($index)" ng-class="{'selected':projectData.isActive($index)}" active="slide.active" index="project.projectID")
+      img(ng-src="{{project.image}}" alt="{{project.title}}")
+      .carousel-caption {{project.title}}
+    a.left.carousel-control(href="#carousel-projects" role="button" data-slide="prev")
+      span
+        i.fa.fa-fw.fa-chevron-left
+      span.sr-only Previous
+    a.right.carousel-control(href="#carousel-projects" role="button" data-slide="next")
+      span
+        i.fa.fa-fw.fa-chevron-right
+      span.sr-only Next

@@ -1,0 +1,13 @@
+@function str-replace($string, $old, $new: "") {
+  $index: str-index($string, $old);
+  @if $index != null {
+    $new_string: str-slice($string, 1, $index - 1) + $new + str-slice($string, $index + str-length($old));
+
+    @if str-index($new_string, $old) {
+      @return str-replace($new_string, $old, $new);
+    }
+
+    @return $new_string;
+  }
+  @return $string
+}
