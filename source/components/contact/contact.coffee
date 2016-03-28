@@ -1,17 +1,23 @@
-app.controller 'contactController', ($scope, $http) ->
+app.controller 'contactController', ['$scope', '$http', ($scope, $http) ->
   $scope.formData = {}
   
   $scope.processForm = ->
     $http({
-      url: '//formspree.io/loyless.sean@gmail.com',
       method: 'POST',
-      data: $scope.formData,
-      dataType: 'application/json'
+      url: 'components/contact/formprocess.php?action=formData',
+      data: $.param($scope.formData),
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' }
     })
+    .success (data) ->
+      console.log(data)
+      $scope.message = data.message
+      false
     false
   
   $scope.reset = ->
-    $scope.user = angular.copy($scope.formData)
+    $scope.formData = angular.copy($scope.formData)
+    false
 
   do $scope.reset
   false
+]
