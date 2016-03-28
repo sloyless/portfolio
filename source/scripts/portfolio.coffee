@@ -1,3 +1,14 @@
+jQuery(document).ready ($) ->
+  $(window).scroll ->
+    scroll = $(window).scrollTop()
+    nav = $('#global-header')
+
+    if scroll >= 80
+      $(nav).addClass('compact')
+    if scroll < 200
+      nav.removeClass('compact')
+    false
+
 app = angular.module 'portfolio', [
   'ngSanitize', 
   'ngAnimate',
@@ -9,10 +20,13 @@ app = angular.module 'portfolio', [
 app.controller 'ProjectController', ['$http', ($http) ->
   projectData = @
   projectData.projects = []
-  active = 0
   $http.get('/content/data/projects.json').success (data) ->  
-    data.sort
+    # Sorts the JSON by projectID in decending order (newest first)
+    data.sort((a, b) ->
+      return parseFloat(b.projectID) - parseFloat(a.projectID)
+    )
     projectData.projects = data
+    false
 
   projectData._Index = 0
   projectData.isActive = (index) ->
@@ -21,22 +35,6 @@ app.controller 'ProjectController', ['$http', ($http) ->
   projectData.showProject = (index) ->
     projectData._Index = index
     projectData.selected = projectData.projects[index]
+    false
   false
 ]
-
-jQuery(document).ready ($) ->
-  $('.carousel-inner').find('.item').first().addClass('active')
-  
-  $('#carousel-projects .item').click (e) ->
-    e.preventDefault
-    $(@).carousel('pause')
-
-  $(window).scroll ->
-    scroll = $(window).scrollTop()
-    nav = $('#global-header')
-
-    if scroll >= 80
-      $(nav).addClass('compact')
-    if scroll < 200
-      nav.removeClass('compact')
-    false

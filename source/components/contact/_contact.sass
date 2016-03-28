@@ -1,17 +1,8 @@
 #contact
   position: relative
-
-  &:before
-    background: url('../content/images/bg-contact.jpg') no-repeat
-    content: ''
-    position: absolute
-    top: 0
-    left: 0
-    width: 100%
-    height: 100%
-    opacity: 0.5
-    background-position: 50% 0
-    background-size: cover
+  background: url('../content/images/bg-contact.jpg') no-repeat
+  background-position: 50% 0
+  background-size: cover
   
   h3
     color: white
@@ -53,7 +44,7 @@
       opacity: 0.9
   
   span.error
-    color: red
+    color: white
     font-size: 10px
     position: absolute
     bottom: -15px
@@ -63,7 +54,7 @@
     border: 1px solid transparent
     outline: none
     width: 100%
-    height: 284px
+    height: 255px
     background-color: #dedccf
     opacity: 0.9
     padding: 10px
@@ -88,16 +79,13 @@
           background: gray
       &:hover
         background: darken($brand-orange, 15%)
-
-    &[type="reset"]
-      background: white
-      color: red
-      &:hover
-        background: darken(red, 25%)
         color: white
 
+  .g-recaptcha
+    margin-top: 25px
+
 .contact-field
-  margin: 0 0 30px
+  margin: 0 0 20px
   position: relative
 
   .g-recaptcha
@@ -106,7 +94,7 @@
 .contact-preview
   color: white
   margin-bottom: 25px
-  height: 208px
+  height: 225px
   overflow-y: auto
 
   p:last-child

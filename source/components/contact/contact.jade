@@ -1,8 +1,10 @@
 section#contact.col-xs-12
   h2 Contact Me!
+  p(ng-show="success") Form submitted. Thank you!
+  p(ng-show="error") Form could not submit. Please try again later.
   .contact-form.sans(ng-controller="contactController")
-    script(src='https://www.google.com/recaptcha/api.js')
-    form.row(name="contactForm" novalidate)
+    script(src="https://www.google.com/recaptcha/api.js")
+    form.row(name="contactForm" enctype="multipart/form-data" novalidate)
       .col-md-3
         .contact-field
           label(for="firstname") First Name
@@ -26,6 +28,7 @@ section#contact.col-xs-12
         .contact-field
           label(for="phone") Phone Number
           input(name="phone" type="tel" ng-model="user.phone")
+        .g-recaptcha(data-sitekey="6LdV4xsTAAAAAP667xppVOp2uILr7KP3Q8plklzf")
 
       .col-md-5
         .contact-field
@@ -34,6 +37,8 @@ section#contact.col-xs-12
           textarea(ng-model="user.message" required name="message")
           div(ng-show="contactForm.$submitted || contactForm.message.$touched")
             span.error(ng-show="contactForm.message.$error.required") Please enter a message.
+        .contact-field.text-right
+          button.btn.btn-danger(type="reset" ng-click="reset()") Reset
           
       .col-md-4
         h3.hidden-xs Preview
@@ -48,6 +53,4 @@ section#contact.col-xs-12
 
         input(type="hidden" name="_subject" value="New submission!")
         input.visuallyhidden(type="text" name="_gotcha")
-
-        button(type="submit" ng-click="processForm()" ng-disabled="contactForm.$invalid") Submit
-        button(type="reset" ng-click="reset()") Reset
+        button.btn.btn-default(type="submit" ng-click="processForm()" ng-disabled="contactForm.$invalid") Submit

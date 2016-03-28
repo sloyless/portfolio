@@ -1,5 +1,12 @@
 #follow
-  padding: 30px 0 10px
+  padding-top: 30px
+  padding-bottom: 10px
+
+  i.fa
+    display: block
+    color: white
+    font-size: 28px
+
   > ul
     width: 100%
     margin: 0 auto
@@ -16,9 +23,15 @@
     line-height: 1
 
     &:before
+      font-family: FontAwesome
       margin-bottom: 5px
-      width: 100px
-      height: 100px
+      width: 80px
+      height: 80px
+      color: #0054a6
+      background-color: white
+      border-radius: 50%
+      line-height: 82px
+      font-size: 60px
 
     span
       +cssAnimate
@@ -29,6 +42,18 @@
       strong
         color: white
         font-size: 18px
+    
+    &.icon-facebook:before
+      content: '\f09a'
+
+    &.icon-twitter:before
+      content: '\f099'
+
+    &.icon-linkedin:before
+      content: '\f0e1'
+
+    &.icon-github:before
+      content: '\f09b'
 
     &:hover, &:focus
       text-decoration: none

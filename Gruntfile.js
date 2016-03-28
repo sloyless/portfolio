@@ -43,10 +43,10 @@ module.exports = function(grunt) {
         },
         expand: true,
         flatten: false,
-        cwd: '<%= project.app %>/',
-        src: ['**/*.{coffee,litcoffee}'],
-        dest: '<%= project.build %>/',
-        ext: '.js'
+        ext: '.js',
+        files: {
+          '<%= project.build %>/scripts/portfolio.js': ['<%= project.js %>/portfolio.coffee', '<%= project.components %>/**/*.coffee']
+        }
       },
       build: {
         options: {
@@ -55,10 +55,10 @@ module.exports = function(grunt) {
         },
         expand: true,
         flatten: false,
-        cwd: '<%= project.app %>/',
-        src: ['<%= project.js %>/**/*.{coffee,litcoffee}','<%= project.components %>/**/*.{coffee,litcoffee}'],
-        dest: '<%= project.build %>/',
-        ext: '.js'
+        ext: '.js',
+        files: {
+          '<%= project.build %>/scripts/portfolio.js': ['<%= project.js %>/portfolio.coffee', '<%= project.components %>/**/*.coffee']
+        }
       }
     },
     // Jade -> HTML
@@ -101,7 +101,7 @@ module.exports = function(grunt) {
     },
     // JS Error checking
     jshint: {
-      files: ['Gruntfile.js', '<%= project.build %>/scripts/portfolio.js', '<%= project.build %>/components/**/*.js'],
+      files: ['Gruntfile.js', '<%= project.build %>/scripts/portfolio.js'],
       options: {
         // options here to override JSHint defaults
         globals: {
@@ -109,17 +109,6 @@ module.exports = function(grunt) {
           console: true,
           module: true,
           document: true
-        }
-      }
-    },
-    // Minify JS
-    uglify: {
-      options: {
-        mangle: true
-      },
-      target: {
-        files: {
-          "<%= project.build %>/scripts/portfolio.min.js":   ["<%= project.build %>/scripts/portfolio.js"]
         }
       }
     },
@@ -148,28 +137,20 @@ module.exports = function(grunt) {
           max_jshint_notifications: 1
         }
       },
-      uglify:{
+      content:{
         options:{
           title: "Grunt",
-          message: "JS Linted and Minified Successfully.",
-          duration: 2,
-          max_jshint_notifications: 1
-        }
-      },
-      images:{
-        options:{
-          title: "Grunt",
-          message: "Images Copied Successfully.",
+          message: "Content Updated or Copied Successfully.",
           duration: 2,
           max_jshint_notifications: 1
         }
       }
     },
     sync: {
-      images: {
+      content: {
         files: [{
           cwd: '<%= project.app %>/', 
-          src: ['content/**/*'],
+          src: ['content/**/*', 'scripts/vendor/*.js', '**/*.php'],
           dest: '<%= project.build %>/'
         }],
       }
@@ -179,7 +160,7 @@ module.exports = function(grunt) {
       main: {
         expand: true,
         cwd: '<%= project.app %>/',
-        src: ['content/**', 'scripts/vendor/*.js'],
+        src: ['content/**', 'scripts/vendor/*.js', '**/*.php'],
         dest: '<%= project.build %>/',
       }
     },
@@ -203,6 +184,10 @@ module.exports = function(grunt) {
         files: ['<%= project.js %>/**/*.{coffee,litcoffee}','<%= project.components %>/**/*.{coffee,litcoffee}'],
         tasks: ['coffee', 'notify:coffee']
       },
+      jshint: {
+        files: ['<%= project.build %>/scripts/portfolio.js'],
+        tasks: ['jshint']
+      },
       jade: {
         files: ['<%= project.app %>/**/*.jade'],
         tasks: ['jade', 'notify:jade']
@@ -211,13 +196,19 @@ module.exports = function(grunt) {
         files: ['<%= project.build %>/style.css'],
         tasks: ['autoprefixer', 'cssmin']
       },
-      uglify: {
-        files: ['<%= project.build %>/**/*.js'],
-        tasks:['uglify','notify:uglify']
-      },
-      images: {
-        files: ['<%= project.app %>/content/**/*', '<%= project.js %>/vendor/*'],
-        tasks: ['sync:images', 'notify:images']
+      content: {
+        files: ['<%= project.app %>/content/**/*', '<%= project.js %>/vendor/*.js', '<%= project.app %>/**/*.php'],
+        tasks: ['sync:content', 'notify:content']
+      }
+    },
+    php: {
+      dist: {
+        options: {
+          hostname: '127.0.0.1',
+          port: 9000,
+          base: 'build', // Project root
+          silent: true
+        }
       }
     },
     // Server setup
@@ -225,15 +216,16 @@ module.exports = function(grunt) {
       dev: {
         bsFiles: {
           src : [
-              '<%= project.build %>/style.min.css',
-              '<%= project.build %>/**/*.js',
-              '<%= project.build %>/content/**/*',
-              '<%= project.build %>/**/*.html'
+            '<%= project.build %>/style.min.css',
+            '<%= project.build %>/**/*.js',
+            '<%= project.build %>/content/**/*',
+            '<%= project.build %>/**/*.{html,php}'
           ]
         },
         options: {
+          proxy: '<%= php.dist.options.hostname %>:<%= php.dist.options.port %>',
           watchTask: true,
-          server: '<%= project.build %>/'
+          logLevel: 'silent'
         }
       }
     }
@@ -248,7 +240,8 @@ module.exports = function(grunt) {
     'autoprefixer',
     'cssmin',
     'coffee:dev',
-    'uglify',
+    'jshint',
+    'php',
     'browserSync',
     'watch'
   ]);
@@ -260,7 +253,6 @@ module.exports = function(grunt) {
     'autoprefixer',
     'cssmin',
     'coffee:build',
-    'jshint',
-    'uglify',
+    'jshint'
   ]);
 };
