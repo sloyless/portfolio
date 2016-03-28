@@ -1,5 +1,75 @@
 [
   {
+    "projectID": "20140601",
+    "date": "March 2014",
+    "title": "Marfa Trip",
+    "client": "Go Forth Creative",
+    "thumb": "https://s3-us-west-2.amazonaws.com/seanloyless-portfolio/images/projects/thumb-marfatrip.jpg",
+    "image": "https://s3-us-west-2.amazonaws.com/seanloyless-portfolio/images/projects/marfatrip.jpg",
+    "description": "<p>Go Forth Creative contacted me wanting to create a simple 1-page website for a local travel destination company, Marfa Trip. The site was created in WordPress, and features responsive design and custom fields to allow the three-column content shown.</p>",
+    "url": "http://marfatrip.com/"
+  },
+  {
+    "projectID": "20150220",
+    "date": "February 2015",
+    "title": "Loot Vintage Rentals",
+    "client": "Go Forth Creative",
+    "thumb": "https://s3-us-west-2.amazonaws.com/seanloyless-portfolio/images/projects/thumb-lootvintage.jpg",
+    "image": "https://s3-us-west-2.amazonaws.com/seanloyless-portfolio/images/projects/lootvintage.jpg",
+    "description": "<p>Go Forth Creative contact me for a site update to a vintage shop located in Austin. Loot Vintage Rentals is local Austin based vintage furniture rental company. They do some amazing work, and I was proud to help build them an updated site. Site was created in WordPress with responsive design elements.</p>",
+    "url": "http://lootvintagerentals.com"
+  },
+  {
+    "projectID": "20150221",
+    "date": "February 2015",
+    "title": "JenniferElsner.com",
+    "client": "Go Forth Creative",
+    "thumb": "https://s3-us-west-2.amazonaws.com/seanloyless-portfolio/images/projects/thumb-jenniferelsner.jpg",
+    "image": "https://s3-us-west-2.amazonaws.com/seanloyless-portfolio/images/projects/jenniferelsner.jpg",
+    "description": "<p>Go Forth Creative contacted me for a site update to a vintage shop located in Austin. Loot Vintage Rentals is local Austin based vintage furniture rental company. They do some amazing work, and I was proud to help build them an updated site. Site was created in WordPress with responsive design elements.</p>",
+    "url": "http://jenniferelsner.com/"
+  },
+  {
+    "projectID": "20150411",
+    "date": "April 2015",
+    "title": "KellyColchin.com",
+    "client": "Go Forth Creative",
+    "thumb": "https://s3-us-west-2.amazonaws.com/seanloyless-portfolio/images/projects/thumb-kellycolchin.jpg",
+    "image": "https://s3-us-west-2.amazonaws.com/seanloyless-portfolio/images/projects/kellycolchin.jpg",
+    "description": "<p>Go Forth Creative contacted me for a overhaul to a local Austin artist Kelly Colchin's personal portfolio. Created in Squarespace, the site is fully responsive and features a beautiful design.</p>",
+    "url": "http://kellycolchin.com/"
+  },
+  {
+    "projectID": "20150426",
+    "date": "April 2015",
+    "title": "BlueberryAndMe.com",
+    "client": "Viewers Like You",
+    "thumb": "https://s3-us-west-2.amazonaws.com/seanloyless-portfolio/images/projects/thumb-blueberry.jpg",
+    "image": "https://s3-us-west-2.amazonaws.com/seanloyless-portfolio/images/projects/blueberry.jpg",
+    "description": "<p>Viewers Like You contacted me with another site from Margarita McClure: Blueberry & Me. Described as a wholesale baby supplies site, the page was designed in Shopify and features a custom design and responsive layout.</p>",
+    "url": "http://BlueberryAndMe.com/"
+  },
+  {
+    "projectID": "20151123",
+    "date": "November 2015",
+    "title": "GrabSlice.com",
+    "client": "Bridgit Kreutzer",
+    "thumb": "https://s3-us-west-2.amazonaws.com/seanloyless-portfolio/images/projects/thumb-grabslice.jpg",
+    "image": "https://s3-us-west-2.amazonaws.com/seanloyless-portfolio/images/projects/grabslice.jpg",
+    "description": "<p>A new client contacted me for some small changes to a North Carolina pizza place <em>Slice of Life Pizzaria & Pub</em> to add a dropdown on mobile to download their official Mobile App, and to add new slides to the desktop carousel.</p>",
+    "url": "http://grabslice.com/"
+  },
+  {
+    "projectID": "20160401",
+    "date": "TBD",
+    "title": "POW! Comic Book Manager",
+    "client": "Anthony Sanchez and Sean Loyless",
+    "thumb": "https://s3-us-west-2.amazonaws.com/seanloyless-portfolio/images/projects/thumb-pow.jpg",
+    "image": "https://s3-us-west-2.amazonaws.com/seanloyless-portfolio/images/projects/pow.jpg",
+    "description": "<p>POW! Comic Book Manager is a collaborative effort to create an online comic book collection web app. After searching around and being disappointed with every other online offering, Anthony and I put our heads together and created POW! CBM. The site is written in native PHP, with SCSS and Bootstrap 3 elements for a full-featured responsive site.</p><p><strong>IN DEVELOPMENT</strong></p>",
+    "url": "http://comicmanager.com/"
+  },
+  {
     "projectID": "20140401",
     "date": "April 2014",
     "title": "Grown Up Shoes",
@@ -208,5 +278,15 @@
     "image": "https://s3-us-west-2.amazonaws.com/seanloyless-portfolio/images/projects/dunetx.jpg",
     "description": "<p>The local Houston area band Dune.Tx needed a display poster to promote the release of their new CD. I was tasked to create a full size poster to display in all local music stores in the Greater Houston area.</p>",
     "url": ""
+  },
+  {
+    "projectID": "20160322",
+    "date": "March 2016",
+    "title": "Sabrina Sew & Sew",
+    "client": "Sabrina Loyless",
+    "thumb": "https://s3-us-west-2.amazonaws.com/seanloyless-portfolio/images/projects/thumb-sabrinasewsew.jpg",
+    "image": "https://s3-us-west-2.amazonaws.com/seanloyless-portfolio/images/projects/sabrinasewsew.jpg",
+    "description": "<p>My lovely wife Sabrina Loyless has her own seamstress business and was in need of not only a website, but a full advertising brand.</p><p>We worked together on creating the logo, color scheme, and branding kit for her business, Sabrina Sew & Sew.</p><p>The logo was illustrated by hand by Sabrina, and redone in Photoshop by myself. From there, we created a set of business cards as well as began designing the website.<p>The launch of the website sees the final step in the process and official release of Sabrina Sew & Sew as a local Austin, Texas business. The site was written in Jade/Sass/Coffeescript, with Bootstrap 3 elements for responsive design.</p><p>If you are in need of any tailoring or custom costume/clothes creation, contact Sabrina!</p>",
+    "url": "http://sabrinasewandsew.com/"
   }
 ]
