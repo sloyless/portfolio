@@ -45,7 +45,7 @@
       $messageText .= '<strong>Message:</strong><br />' . $_POST['messageText'] . '</body></html>';
 
       $headers = "From: noreply@seanloyless.info" . "\r\n";
-      $headers .= 'Reply-To: ' . strip_tags($email) . "\r\n"; 
+      $headers .= "Reply-To: " . strip_tags($email) . "\r\n";
       $headers .= "X-Mailer: PHP/" . phpversion() . "\r\n";
       $headers .= "MIME-Version: 1.0\r\n";
       $headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";

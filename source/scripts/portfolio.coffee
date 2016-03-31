@@ -9,6 +9,19 @@ jQuery(document).ready ($) ->
       nav.removeClass('compact')
     false
 
+  # Smooth anchor scrolling
+  $('a[href^="#"]').on 'click.smoothscroll', (e) ->
+    e.preventDefault()
+
+    target = @hash
+    $target = $(target)
+
+    $('html, body').stop().animate {
+      'scrollTop': $target.offset().top-60
+    }, 500, 'swing', ->
+      window.location.hash = target
+      false
+
 app = angular.module 'portfolio', [
   'ngSanitize', 
   'ngAnimate',

@@ -60,7 +60,7 @@
     "url": "http://grabslice.com/"
   },
   {
-    "projectID": "20160401",
+    "projectID": "20160201",
     "date": "TBD",
     "title": "POW! Comic Book Manager",
     "client": "Anthony Sanchez and Sean Loyless",
@@ -288,5 +288,15 @@
     "image": "https://s3-us-west-2.amazonaws.com/seanloyless-portfolio/images/projects/sabrinasewsew.jpg",
     "description": "<p>My lovely wife Sabrina Loyless has her own seamstress business and was in need of not only a website, but a full advertising brand.</p><p>We worked together on creating the logo, color scheme, and branding kit for her business, Sabrina Sew & Sew.</p><p>The logo was illustrated by hand by Sabrina, and redone in Photoshop by myself. From there, we created a set of business cards as well as began designing the website.<p>The launch of the website sees the final step in the process and official release of Sabrina Sew & Sew as a local Austin, Texas business. The site was written in Jade/Sass/Coffeescript, with Bootstrap 3 elements for responsive design.</p><p>If you are in need of any tailoring or custom costume/clothes creation, contact Sabrina!</p>",
     "url": "http://sabrinasewandsew.com/"
+  },
+  {
+    "projectID": "20160329",
+    "date": "March 2016",
+    "title": "DeRouen & Co.",
+    "client": "DeRouen & Co.",
+    "thumb": "https://s3-us-west-2.amazonaws.com/seanloyless-portfolio/images/projects/thumb-derouen.jpg",
+    "image": "https://s3-us-west-2.amazonaws.com/seanloyless-portfolio/images/projects/derouenco.jpg",
+    "description": "<p>DeRouen & Co. builds authentic brands by partnering with their clients to define the unique personalities that set them apart. They contacted me needing a new website to reflect on all the work they had done with their clients. Working with their beautiful designs, I developed the site in WordPress using the Bootstrap foundation for a full-featured, high resolution responsive website.</p>",
+    "url": "http://derouenco.com/"
   }
 ]

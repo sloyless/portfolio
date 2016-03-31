@@ -10,8 +10,16 @@ app.controller 'contactController', ['$scope', '$http', ($scope, $http) ->
     })
     .success (data) ->
       console.log(data)
-      $scope.message = data.message
-      false
+      if !data.success
+        if data.errors.firstname
+          $scope.errorFirstName = data.errors.firstname
+        $scope.errorLastName = data.errors.lastname
+        $scope.errorEmail = data.errors.email
+        $scope.errorMessageText = data.errors.messageText
+        false
+      else
+        $scope.message = data.message
+        false
     false
   
   $scope.reset = ->
