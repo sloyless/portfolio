@@ -18,7 +18,9 @@ module.exports = function(grunt) {
     sass: {
       dev: {
         options: {
-          style: 'expanded'
+          outputStyle: 'compact',
+          outFile: '<%= project.build %>/style.css',
+          sourceMap: true
         },
         files: {
             "<%= project.build %>/style.css": "<%= project.css %>/style.sass"
@@ -26,8 +28,8 @@ module.exports = function(grunt) {
       },
       build: {
         options: {
-          style: 'expanded',
-          sourcemap: 'none'
+          outputStyle: 'compressed',
+          sourceMap: 'none'
         },
         files: {
             "<%= project.build %>/style.css": "<%= project.css %>/style.sass"
@@ -84,18 +86,7 @@ module.exports = function(grunt) {
       },
       target: {
         files: {
-            "<%= project.build %>/style.css": "<%= project.build %>/style.css"
-        }
-      }
-    },
-    // Minify CSS
-    cssmin: {
-      options: {
-        sourceMap: true
-      },
-      target: {
-        files: {
-          "<%= project.build %>/style.min.css": ['<%= project.build %>/style.css']
+            "<%= project.build %>/style.min.css": "<%= project.build %>/style.css"
         }
       }
     },
@@ -194,7 +185,7 @@ module.exports = function(grunt) {
       },
       autoprefixer:{
         files: ['<%= project.build %>/style.css'],
-        tasks: ['autoprefixer', 'cssmin']
+        tasks: ['autoprefixer']
       },
       content: {
         files: ['<%= project.app %>/content/**/*', '<%= project.js %>/vendor/*.js', '<%= project.app %>/**/*.php'],
@@ -238,7 +229,6 @@ module.exports = function(grunt) {
     'jade',
     'sass:dev',
     'autoprefixer',
-    'cssmin',
     'coffee:dev',
     'jshint',
     'php',
@@ -251,7 +241,6 @@ module.exports = function(grunt) {
     'jade',
     'sass:build',
     'autoprefixer',
-    'cssmin',
     'coffee:build',
     'jshint'
   ]);
