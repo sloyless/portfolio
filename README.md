@@ -1,7 +1,7 @@
 # Portfolio Project
 
 [![npm version](https://img.shields.io/npm/v/bootstrap.svg)](https://www.npmjs.com/package/bootstrap)
-[![devDependency Status](https://david-dm.org/sass/node-sass/dev-status.svg?theme=shields.io)](https://david-dm.org/sass/node-sass#info=devDependencies)
+[![devDependency Status](https://david-dm.org/sloyless/portfolio/dev-status.svg?theme=shields.io)](https://david-dm.org/sloyless/portfolio#info=devDependencies)
 
 This is a redesign of an existing portfolio site built in Wordpress. The redesign/refactor includes building the entire site from scratch using newer technologies and removing WordPress entirely.
 
