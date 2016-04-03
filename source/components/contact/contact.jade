@@ -1,37 +1,44 @@
-section#contact.col-xs-12
-  h2 Contact Me!
-  .contact-form.sans(ng-controller="contactController" ng-hide="addformtoggle")
+section#contact.col-xs-12(ng-controller="contactController" ng-hide="addformtoggle")
+  .alert-success(ng-show="message") 
+    h2 {{ message }}
+    p Thanks for contacting me! I'll get back to you as soon as possible.
+  .contact-form.sans(ng-show="!message")
+    h2 Contact Me!
     script(src="https://www.google.com/recaptcha/api.js")
-    .alert-success(ng-show="message") {{ message }}
     form.row(ng-submit="processForm()" name="contactForm" method="post" novalidate)
       .col-md-3
-        .contact-field(ng-class="{ 'has-error' : errorFirstName }")
+        .contact-field
           label(for="firstname") First Name
             sup *
           input(name="firstname" type="text" ng-model="formData.firstname" required)
-          span.help-block(ng-show="errorFirstName || contactForm.firstname.$touched") {{ errorFirstName }}
-        .contact-field(ng-class="{ 'has-error' : errorLastName }")
+          span.help-block.error(ng-show="contactForm.$submitted || contactForm.firstname.$touched")
+            em(ng-show="contactForm.firstname.$error.required") First name is required.
+
+        .contact-field
           label(for="lastname") Last Name
             sup *
           input(name="lastname" type="text" ng-model="formData.lastname" required)
-          span.help-block(ng-show="errorLastName || contactForm.lastname.$touched") {{ errorLastName }}
-        .contact-field(ng-class="{ 'has-error' : errorEmail }")
+          span.help-block.error(ng-show="contactForm.$submitted || contactForm.lastname.$touched") 
+            em(ng-show="contactForm.lastname.$error.required") Last name is required.
+        .contact-field
           label(for="email") Email Address
             sup *
           input(name="email" type="email" ng-model="formData.email" required validate)
-          span.help-block(ng-show="errorEmail || contactForm.email.$touched") {{ errorEmail }}
+          span.help-block.error(ng-show="contactForm.$submitted || contactForm.email.$touched") 
+            em(ng-show="contactForm.email.$error.required") Email is required.
         .contact-field
           label(for="phone") Phone Number
           input(name="phone" type="tel" ng-model="formData.phone")
         .g-recaptcha(data-sitekey="6LdV4xsTAAAAAP667xppVOp2uILr7KP3Q8plklzf")
 
       .col-md-5
-        .contact-field(ng-class="{ 'has-error' : errorMessageText }")
+        .contact-field
           label(for="messageText") Message
             sup *
           textarea(ng-model="formData.messageText" required name="messageText")
-          span.help-block(ng-show="errorMessageText || contactForm.message.$touched") {{ errorMessageText }}
-        .contact-field.text-right
+          span.help-block.error(ng-show="contactForm.$submitted || contactForm.messageText.$touched") 
+            em(ng-show="contactForm.messageText.$error.required") {{ errorMessageText }}
+        .contact-field.text-right.hidden-xs.hidden-sm
           button.btn.btn-lg.btn-danger(type="reset" ng-click="reset()") Reset
           
       .col-md-4
@@ -47,4 +54,6 @@ section#contact.col-xs-12
 
         input(type="hidden" name="_subject" value="New submission!")
         input.visuallyhidden(type="text" name="_gotcha")
-        button.btn.btn-lg.btn-default(type="submit" ng-disabled="contactForm.$invalid") Submit
+        .contact-field
+          button.btn.btn-lg.btn-danger.hidden-md.hidden-lg(type="reset" ng-click="reset()") Reset  
+          button.btn.btn-lg.btn-default(type="submit" ng-disabled="contactForm.$invalid") Submit

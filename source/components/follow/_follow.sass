@@ -15,6 +15,10 @@
   li
     display: inline-block
     vertical-align: top
+    margin-bottom: 15px
+
+    @media (min-width: $screen-md)
+      margin-bottom: 0
 
   .icon
     width: 100%
@@ -35,9 +39,13 @@
 
     span
       +cssAnimate
-      opacity: 0
+      opacity: 1
       color: $brand-orange
-      font-size: 14px
+      font-size: 12px
+
+      @media (min-width: $screen-md)
+        opacity: 0
+        font-size: 14px
       
       strong
         color: white

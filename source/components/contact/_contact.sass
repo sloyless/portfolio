@@ -11,6 +11,11 @@
     margin-bottom: 10px
     border-bottom: 1px dotted white
 
+  .alert-success
+    min-height: 200px
+    color: white
+    text-align: center
+
 .contact-form
   display: block
   
@@ -27,6 +32,7 @@
     display: block
     font-size: 14px
     margin: 0 0 5px
+    text-shadow: black 1px 1px 2px
 
     sup
       line-height: 0
@@ -46,9 +52,6 @@
   span.error
     color: white
     font-size: 10px
-    position: absolute
-    bottom: -15px
-    left: 0
 
   textarea
     border: 1px solid transparent
@@ -83,6 +86,10 @@
 
   .g-recaptcha
     margin-top: 25px
+    margin-bottom: 10px
+
+    @media (min-width: $screen-md)
+      margin-bottom: 0
 
 .contact-field
   margin: 0 0 20px

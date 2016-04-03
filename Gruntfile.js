@@ -85,7 +85,7 @@ module.exports = function(grunt) {
       },
       target: {
         files: {
-            "<%= project.build %>/style.min.css": "<%= project.build %>/style.css"
+            "<%= project.build %>/style.css": "<%= project.build %>/style.css"
         }
       }
     },
@@ -107,6 +107,14 @@ module.exports = function(grunt) {
         options:{
           title: "Grunt",
           message: "Sass Compiled Successfully.",
+          duration: 2,
+          max_jshint_notifications: 1
+        }
+      },
+      autoprefixer:{
+        options:{
+          title: "Grunt",
+          message: "CSS Autoprefixed",
           duration: 2,
           max_jshint_notifications: 1
         }
@@ -184,7 +192,7 @@ module.exports = function(grunt) {
       },
       autoprefixer:{
         files: ['<%= project.build %>/style.css'],
-        tasks: ['autoprefixer']
+        tasks: ['autoprefixer', 'notify:autoprefixer']
       },
       content: {
         files: ['<%= project.app %>/content/**/*', '<%= project.js %>/vendor/*.js', '<%= project.app %>/**/*.php'],
@@ -206,7 +214,7 @@ module.exports = function(grunt) {
       dev: {
         bsFiles: {
           src : [
-            '<%= project.build %>/style.min.css',
+            '<%= project.build %>/style.css',
             '<%= project.build %>/**/*.js',
             '<%= project.build %>/content/**/*',
             '<%= project.build %>/**/*.{html,php}'
@@ -214,8 +222,7 @@ module.exports = function(grunt) {
         },
         options: {
           proxy: '<%= php.dist.options.hostname %>:<%= php.dist.options.port %>',
-          watchTask: true,
-          logLevel: 'silent'
+          watchTask: true
         }
       }
     }

@@ -1,24 +1,8 @@
-// formprocess.php
 <?php
+  // formprocess.php
   $errors = array();  // array to hold validation errors
   $data = array();        // array to pass back data
   if(!empty($_REQUEST['action']) && $_REQUEST['action'] == "formData") {
-    // validate the variables ========
-    if (empty($_POST['firstname']))
-      $errors['firstname'] = 'First name is required.';
-
-    if (empty($_POST['lastname']))
-      $errors['lastname'] = 'Last name is required.';
-
-    if (empty($_POST['email']))
-      $errors['email'] = 'Email is required.';
-
-    if (filter_var($_POST['email'], FILTER_VALIDATE_EMAIL) === false && $_POST['email']!="" ) {
-      $errors['email'] = 'Enter a valid email address.';
-    }
-    if (empty($_POST['messageText']))
-      $errors['messageText'] = 'Please enter a message.';
-
     // return a response ==============
 
     // response if there are errors
@@ -32,17 +16,17 @@
       $data['success'] = true;
       $data['message'] = 'Success!';
       
-      $firstname = $_POST['firstname'];
-      $lastname = $_POST['lastname'];
-      $email = $_POST['email'];
-      $phone = $_POST['phone'];
+      $firstname = strip_tags($_POST['firstname']);
+      $lastname = strip_tags($_POST['lastname']);
+      $email = strip_tags($_POST['email']);
+      $phone = strip_tags($_POST['phone']);
       $messageText = '<html><body><p>A new message has been received from the SeanLoyless.info site:</p>';
       $messageText .= '<strong>Name:</strong> ' . $firstname . ' ' . $lastname . '<br />';
       $messageText .= '<strong>Email:</strong> ' . $email . '<br />';
       if ($phone != '') {
         $messageText .= '<strong>Phone:</strong> <a href="tel:' . $phone . '">' . $phone . '</a><br />';
       }
-      $messageText .= '<strong>Message:</strong><br />' . $_POST['messageText'] . '</body></html>';
+      $messageText .= '<strong>Message:</strong><br />' . strip_tags($_POST['messageText']) . '</body></html>';
 
       $headers = "From: noreply@seanloyless.info" . "\r\n";
       $headers .= "Reply-To: " . strip_tags($email) . "\r\n";

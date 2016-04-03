@@ -9,15 +9,7 @@ app.controller 'contactController', ['$scope', '$http', ($scope, $http) ->
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' }
     })
     .success (data) ->
-      console.log(data)
-      if !data.success
-        if data.errors.firstname
-          $scope.errorFirstName = data.errors.firstname
-        $scope.errorLastName = data.errors.lastname
-        $scope.errorEmail = data.errors.email
-        $scope.errorMessageText = data.errors.messageText
-        false
-      else
+      if data.success
         $scope.message = data.message
         false
     false
