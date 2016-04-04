@@ -158,7 +158,7 @@ module.exports = function(grunt) {
       main: {
         expand: true,
         cwd: '<%= project.app %>/',
-        src: ['content/**', 'scripts/vendor/*.js', '**/*.php'],
+        src: ['content/**', 'scripts/vendor/*.js', '**/*.php', 'robots.txt'],
         dest: '<%= project.build %>/',
       }
     },
