@@ -10,36 +10,34 @@ section#contact.col-xs-12(ng-controller="contactController" ng-hide="addformtogg
         .contact-field
           label(for="firstname") First Name
             sup *
-          input(name="firstname" type="text" ng-model="formData.firstname" required)
+          input(id="firstname" name="firstname" type="text" ng-model="formData.firstname" required)
           span.help-block.error(ng-show="contactForm.$submitted || contactForm.firstname.$touched")
             em(ng-show="contactForm.firstname.$error.required") First name is required.
 
         .contact-field
           label(for="lastname") Last Name
             sup *
-          input(name="lastname" type="text" ng-model="formData.lastname" required)
+          input(id="lastname" name="lastname" type="text" ng-model="formData.lastname" required)
           span.help-block.error(ng-show="contactForm.$submitted || contactForm.lastname.$touched") 
             em(ng-show="contactForm.lastname.$error.required") Last name is required.
         .contact-field
           label(for="email") Email Address
             sup *
-          input(name="email" type="email" ng-model="formData.email" required validate)
+          input(id="email" name="email" type="email" ng-model="formData.email" required validate)
           span.help-block.error(ng-show="contactForm.$submitted || contactForm.email.$touched") 
             em(ng-show="contactForm.email.$error.required") Email is required.
         .contact-field
           label(for="phone") Phone Number
-          input(name="phone" type="tel" ng-model="formData.phone")
+          input(id="phone" name="phone" type="tel" ng-model="formData.phone")
         .g-recaptcha(data-sitekey="6LdV4xsTAAAAAP667xppVOp2uILr7KP3Q8plklzf")
 
       .col-md-5
         .contact-field
           label(for="messageText") Message
             sup *
-          textarea(ng-model="formData.messageText" required name="messageText")
+          textarea(ng-model="formData.messageText" required name="messageText" id="messageText")
           span.help-block.error(ng-show="contactForm.$submitted || contactForm.messageText.$touched") 
             em(ng-show="contactForm.messageText.$error.required") {{ errorMessageText }}
-        .contact-field.text-right.hidden-xs.hidden-sm
-          button.btn.btn-lg.btn-danger(type="reset" ng-click="reset()") Reset
           
       .col-md-4
         h3.hidden-xs Preview
@@ -54,6 +52,5 @@ section#contact.col-xs-12(ng-controller="contactController" ng-hide="addformtogg
 
         input(type="hidden" name="_subject" value="New submission!")
         input.visuallyhidden(type="text" name="_gotcha")
-        .contact-field
-          button.btn.btn-lg.btn-danger.hidden-md.hidden-lg(type="reset" ng-click="reset()") Reset  
+        .contact-field 
           button.btn.btn-lg.btn-default(type="submit" ng-disabled="contactForm.$invalid") Submit
