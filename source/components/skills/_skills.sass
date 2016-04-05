@@ -1,11 +1,9 @@
 #skills
   position: relative
-  background: url('../content/images/bg-skills.jpg') no-repeat
-  background-position: 50% 50%
-  background-size: cover
 
-  a
-    color: $brand-red
+  > * 
+    padding-left: 15px
+    padding-right: 15px
 
   ul
     text-align: center
@@ -29,7 +27,7 @@
 
     &.icon-angular
       &:before
-        +style-svg($icon-angular)
+        +style-svg($icon-angular, white)
         width: 200px
 
     &.icon-react
@@ -44,10 +42,10 @@
 
     &.icon-coffeescript
       &:before
-        +style-svg($icon-coffeescript)
+        +style-svg($icon-coffeescript, white, white)
         width: 220px
 
     &.icon-wordpress
       &:before
-        +style-svg($icon-wordpress)
+        +style-svg($icon-wordpress, white)
         width: 80px
