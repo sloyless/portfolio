@@ -2,7 +2,7 @@
   "name": "sean-loyless-portfolio",
   "private": false,
   "devDependencies": {
-    "grunt": ">=1.0.0",
+    "grunt": ">=1.0.1",
     "grunt-autoprefixer": ">=3.0.4",
     "grunt-browser-sync": ">=2.2.0",
     "grunt-contrib-clean": ">=1.0.0",
