@@ -4,7 +4,6 @@ section#contact.col-xs-12(ng-controller="contactController" ng-hide="addformtogg
     p Thanks for contacting me! I'll get back to you as soon as possible.
   .contact-form.sans(ng-show="!message")
     h2 Contact Me!
-    script(src="https://www.google.com/recaptcha/api.js")
     form.row(ng-submit="processForm()" name="contactForm" method="post" novalidate)
       .col-md-3
         .contact-field
@@ -29,7 +28,6 @@ section#contact.col-xs-12(ng-controller="contactController" ng-hide="addformtogg
         .contact-field
           label(for="phone") Phone Number
           input(id="phone" name="phone" type="tel" ng-model="formData.phone")
-        .g-recaptcha(data-sitekey="6LdV4xsTAAAAAP667xppVOp2uILr7KP3Q8plklzf")
 
       .col-md-5
         .contact-field
@@ -50,7 +48,6 @@ section#contact.col-xs-12(ng-controller="contactController" ng-hide="addformtogg
             br
             | {{formData.messageText}}
 
-        input(type="hidden" name="_subject" value="New submission!")
         input.visuallyhidden(type="text" name="_gotcha")
         .contact-field 
           button.btn.btn-lg.btn-default(type="submit" ng-disabled="contactForm.$invalid") Submit

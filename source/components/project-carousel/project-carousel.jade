@@ -1,5 +1,5 @@
 #carousel-projects
-  uib-carousel.slide(active="active")
+  uib-carousel.slide(active="active" interval="6000")
     uib-slide(ng-repeat="project in projectData.projects track by $index" id="project-{{project.projectID}}" ng-click="projectData.showProject($index)" active="slide.active" index="$index")
       img.center-block(ng-src="{{project.image}}" alt="{{project.title}}")
       .carousel-caption.hidden-xs
