@@ -1,9 +1,11 @@
+$bg-black: #101010;
+
 body {
   scroll-behavior: smooth;
 }
 
 .sl-jumbotron {
-  background-color: #101010;
+  background-color: $bg-black;
 
   @media only screen and (min-width: 768px) {
     background-image: url('/assets/images/profile.png');
@@ -62,5 +64,5 @@ section {
 }
 
 #portfolio {
-  height: 50vh;
+  background-color: $bg-black;
 }

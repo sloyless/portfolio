@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AboutTabs, Skill, PortfolioCard } from './app.models';
 
 @Component({
   selector: 'app-root',
@@ -9,7 +10,7 @@ export class AppComponent {
   title = 'Portfolio of Sean Loyless';
   aboutActive = 1;
 
-  readonly items: readonly any[] = [
+  readonly items: AboutTabs[] = [
     {
       id: 1,
       title: 'Top Skills',
@@ -86,7 +87,7 @@ export class AppComponent {
     },
   ];
 
-  readonly skills: readonly any[] = [
+  readonly skills: Skill[] = [
     {
       title: 'Website Development',
       icon: 'bi-code-square',
@@ -116,6 +117,58 @@ export class AppComponent {
       title: 'Marketing & Reporting',
       icon: 'bi-bar-chart-line',
       text: 'Experience with Analytics and reporting tools.'
+    },
+  ]
+
+  readonly portfolioItems: PortfolioCard[] = [
+    {
+      id: 202010,
+      date: '2020',
+      title: 'United Cargo',
+      client: 'IBM iX',
+      image: '/assets/portfolio/unitedcargo.jpg',
+    },
+    {
+      id: 202003,
+      date: '2020',
+      title: 'Kichler Lighting',
+      client: 'IBM iX',
+      image: '/assets/portfolio/kichler.jpg',
+    },
+    {
+      id: 201807,
+      date: '2018',
+      title: 'P-TECH Academy',
+      client: 'IBM iX',
+      image: '/assets/portfolio/ptech.jpg',
+    },
+    {
+      id: 201803,
+      date: '2018',
+      title: 'Childrens Defense Fund',
+      client: 'IBM iX',
+      image: '/assets/portfolio/cdf.jpg',
+    },
+    {
+      id: 201707,
+      date: '2017',
+      title: 'United Airlines',
+      client: 'IBM iX',
+      image: '/assets/portfolio/united.jpg',
+    },
+    {
+      id: 201504,
+      date: '2015',
+      title: 'AT&T Small Business',
+      client: 'Razorfish',
+      image: '/assets/portfolio/attcircle.jpg',
+    },
+    {
+      id: 201404,
+      date: '2013',
+      title: 'Blackberry',
+      client: 'Razorfish',
+      image: '/assets/portfolio/blackberry.jpg',
     },
   ]
 }

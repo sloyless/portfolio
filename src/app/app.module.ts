@@ -4,6 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
+import { PortfolioCardModule } from './components/portfolio-card/portfolio-card.module';
 import { SkillTabItemModule } from './components/skill-tab-item/skill-tab-item.module';
 import { SkillCardModule } from './components/skill-card/skill-card.module';
 
@@ -14,6 +15,7 @@ import { SkillCardModule } from './components/skill-card/skill-card.module';
   imports: [
     BrowserModule,
     NgbModule,
+    PortfolioCardModule,
     SkillTabItemModule,
     SkillCardModule
   ],
