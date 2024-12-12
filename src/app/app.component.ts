@@ -75,7 +75,7 @@ export class AppComponent {
       detail: [
         {
           title: 'Art Institute of Houston',
-          subtitle: 'Associate of Science - Multimedia',
+          subtitle: 'Bachelors of Applied Science - Multimedia',
           text: '2001'
         },
         {
