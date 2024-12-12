@@ -58,7 +58,7 @@ export class AppComponent {
       title: 'Experience',
       detail: [
         {
-          title: 'Application Developer',
+          title: 'Senior Application Developer',
           subtitle: 'IBM Consulting - iX',
           text: '2016 - Current'
         },
@@ -111,7 +111,7 @@ export class AppComponent {
     {
       title: 'Accessibility First',
       icon: 'bi-eye',
-      text: 'Every site or application I build has heavy consideration on a11y requirements for people with visual disabilities.'
+      text: 'Every site or application I develop places a strong emphasis on meeting accessibility (a11y) requirements, particularly for individuals with visual impairments.'
     },
     {
       title: 'Marketing & Reporting',
