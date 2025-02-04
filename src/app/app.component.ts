@@ -4,7 +4,7 @@ import { AboutTabs, Skill, PortfolioCard } from './app.models';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
   title = 'Portfolio of Sean Loyless';
@@ -18,24 +18,24 @@ export class AppComponent {
         {
           title: 'Full Stack/Application Developer',
           subtitle: 'Development',
-          text: 'Over 20 years of professional programming experience in website and mobile app development.'
+          text: 'Over 20 years of professional programming experience in website and mobile app development.',
         },
         {
           title: 'Application Architecture',
           subtitle: 'UX/UX',
-          text: 'Enterprise, large scale applications, and design system planning and development.'
+          text: 'Enterprise, large scale applications, and design system planning and development.',
         },
         {
           title: 'Lead Developer Roles',
           subtitle: 'Leadership',
-          text: 'Able to manage small and large teams of local and offshore developers to meet project goals.'
+          text: 'Able to manage small and large teams of local and offshore developers to meet project goals.',
         },
         {
           title: 'Accessibility and Responsive Design',
           subtitle: 'a11y',
-          text: 'Supporting a11y standards and mobile-first design in all projects from the start.'
+          text: 'Supporting a11y standards and mobile-first design in all projects from the start.',
         },
-      ]
+      ],
     },
     {
       id: 2,
@@ -44,30 +44,35 @@ export class AppComponent {
         {
           title: 'Winner of IBM Hackathon Challenge',
           subtitle: '48in48',
-          text: 'Participated in the October 2020 48in48 Hackathon challenge supporting Black-owned charities.'
+          text: 'Participated in the October 2020 48in48 Hackathon challenge supporting Black-owned charities.',
         },
         {
           title: 'Financial Innovation Awards',
           subtitle: 'Digital Evolution Program',
-          text: 'San Antonio Chamber of Commerce website'
-        }
-      ]
+          text: 'San Antonio Chamber of Commerce website',
+        },
+      ],
     },
     {
       id: 3,
       title: 'Experience',
       detail: [
         {
+          title: 'Lead Software Engineer',
+          subtitle: 'The Walt Disney Company',
+          text: '2025 - Current',
+        },
+        {
           title: 'Senior Application Developer',
           subtitle: 'IBM Consulting - iX',
-          text: '2016 - Current'
+          text: '2016 - 2025',
         },
         {
           title: 'Presentation Layer Engineer',
           subtitle: 'Razorfish',
-          text: '2012 - 2016'
-        }
-      ]
+          text: '2012 - 2016',
+        },
+      ],
     },
     {
       id: 4,
@@ -76,14 +81,14 @@ export class AppComponent {
         {
           title: 'Art Institute of Houston',
           subtitle: 'Bachelors of Applied Science - Multimedia',
-          text: '2001'
+          text: '2001',
         },
         {
           title: 'Magnolia High School',
           subtitle: 'Magnolia, TX',
-          text: '1996'
-        }
-      ]
+          text: '1996',
+        },
+      ],
     },
   ];
 
@@ -91,34 +96,34 @@ export class AppComponent {
     {
       title: 'Website Development',
       icon: 'bi-code-square',
-      text: 'Full-stack programming and markup including HTML, SCSS/CSS, JavaScript, Angular, React, PHP, MySQL.'
+      text: 'Full-stack programming and markup including HTML, SCSS/CSS, JavaScript, Angular, React, PHP, MySQL.',
     },
     {
       title: 'Graphic Design',
       icon: 'bi-images',
-      text: 'I spent the beginning of my career (2001-2005) as a Graphic Designer before moving into web development, which has served me well in working with other designers.'
+      text: 'I spent the beginning of my career (2001-2005) as a Graphic Designer before moving into web development, which has served me well in working with other designers.',
     },
     {
       title: 'Mobile App Development',
       icon: 'bi-phone-vibrate',
-      text: 'Creating cross-platform mobile applications in React Native.'
+      text: 'Creating cross-platform mobile applications in React Native.',
     },
     {
       title: 'Application Architecture',
       icon: 'bi-server',
-      text: 'Create Enterprise-level website or mobile applications from top to bottom. Scoping, discovery, and design systems.'
+      text: 'Create Enterprise-level website or mobile applications from top to bottom. Scoping, discovery, and design systems.',
     },
     {
       title: 'Accessibility First',
       icon: 'bi-eye',
-      text: 'Every site or application I develop places a strong emphasis on meeting accessibility (a11y) requirements, particularly for individuals with visual impairments.'
+      text: 'Every site or application I develop places a strong emphasis on meeting accessibility (a11y) requirements, particularly for individuals with visual impairments.',
     },
     {
       title: 'Marketing & Reporting',
       icon: 'bi-bar-chart-line',
-      text: 'Experience with Analytics and reporting tools.'
+      text: 'Experience with Analytics and reporting tools.',
     },
-  ]
+  ];
 
   readonly portfolioItems: PortfolioCard[] = [
     {
@@ -170,5 +175,5 @@ export class AppComponent {
       client: 'Razorfish',
       image: '/assets/portfolio/blackberry.jpg',
     },
-  ]
+  ];
 }
