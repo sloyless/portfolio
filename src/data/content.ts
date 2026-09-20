@@ -8,7 +8,7 @@ export const aboutTabs: AboutTabs[] = [
       {
         title: 'Full Stack/Application Developer',
         subtitle: 'Development',
-        text: 'Over 20 years of professional programming experience in website and mobile app development.',
+        text: 'Over 25 years of professional programming experience in website and mobile app development.',
       },
       {
         title: 'Application Architecture',
@@ -48,7 +48,7 @@ export const aboutTabs: AboutTabs[] = [
     title: 'Experience',
     detail: [
       {
-        title: 'Lead Software Engineer',
+        title: 'Lead Application Software Engineer',
         subtitle: 'The Walt Disney Company',
         text: '2025 - Current',
       },

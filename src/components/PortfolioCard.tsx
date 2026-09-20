@@ -14,7 +14,7 @@ export function PortfolioCard({ item }: PortfolioCardProps) {
       style={{ backgroundImage: `url('${item.image}')` }}
     >
       <div className="portfolio-card-details">
-        <Space direction="vertical" size={0} className="w-full">
+        <Space orientation="vertical" size={0} className="w-full">
           <Title level={5} className="portfolio-card-title !mb-0 !text-inherit">
             {item.title}{' '}
             <Text className="fw-lighter">({item.date})</Text>

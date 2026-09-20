@@ -12,7 +12,7 @@ export function AboutTabs({ tabs }: AboutTabsProps) {
   const activeTab = tabs.find((tab) => tab.id === activeId);
 
   return (
-    <Space direction="vertical" size="small" className="w-full items-start">
+    <Space orientation="vertical" size="small" className="w-full items-start">
       <ul className="mb-0 flex list-none flex-wrap gap-0 p-0" role="tablist">
         {tabs.map((tab) => (
           <li key={tab.id} role="presentation">

@@ -15,7 +15,7 @@ export default function App() {
 
       <aside className="sl-jumbotron mb-0">
         <div className="site-container flex h-full flex-col justify-center pt-5 pb-5">
-          <Space direction="vertical" size="middle" className="w-full">
+          <Space orientation="vertical" size="middle" className="w-full">
             <Title level={1} className="display-3 pt-3 !mb-0 !text-inherit">
               Hi! I&apos;m Sean Loyless,
             </Title>
@@ -39,14 +39,14 @@ export default function App() {
             </Col>
             <Col xs={24} md={16} className="md:!pl-12">
               <Space
-                direction="vertical"
+                orientation="vertical"
                 size="middle"
                 className="w-full items-start"
               >
                 <Title level={2} className="display-5 !mb-0">
                   About Me
                 </Title>
-                <Space direction="vertical" size="middle">
+                <Space orientation="vertical" size="middle">
                   <Paragraph className="lead !mb-0">
                     I&apos;ve been programming since I was 11 years old! I spent
                     hours in front of my Atari XL-800 learning BASIC programming
@@ -67,7 +67,7 @@ export default function App() {
         <section id="skills" className="pb-5">
           <div className="skills-inner site-container text-light">
             <Space
-              direction="vertical"
+              orientation="vertical"
               size="middle"
               className="mb-4 w-full pt-5"
             >
@@ -90,7 +90,7 @@ export default function App() {
 
         <section id="portfolio" className="py-5">
           <div className="site-container text-light">
-            <Space direction="vertical" size="middle" className="mb-4 w-full">
+            <Space orientation="vertical" size="middle" className="mb-4 w-full">
               <Title level={2} className="display-4 !mb-0 text-center">
                 Portfolio
               </Title>
