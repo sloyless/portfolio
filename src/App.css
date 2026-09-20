@@ -139,7 +139,7 @@ section[id] {
 
 #about .about-tab-panel {
   align-self: stretch;
-  min-height: 14rem;
+  min-height: 18rem;
 }
 
 #about .about-detail-list {

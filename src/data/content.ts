@@ -6,24 +6,29 @@ export const aboutTabs: AboutTabs[] = [
     title: 'Top Skills',
     detail: [
       {
-        title: 'Full Stack/Application Developer',
-        subtitle: 'Development',
-        text: 'Over 25 years of professional programming experience in website and mobile app development.',
+        title: 'Full-stack web & application development',
+        subtitle: 'React · TypeScript · Next.js',
+        text: 'Building responsive web and mobile experiences with modern JavaScript stacks, API integration, and performance-focused front-end architecture.',
       },
       {
-        title: 'Application Architecture',
-        subtitle: 'UX/UX',
-        text: 'Enterprise, large scale applications, and design system planning and development.',
+        title: 'Technical leadership & delivery',
+        subtitle: 'Teams · Offshore collaboration',
+        text: 'Leading cross-functional teams of 5–10 engineers through enterprise programs—from discovery and estimation through release and iteration.',
       },
       {
-        title: 'Lead Developer Roles',
-        subtitle: 'Leadership',
-        text: 'Able to manage small and large teams of local and offshore developers to meet project goals.',
+        title: 'Design systems & UI engineering',
+        subtitle: 'Tailwind · Material · Bootstrap · Carbon',
+        text: 'Establishing scalable design systems and component libraries so large product teams ship cohesive, maintainable interfaces.',
       },
       {
-        title: 'Accessibility and Responsive Design',
-        subtitle: 'a11y',
-        text: 'Supporting a11y standards and mobile-first design in all projects from the start.',
+        title: 'Accessibility & inclusive design',
+        subtitle: 'WCAG · ADA · IBM Accessibility Advocate',
+        text: 'Embedding accessibility requirements early in the lifecycle so products work for everyone, including users who rely on assistive technology.',
+      },
+      {
+        title: 'Live & streaming platform work',
+        subtitle: 'Metadata · ESPN · Hulu · Disney+',
+        text: 'Enhancing live-event metadata and related services that power streaming experiences across Disney Entertainment platforms.',
       },
     ],
   },
@@ -32,14 +37,14 @@ export const aboutTabs: AboutTabs[] = [
     title: 'Awards',
     detail: [
       {
-        title: 'Winner of IBM Hackathon Challenge',
-        subtitle: '48in48',
-        text: 'Participated in the October 2020 48in48 Hackathon challenge supporting Black-owned charities.',
+        title: 'IBM Hackathon Challenge — 1st place',
+        subtitle: '48in48 · June 2020',
+        text: 'Built a charity web experience for 2LIVE Daily during an IBM-focused 48in48 hackathon; the project won first place, including charitable donations for the organization.',
       },
       {
         title: 'Financial Innovation Awards',
-        subtitle: 'Digital Evolution Program',
-        text: 'San Antonio Chamber of Commerce website',
+        subtitle: 'bba/ifs · Digital Evolution program',
+        text: 'Recognized as part of the team behind Citi Retail Services’ Digital Evolution program—advancing personalized credit marketing across the digital shopping journey.',
       },
     ],
   },
@@ -48,19 +53,29 @@ export const aboutTabs: AboutTabs[] = [
     title: 'Experience',
     detail: [
       {
-        title: 'Lead Application Software Engineer',
-        subtitle: 'The Walt Disney Company',
-        text: '2025 - Current',
+        title: 'Lead Software Engineer',
+        subtitle: 'The Walt Disney Company · New York, NY',
+        text: 'Feb 2025 – Present. Lead a development team maintaining and enhancing live streaming metadata services for ESPN, Hulu, and Disney+ live events.',
       },
       {
         title: 'Senior Application Developer',
-        subtitle: 'IBM Consulting - iX',
-        text: '2016 - 2025',
+        subtitle: 'IBM Consulting (iX) · New York, NY',
+        text: 'Jul 2016 – Jan 2025. Delivered large-scale web and mobile programs for airlines, automotive, energy, nonprofit, and financial clients—architecture, React/React Native/Angular development, and design-system governance.',
+      },
+      {
+        title: 'Lead front-end developer — United Airlines homepage',
+        subtitle: 'IBM iX · Client site',
+        text: '2017–2018. Led a team of six front-end developers on a React and Redux homepage redesign with multilingual support and AAA accessibility targets.',
       },
       {
         title: 'Presentation Layer Engineer',
-        subtitle: 'Razorfish',
-        text: '2012 - 2016',
+        subtitle: 'Razorfish · Austin, TX',
+        text: 'Feb 2012 – Jun 2016. Front-end engineering for AT&T, BlackBerry, Citi, and other enterprise clients; lead developer on AT&T Small Business (2014 launch).',
+      },
+      {
+        title: 'Freelance design & development',
+        subtitle: 'Sean Loyless Designs',
+        text: '1999 – 2016. Independent web design, development, branding, and multimedia work for agencies, small businesses, and creatives across Texas.',
       },
     ],
   },
@@ -69,14 +84,50 @@ export const aboutTabs: AboutTabs[] = [
     title: 'Education',
     detail: [
       {
-        title: 'Art Institute of Houston',
-        subtitle: 'Bachelors of Applied Science - Multimedia',
-        text: '2001',
+        title: 'Bachelor of Applied Science, Multimedia',
+        subtitle: 'The Art Institute of Houston',
+        text: '1999 – 2001. Coursework spanning web design and development, graphic design, video editing, and sound production.',
+      },
+      {
+        title: 'Full Stack Web Development Certification',
+        subtitle: 'freeCodeCamp',
+        text: '2016. Intensive program reinforcing modern JavaScript, responsive design, APIs, and full-stack fundamentals.',
       },
       {
         title: 'Magnolia High School',
         subtitle: 'Magnolia, TX',
-        text: '1996',
+        text: '1996.',
+      },
+    ],
+  },
+  {
+    id: 5,
+    title: 'Certifications',
+    detail: [
+      {
+        title: 'JavaScript (Basic)',
+        subtitle: 'HackerRank · Dec 2024',
+        text: 'Verified JavaScript fundamentals credential.',
+      },
+      {
+        title: 'IBM Microsoft Copilot Summit',
+        subtitle: 'Credly · Oct 2024',
+        text: 'Microsoft Global Partner Solutions achievement.',
+      },
+      {
+        title: 'IBM Accessibility Advocate',
+        subtitle: 'Credly · Mar 2022',
+        text: 'Formal training in inclusive design and accessibility advocacy within enterprise delivery.',
+      },
+      {
+        title: 'IBM Design Thinking Practitioner',
+        subtitle: 'IBM · Oct 2016',
+        text: 'Human-centered problem solving for product and delivery teams.',
+      },
+      {
+        title: 'IBM Carbon Design System — React',
+        subtitle: 'IBM · Apr 2020',
+        text: 'Developer essentials for IBM’s Carbon React component system.',
       },
     ],
   },
@@ -84,34 +135,34 @@ export const aboutTabs: AboutTabs[] = [
 
 export const skills: Skill[] = [
   {
-    title: 'Website Development',
+    title: 'Web & application development',
     icon: 'code',
-    text: 'Full-stack programming and markup including HTML, CSS, JavaScript, Angular, React, PHP, MySQL.',
+    text: 'Production experience with React, Next.js, TypeScript, Node.js, Angular, and RESTful APIs— from marketing sites to complex enterprise applications for clients including Google, United Airlines, AT&T, and Citibank.',
   },
   {
-    title: 'Graphic Design',
+    title: 'Visual & UX collaboration',
     icon: 'images',
-    text: 'I spent the beginning of my career (2001-2005) as a Graphic Designer before moving into web development, which has served me well in working with other designers.',
+    text: 'Graphic design foundation (2001–2005) informs how I partner with designers on layout, typography, and brand—translating comps into accessible, responsive implementations.',
   },
   {
-    title: 'Mobile App Development',
+    title: 'Mobile development',
     icon: 'mobile',
-    text: 'Creating cross-platform mobile applications in React Native.',
+    text: 'Cross-platform apps with React Native, including large-scale transformation programs that unify web and mobile experiences under a shared codebase.',
   },
   {
-    title: 'Application Architecture',
+    title: 'Architecture & design systems',
     icon: 'server',
-    text: 'Create Enterprise-level website or mobile applications from top to bottom. Scoping, discovery, and design systems.',
+    text: 'Technical discovery, information architecture, and design-system creation using Tailwind CSS, Material Design, Bootstrap, and IBM Carbon to keep multi-team programs aligned.',
   },
   {
-    title: 'Accessibility First',
+    title: 'Accessibility first',
     icon: 'eye',
-    text: 'Every site or application I develop places a strong emphasis on meeting accessibility (a11y) requirements, particularly for individuals with visual impairments.',
+    text: 'WCAG-aware development backed by IBM Accessibility Advocate certification—practical testing, semantic markup, and patterns that support screen readers and keyboard users.',
   },
   {
-    title: 'Marketing & Reporting',
+    title: 'Analytics & optimization',
     icon: 'chart',
-    text: 'Experience with Analytics and reporting tools.',
+    text: 'SEO, analytics, and reporting integrations that help stakeholders measure performance and refine digital experiences over time.',
   },
 ];
 

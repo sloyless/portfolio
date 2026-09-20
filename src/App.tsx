@@ -20,7 +20,7 @@ export default function App() {
               Hi! I&apos;m Sean Loyless,
             </Title>
             <Paragraph className="display-4 fw-bolder text-danger !mb-0">
-              Application Engineer
+              Lead Software Engineer
             </Paragraph>
             <Paragraph className="display-4 !mb-0 pb-3">in NYC.</Paragraph>
           </Space>
@@ -48,14 +48,19 @@ export default function App() {
                 </Title>
                 <Space orientation="vertical" size="middle">
                   <Paragraph className="lead !mb-0">
-                    I&apos;ve been programming since I was 11 years old! I spent
-                    hours in front of my Atari XL-800 learning BASIC programming
-                    from the back of <em>3-2-1 Contact</em> magazines.
+                    I&apos;m a full-stack web and application developer in New
+                    York City with more than 25 years of experience designing
+                    and shipping digital products—from early graphic design work
+                    to enterprise platforms for streaming, travel, finance,
+                    and nonprofit organizations.
                   </Paragraph>
                   <Paragraph className="!mb-0">
-                    I love the challenge of programming with the constant
-                    learning required to stay on top of the latest technologies
-                    and trends to support my clients.
+                    Today I lead engineering for live streaming metadata at
+                    The Walt Disney Company. Previously at IBM iX, I architected
+                    and delivered React, React Native, and Angular solutions for
+                    global brands, led distributed teams, and built design systems
+                    that scale. I still love the craft that started on an Atari
+                    800 writing BASIC programming language from <em>3-2-1 Contact</em> magazines.
                   </Paragraph>
                 </Space>
                 <AboutTabs tabs={aboutTabs} />
@@ -75,7 +80,8 @@ export default function App() {
                 My Toolbox
               </Title>
               <Paragraph className="lead !mb-0 text-center">
-                These are just a few of the skills I use everyday as a developer.
+                A cross-section of the technologies and practices I use to design,
+                build, and lead modern web and mobile products.
               </Paragraph>
             </Space>
             <Row gutter={[24, 24]} className="mb-4">
@@ -95,7 +101,8 @@ export default function App() {
                 Portfolio
               </Title>
               <Paragraph className="lead !mb-0 text-center">
-                A few of the clients I have done work for over my career.
+                Selected client work from agency and consulting engagements across
+                travel, retail, nonprofit, and telecommunications.
               </Paragraph>
             </Space>
             <Row gutter={[24, 24]} className="mb-4">
