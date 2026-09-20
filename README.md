@@ -1,27 +1,60 @@
-# SlPortfolio
+# Sean Loyless Portfolio
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.6.
+Personal portfolio site built with React, TypeScript, Vite, Ant Design, and Tailwind CSS.
 
-## Development server
+## Development
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+```bash
+yarn install
+yarn dev
+```
 
-## Code scaffolding
+Open [http://localhost:5173](http://localhost:5173) in your browser.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Lint & typecheck
+
+```bash
+yarn lint
+yarn lint:fix
+yarn typecheck
+```
+
+Pull requests run ESLint and TypeScript checks in GitHub Actions (`.github/workflows/ci.yml`).
 
 ## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+```bash
+yarn build
+```
 
-## Running unit tests
+Production output is written to `dist/`. Static assets live in `public/`.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Preview production build
 
-## Running end-to-end tests
+```bash
+yarn preview
+```
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+## Deployment
 
-## Further help
+Production deploys run automatically via GitHub Actions when changes are pushed to **`master`**.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+### One-time GitHub setup
+
+1. Open the repo **Settings → Pages**.
+2. Under **Build and deployment**, set **Source** to **GitHub Actions**.
+3. Under **Custom domain**, enter `seanloyless.com` if it is not already set (DNS should point at GitHub Pages).
+
+The workflow (`.github/workflows/deploy.yml`) runs `yarn build` and publishes the `dist/` folder. `public/CNAME` is copied into the build output for the custom domain.
+
+### Manual deploy
+
+Run **Actions → Deploy to GitHub Pages → Run workflow**, or merge to `master`.
+
+### Local build only
+
+```bash
+yarn build
+```
+
+Deploy the contents of `dist/` manually if needed.

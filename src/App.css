@@ -1,0 +1,249 @@
+:root {
+  --site-danger: #dc3545;
+  --jumbotron-bg: rgb(16, 16, 16);
+  --bs-secondary: #6c757d;
+}
+
+.nav-link {
+  color: rgba(255, 255, 255, 0.55);
+  text-decoration: none;
+}
+
+.nav-link:hover,
+.nav-link:focus {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.social-link {
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
+main {
+  background-color: var(--site-bg);
+}
+
+section[id] {
+  scroll-margin-top: 4rem;
+}
+
+.site-container {
+  width: 100%;
+  padding-right: 12px;
+  padding-left: 12px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (min-width: 576px) {
+  .site-container {
+    max-width: 540px;
+  }
+}
+
+@media (min-width: 768px) {
+  .site-container {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+  .site-container {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .site-container {
+    max-width: 1140px;
+  }
+}
+
+.display-3 {
+  font-size: calc(1.525rem + 3.3vw);
+  font-weight: 300;
+  line-height: 1.2;
+}
+
+.display-4 {
+  font-size: calc(1.475rem + 2.5vw);
+  font-weight: 300;
+  line-height: 1.2;
+}
+
+.display-5 {
+  font-size: calc(1.425rem + 1.5vw);
+  font-weight: 300;
+  line-height: 1.2;
+}
+
+.lead {
+  font-size: 1.25rem;
+  font-weight: 300;
+}
+
+.text-danger {
+  color: var(--site-danger) !important;
+}
+
+.fw-bolder {
+  font-weight: 700 !important;
+}
+
+.fw-light {
+  font-weight: 300 !important;
+}
+
+.fw-lighter {
+  font-weight: 200 !important;
+}
+
+.sl-jumbotron {
+  background-color: var(--jumbotron-bg);
+  height: 475px;
+  color: var(--bs-light);
+}
+
+@media (min-width: 768px) {
+  .sl-jumbotron {
+    background-image: url('/assets/images/profile.png');
+    background-repeat: no-repeat;
+    background-position: right center;
+  }
+}
+
+#about .about-tab {
+  color: var(--bs-light);
+  border: 0;
+  background: transparent;
+  font-weight: 700;
+  padding: 0 0 4px;
+  margin-right: 10px;
+  opacity: 0.6;
+  cursor: pointer;
+  transition:
+    color 0.2s,
+    opacity 0.2s;
+}
+
+#about .about-tab.active {
+  opacity: 1;
+  color: var(--site-danger);
+  border-bottom: 2px solid var(--site-danger);
+}
+
+#about .about-tab:hover,
+#about .about-tab:focus {
+  opacity: 1;
+}
+
+#about .about-tab-panel {
+  align-self: stretch;
+  min-height: 14rem;
+}
+
+#about .about-detail-list {
+  margin-bottom: 0;
+  padding-left: 1.5rem;
+  list-style-type: disc;
+}
+
+@media (min-width: 768px) {
+  #about .about-tab {
+    margin-right: 45px;
+  }
+}
+
+.skill-card {
+  height: 100%;
+  color: var(--bs-light);
+  background-color: var(--site-bg);
+  border: 1px solid var(--bs-secondary);
+  border-radius: 4px;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+.skill-card-body {
+  padding: 1rem;
+}
+
+.skill-card-icon {
+  display: inline;
+  font-size: 1.75rem;
+  color: var(--site-danger);
+  vertical-align: middle;
+}
+
+.skill-card-title {
+  margin-bottom: 0;
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+
+.skill-card-text {
+  margin-top: 0.5rem;
+  margin-bottom: 0;
+  font-weight: 300;
+}
+
+#skills {
+  position: relative;
+}
+
+#skills::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url('/assets/images/skills.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  opacity: 0.5;
+  z-index: 0;
+  pointer-events: none;
+}
+
+#skills > .skills-inner {
+  position: relative;
+  z-index: 1;
+}
+
+#portfolio {
+  background-color: var(--site-bg);
+}
+
+.portfolio-card {
+  height: 500px;
+  background-size: cover;
+  background-position: center left;
+  border: 0;
+  border-radius: 4px;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  position: relative;
+  overflow: hidden;
+}
+
+.portfolio-card-details {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 0.5rem 0;
+  text-align: center;
+  background-color: rgba(var(--site-bg-rgb), 0.75);
+}
+
+.portfolio-card-title {
+  margin-bottom: 0;
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+
+.portfolio-card-client {
+  font-size: 1.25rem;
+  font-weight: 300;
+}
+
+.about-photo {
+  border-radius: 4px;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
