@@ -1,0 +1,6 @@
+# https://www.robotstxt.org/
+
+User-agent: *
+Allow: /
+
+Sitemap: https://seanloyless.com/sitemap.xml
