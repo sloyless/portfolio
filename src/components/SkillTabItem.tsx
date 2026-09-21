@@ -1,4 +1,4 @@
-import { Typography } from 'antd';
+import { List, Typography } from 'antd';
 import type { AboutTabs } from '../types/models';
 
 const { Paragraph, Text } = Typography;
@@ -9,19 +9,27 @@ interface SkillTabItemProps {
 
 export function SkillTabItem({ item }: SkillTabItemProps) {
   return (
-    <ul className="about-detail-list mt-3">
-      {item.detail.map((detail) => (
-        <li key={detail.title} className="mb-2">
-          <Text>
-            <Text strong>{detail.title}</Text>
-            {detail.subtitle ? (
-              <Text className="fw-lighter"> - {detail.subtitle}</Text>
-            ) : null}
-          </Text>
-          <br />
-          <Paragraph className="fw-light !mb-0">{detail.text}</Paragraph>
-        </li>
-      ))}
-    </ul>
+    <List
+      className="credential-list"
+      dataSource={item.detail}
+      split={false}
+      renderItem={(detail) => (
+        <List.Item className="credential-list-item !px-0">
+          <List.Item.Meta
+            title={
+              <Text>
+                <Text strong>{detail.title}</Text>
+                {detail.subtitle ? (
+                  <Text type="secondary"> — {detail.subtitle}</Text>
+                ) : null}
+              </Text>
+            }
+            description={
+              <Paragraph className="fw-light !mb-0">{detail.text}</Paragraph>
+            }
+          />
+        </List.Item>
+      )}
+    />
   );
 }

@@ -1,56 +1,16 @@
 import type { AboutTabs, PortfolioItem, Skill } from '../types/models';
 
-export const aboutTabs: AboutTabs[] = [
-  {
-    id: 1,
-    title: 'Top Skills',
-    detail: [
-      {
-        title: 'Full-stack web & application development',
-        subtitle: 'React · TypeScript · Next.js',
-        text: 'Building responsive web and mobile experiences with modern JavaScript stacks, API integration, and performance-focused front-end architecture.',
-      },
-      {
-        title: 'Technical leadership & delivery',
-        subtitle: 'Teams · Offshore collaboration',
-        text: 'Leading cross-functional teams of 5–10 engineers through enterprise programs—from discovery and estimation through release and iteration.',
-      },
-      {
-        title: 'Design systems & UI engineering',
-        subtitle: 'Tailwind · Material · Bootstrap · Carbon',
-        text: 'Establishing scalable design systems and component libraries so large product teams ship cohesive, maintainable interfaces.',
-      },
-      {
-        title: 'Accessibility & inclusive design',
-        subtitle: 'WCAG · ADA · IBM Accessibility Advocate',
-        text: 'Embedding accessibility requirements early in the lifecycle so products work for everyone, including users who rely on assistive technology.',
-      },
-      {
-        title: 'Live & streaming platform work',
-        subtitle: 'Metadata · ESPN · Hulu · Disney+',
-        text: 'Enhancing live-event metadata and related services that power streaming experiences across Disney Entertainment platforms.',
-      },
-    ],
-  },
-  {
-    id: 2,
-    title: 'Awards',
-    detail: [
-      {
-        title: 'IBM Hackathon Challenge — 1st place',
-        subtitle: '48in48 · June 2020',
-        text: 'Built a charity web experience for 2LIVE Daily during an IBM-focused 48in48 hackathon; the project won first place, including charitable donations for the organization.',
-      },
-      {
-        title: 'Financial Innovation Awards',
-        subtitle: 'bba/ifs · Digital Evolution program',
-        text: 'Recognized as part of the team behind Citi Retail Services’ Digital Evolution program—advancing personalized credit marketing across the digital shopping journey.',
-      },
-    ],
-  },
+export const intro = {
+  lead: 'I build responsive web and mobile products with a bias for clarity, accessibility, and teams that enjoy shipping.',
+  paragraphs: [
+    'Full-stack developer in New York with 25+ years in design and engineering—from early graphic design to enterprise platforms for streaming, travel, finance, and nonprofit organizations.',
+  ] as const,
+};
+
+export const credentialTabs: AboutTabs[] = [
   {
     id: 3,
-    title: 'Experience',
+    title: 'Work',
     detail: [
       {
         title: 'Lead Software Engineer',
@@ -61,11 +21,6 @@ export const aboutTabs: AboutTabs[] = [
         title: 'Senior Application Developer',
         subtitle: 'IBM Consulting (iX) · New York, NY',
         text: 'Jul 2016 – Jan 2025. Delivered large-scale web and mobile programs for airlines, automotive, energy, nonprofit, and financial clients—architecture, React/React Native/Angular development, and design-system governance.',
-      },
-      {
-        title: 'Lead front-end developer — United Airlines homepage',
-        subtitle: 'IBM iX · Client site',
-        text: '2017–2018. Led a team of six front-end developers on a React and Redux homepage redesign with multilingual support and AAA accessibility targets.',
       },
       {
         title: 'Presentation Layer Engineer',
@@ -128,6 +83,22 @@ export const aboutTabs: AboutTabs[] = [
         title: 'IBM Carbon Design System — React',
         subtitle: 'IBM · Apr 2020',
         text: 'Developer essentials for IBM’s Carbon React component system.',
+      },
+    ],
+  },
+  {
+    id: 2,
+    title: 'Awards',
+    detail: [
+      {
+        title: 'IBM Hackathon Challenge — 1st place',
+        subtitle: '48in48 · June 2020',
+        text: 'Built a charity web experience for 2LIVE Daily during an IBM-focused 48in48 hackathon; the project won first place, including charitable donations for the organization.',
+      },
+      {
+        title: 'Financial Innovation Awards',
+        subtitle: 'bba/ifs · Digital Evolution program',
+        text: 'Recognized as part of the team behind Citi Retail Services’ Digital Evolution program—advancing personalized credit marketing across the digital shopping journey.',
       },
     ],
   },

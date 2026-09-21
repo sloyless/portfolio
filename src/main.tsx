@@ -20,6 +20,12 @@ createRoot(document.getElementById('root')!).render(
           fontFamily:
             "system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif",
         },
+        components: {
+          Layout: {
+            headerBg: '#212529',
+            headerPadding: 0,
+          },
+        },
       }}
     >
       <App />
